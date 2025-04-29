@@ -1,0 +1,21 @@
+﻿using RSFRecomendations.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore;
+
+namespace RSFRecomendations.Configurations
+{
+    /// <summary>
+    /// Конфигурация Языка 
+    /// </summary>
+    public class ProgrammingLanguageConfiguration : IEntityTypeConfiguration<ProgrammingLanguageModel>
+    {
+        public void Configure(EntityTypeBuilder<ProgrammingLanguageModel> builder)
+        {
+            builder.HasKey(p => p.Id);
+
+            builder
+                .HasMany(p => p.UsersProgrammingLanguage)
+                .WithOne(up => up.ProgrammingLanguage);
+        }
+    }
+}
