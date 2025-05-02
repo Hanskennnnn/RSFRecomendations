@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.EntityFrameworkCore;
@@ -45,6 +46,11 @@ namespace RSFRecomendations
                 MessageBox.Show(Properties.Resources.EmptyName);
                 return;
             }
+            if (textBoxRegName.Text.Contains(" "))
+            {
+                MessageBox.Show(Properties.Resources.NoContainsSpaceName);
+                return;
+            }
             if (string.IsNullOrWhiteSpace(textBoxRegEmail.Text))
             {
                 MessageBox.Show(Properties.Resources.EmptyEmail);
@@ -55,9 +61,24 @@ namespace RSFRecomendations
                 MessageBox.Show(Properties.Resources.NotSobachkaInEmail);
                 return;
             }
+            if (textBoxRegEmail.Text.Contains(" "))
+            {
+                MessageBox.Show(Properties.Resources.NoContainsSpaceEmail);
+                return;
+            }
+            if (!IsValidEmail(textBoxRegEmail.Text))
+            {
+                MessageBox.Show(Properties.Resources.IncorrectMail);
+                return;
+            }
             if (string.IsNullOrWhiteSpace(textBoxRegPassword.Text))
             {
                 MessageBox.Show(Properties.Resources.EmptyPassword);
+                return;
+            }
+            if (textBoxRegPassword.Text.Contains(" "))
+            {
+                MessageBox.Show(Properties.Resources.NoContainsSpacePassword);
                 return;
             }
             if (string.IsNullOrWhiteSpace(textBoxRegPassword2.Text))
@@ -68,6 +89,11 @@ namespace RSFRecomendations
             if (textBoxRegPassword.Text != textBoxRegPassword2.Text)
             {
                 MessageBox.Show(Properties.Resources.PasswordsDontMatch);
+                return;
+            }
+            if (textBoxRegPassword2.Text.Contains(" "))
+            {
+                MessageBox.Show(Properties.Resources.NoContainsSpacePassword);
                 return;
             }
 
@@ -91,12 +117,17 @@ namespace RSFRecomendations
 
             MessageBox.Show("Регистрация прошла успешно!!!");
 
+
             this.Hide();
             var loginForm = new LoginForm();
             loginForm.Show();
-
         }
 
+        private bool IsValidEmail(string email)
+        {
+            string pattern = @"^[^@\s]+@[a-zA-Z]+\.[a-zA-Z]+$";
+            return Regex.IsMatch(email, pattern);
+        }
 
         public void EnterText(TextBox textBox, string res, bool pass = false)
         {

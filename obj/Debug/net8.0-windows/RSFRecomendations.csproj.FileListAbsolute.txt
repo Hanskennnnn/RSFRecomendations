@@ -259,9 +259,6 @@ C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\bin\Debug\
 C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\RSFRecomendations.csproj.AssemblyReference.cache
 C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\RSFRecomendations.LoginForm.resources
-C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\RSFRecomendations.MainFormAnketa.resources
-C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\RSFRecomendations.MainFormProgLang.resources
-C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\RSFRecomendations.MainFormsProfile.resources
 C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\RSFRecomendations.MainMenu.resources
 C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\RSFRecomendations.Properties.Resources.resources
 C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\RSFRecomendations.RegisterForm.resources
@@ -276,3 +273,8 @@ C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\
 C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\RSFRecomendations.pdb
 C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\RSFRecomendations.genruntimeconfig.cache
 C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\ref\RSFRecomendations.dll
+C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\RSFRecomendations.sourcelink.json
+C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\RSFRecomendations.MainMenuControl.resources
+C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\RSFRecomendations.UserControles.MainFormAnketaControl.resources
+C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\RSFRecomendations.UserControles.MainFormProfileControl.resources
+C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\RSFRecomendations.UserControles.MainFormProgLangControl.resources

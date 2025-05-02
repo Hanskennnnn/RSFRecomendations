@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
-    Microsoft ResX Schema 
-    
+  <!--
+    Microsoft ResX Schema
+
     Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
     associated with the data types.
-    
+
     Example:
-    
+
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-                
-    There are any number of "resheader" rows that contain simple 
+
+    There are any number of "resheader" rows that contain simple
     name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
     mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
     extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
     read any of the formats listed below.
-    
+
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-    
+
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
+    value   : The object must be serialized into a byte array
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -117,65 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="NoUser" xml:space="preserve">
-    <value>Пользователя с таким именем не существует!</value>
-  </data>
-  <data name="UserExists" xml:space="preserve">
-    <value>Пользователь с таким именем уже сущетсвует!</value>
-  </data>
-  <data name="EmptyRepeatPassword" xml:space="preserve">
-    <value>Вы не ввели повторный пароль!</value>
-  </data>
-  <data name="EnterName" xml:space="preserve">
-    <value>Введитя имя</value>
-  </data>
-  <data name="EmptyPassword" xml:space="preserve">
-    <value>Вы не ввели пароль!</value>
-  </data>
-  <data name="EnterEmail" xml:space="preserve">
-    <value>Введите почту</value>
-  </data>
-  <data name="EmptyName" xml:space="preserve">
-    <value>Вы не ввели имя!</value>
-  </data>
-  <data name="PasswordsDontMatch" xml:space="preserve">
-    <value>Ваши пароли не совпадают!</value>
-  </data>
-  <data name="NotSobachkaInEmail" xml:space="preserve">
-    <value>В вашей почте нет специального символа @ !</value>
-  </data>
-  <data name="WrongPassword" xml:space="preserve">
-    <value>Вы ввели не правильный пароль!</value>
-  </data>
-  <data name="EmptyEmail" xml:space="preserve">
-    <value>Вы не ввели почту!</value>
-  </data>
-  <data name="EnterRepeatPassword" xml:space="preserve">
-    <value>Введите пароль повторно</value>
-  </data>
-  <data name="EnterPassword" xml:space="preserve">
-    <value>Введите пароль</value>
-  </data>
-  <data name="NoEditAnything" xml:space="preserve">
-    <value>Вы ничего не изменили!</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Без" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Без.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TeamRSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\TeamRSF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="NoContainsSpaceName" xml:space="preserve">
-    <value>Имя не может содержать пробелы!</value>
-  </data>
-  <data name="NoContainsSpaceEmail" xml:space="preserve">
-    <value>Почта не может содержать пробелы!</value>
-  </data>
-  <data name="NoContainsSpacePassword" xml:space="preserve">
-    <value>Пароль не может содержать пробелы!</value>
-  </data>
-  <data name="IncorrectMail" xml:space="preserve">
-    <value>Почта должна быть вида "____@__.__"!</value>
-  </data>
 </root>

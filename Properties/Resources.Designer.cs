@@ -133,6 +133,51 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Почта должна быть вида &quot;____@__.__&quot;!.
+        /// </summary>
+        internal static string IncorrectMail {
+            get {
+                return ResourceManager.GetString("IncorrectMail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Почта не может содержать пробелы!.
+        /// </summary>
+        internal static string NoContainsSpaceEmail {
+            get {
+                return ResourceManager.GetString("NoContainsSpaceEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Имя не может содержать пробелы!.
+        /// </summary>
+        internal static string NoContainsSpaceName {
+            get {
+                return ResourceManager.GetString("NoContainsSpaceName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пароль не может содержать пробелы!.
+        /// </summary>
+        internal static string NoContainsSpacePassword {
+            get {
+                return ResourceManager.GetString("NoContainsSpacePassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Вы ничего не изменили!.
+        /// </summary>
+        internal static string NoEditAnything {
+            get {
+                return ResourceManager.GetString("NoEditAnything", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на В вашей почте нет специального символа @ !.
         /// </summary>
         internal static string NotSobachkaInEmail {
@@ -160,6 +205,16 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TeamRSF {
+            get {
+                object obj = ResourceManager.GetObject("TeamRSF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Пользователь с таким именем уже сущетсвует!.
         /// </summary>
         internal static string UserExists {
@@ -174,6 +229,16 @@ namespace RSFRecomendations.Properties {
         internal static string WrongPassword {
             get {
                 return ResourceManager.GetString("WrongPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Без {
+            get {
+                object obj = ResourceManager.GetObject("Без", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

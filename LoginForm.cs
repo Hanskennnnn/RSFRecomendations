@@ -1,4 +1,5 @@
 ﻿
+using System.Text.RegularExpressions;
 using Microsoft.VisualBasic.Logging;
 using NLog;
 
@@ -8,7 +9,6 @@ namespace RSFRecomendations
 
     public partial class LoginForm : Form
     {
-
         private readonly MyDBContext db;
 
         public LoginForm()
@@ -39,10 +39,19 @@ namespace RSFRecomendations
                 MessageBox.Show(Properties.Resources.EmptyName);
                 return;
             }
-
+            if (textBoxLogName.Text.Contains(" "))
+            {
+                MessageBox.Show(Properties.Resources.NoContainsSpaceName);
+                return;
+            }
             if (string.IsNullOrWhiteSpace(textBoxLogPassword.Text))
             {
                 MessageBox.Show(Properties.Resources.EmptyPassword);
+                return;
+            }
+            if (textBoxLogPassword.Text.Contains(" "))
+            {
+                MessageBox.Show(Properties.Resources.NoContainsSpacePassword);
                 return;
             }
 
@@ -60,10 +69,8 @@ namespace RSFRecomendations
                 return;
             }
 
-            MessageBox.Show("Успешный вход!");
-
             this.Hide();
-            var main = new MainMenu();
+            var main = new MainMenu(us);
             main.Show();
         }
 

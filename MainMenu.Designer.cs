@@ -29,21 +29,19 @@
         private void InitializeComponent()
         {
             splitContainer1 = new SplitContainer();
+            pbTeamRSF = new PictureBox();
             pictureBox1 = new PictureBox();
-            btn = new Button();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
+            btnGoMainMenu = new Button();
+            btnGoForm = new Button();
+            btnGoProfile = new Button();
+            btnGoProgLang = new Button();
             btnLogoutMainMenu = new Button();
-            listBoxFilteredLanguages = new ListBox();
-            lbFilteredLanguages = new Label();
-            button5 = new Button();
-            textBox1 = new TextBox();
-            lbLanguageInfo = new Label();
+            panelMainMenu = new Panel();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbTeamRSF).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -55,23 +53,30 @@
             // 
             // splitContainer1.Panel1
             // 
+            splitContainer1.Panel1.Controls.Add(pbTeamRSF);
             splitContainer1.Panel1.Controls.Add(pictureBox1);
-            splitContainer1.Panel1.Controls.Add(btn);
-            splitContainer1.Panel1.Controls.Add(button4);
-            splitContainer1.Panel1.Controls.Add(button3);
-            splitContainer1.Panel1.Controls.Add(button2);
+            splitContainer1.Panel1.Controls.Add(btnGoMainMenu);
+            splitContainer1.Panel1.Controls.Add(btnGoForm);
+            splitContainer1.Panel1.Controls.Add(btnGoProfile);
+            splitContainer1.Panel1.Controls.Add(btnGoProgLang);
             splitContainer1.Panel1.Controls.Add(btnLogoutMainMenu);
             // 
             // splitContainer1.Panel2
             // 
-            splitContainer1.Panel2.Controls.Add(lbLanguageInfo);
-            splitContainer1.Panel2.Controls.Add(textBox1);
-            splitContainer1.Panel2.Controls.Add(button5);
-            splitContainer1.Panel2.Controls.Add(lbFilteredLanguages);
-            splitContainer1.Panel2.Controls.Add(listBoxFilteredLanguages);
+            splitContainer1.Panel2.Controls.Add(panelMainMenu);
             splitContainer1.Size = new Size(1182, 628);
             splitContainer1.SplitterDistance = 303;
             splitContainer1.TabIndex = 0;
+            // 
+            // pbTeamRSF
+            // 
+            pbTeamRSF.Image = Properties.Resources.TeamRSF;
+            pbTeamRSF.Location = new Point(3, 3);
+            pbTeamRSF.Name = "pbTeamRSF";
+            pbTeamRSF.Size = new Size(297, 244);
+            pbTeamRSF.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbTeamRSF.TabIndex = 5;
+            pbTeamRSF.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -82,99 +87,67 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
-            // btn
+            // btnGoMainMenu
             // 
-            btn.FlatStyle = FlatStyle.Flat;
-            btn.Location = new Point(0, 242);
-            btn.Name = "btn";
-            btn.Size = new Size(300, 68);
-            btn.TabIndex = 3;
-            btn.Text = "Главное меню";
-            btn.UseVisualStyleBackColor = true;
+            btnGoMainMenu.FlatStyle = FlatStyle.Flat;
+            btnGoMainMenu.Location = new Point(0, 242);
+            btnGoMainMenu.Name = "btnGoMainMenu";
+            btnGoMainMenu.Size = new Size(300, 68);
+            btnGoMainMenu.TabIndex = 3;
+            btnGoMainMenu.Text = "Главное меню";
+            btnGoMainMenu.UseVisualStyleBackColor = true;
+            btnGoMainMenu.Click += btnGoMainMenu_Click;
             // 
-            // button4
+            // btnGoForm
             // 
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Location = new Point(0, 305);
-            button4.Name = "button4";
-            button4.Size = new Size(300, 68);
-            button4.TabIndex = 1;
-            button4.Text = "Анкета";
-            button4.UseVisualStyleBackColor = true;
+            btnGoForm.FlatStyle = FlatStyle.Flat;
+            btnGoForm.Location = new Point(0, 305);
+            btnGoForm.Name = "btnGoForm";
+            btnGoForm.Size = new Size(300, 68);
+            btnGoForm.TabIndex = 1;
+            btnGoForm.Text = "Анкета";
+            btnGoForm.UseVisualStyleBackColor = true;
+            btnGoForm.Click += btnGoForm_Click;
             // 
-            // button3
+            // btnGoProfile
             // 
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(0, 431);
-            button3.Name = "button3";
-            button3.Size = new Size(300, 68);
-            button3.TabIndex = 2;
-            button3.Text = "Профиль";
-            button3.UseVisualStyleBackColor = true;
+            btnGoProfile.FlatStyle = FlatStyle.Flat;
+            btnGoProfile.Location = new Point(0, 431);
+            btnGoProfile.Name = "btnGoProfile";
+            btnGoProfile.Size = new Size(300, 68);
+            btnGoProfile.TabIndex = 2;
+            btnGoProfile.Text = "Профиль";
+            btnGoProfile.UseVisualStyleBackColor = true;
+            btnGoProfile.Click += btnGoProfile_Click;
             // 
-            // button2
+            // btnGoProgLang
             // 
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(0, 369);
-            button2.Name = "button2";
-            button2.Size = new Size(300, 68);
-            button2.TabIndex = 1;
-            button2.Text = "Информация о языках программирования";
-            button2.UseVisualStyleBackColor = true;
+            btnGoProgLang.FlatStyle = FlatStyle.Flat;
+            btnGoProgLang.Location = new Point(0, 369);
+            btnGoProgLang.Name = "btnGoProgLang";
+            btnGoProgLang.Size = new Size(300, 68);
+            btnGoProgLang.TabIndex = 1;
+            btnGoProgLang.Text = "Информация о языках программирования";
+            btnGoProgLang.UseVisualStyleBackColor = true;
+            btnGoProgLang.Click += btnGoProgLang_Click;
             // 
             // btnLogoutMainMenu
             // 
             btnLogoutMainMenu.FlatStyle = FlatStyle.Flat;
-            btnLogoutMainMenu.Location = new Point(0, 560);
+            btnLogoutMainMenu.Location = new Point(3, 548);
             btnLogoutMainMenu.Name = "btnLogoutMainMenu";
             btnLogoutMainMenu.Size = new Size(300, 68);
             btnLogoutMainMenu.TabIndex = 0;
             btnLogoutMainMenu.Text = "Выйти из аккаунта";
             btnLogoutMainMenu.UseVisualStyleBackColor = true;
+            btnLogoutMainMenu.Click += btnLogoutMainMenu_Click;
             // 
-            // listBoxFilteredLanguages
+            // panelMainMenu
             // 
-            listBoxFilteredLanguages.FormattingEnabled = true;
-            listBoxFilteredLanguages.Location = new Point(110, 50);
-            listBoxFilteredLanguages.Name = "listBoxFilteredLanguages";
-            listBoxFilteredLanguages.Size = new Size(678, 224);
-            listBoxFilteredLanguages.TabIndex = 0;
-            // 
-            // lbFilteredLanguages
-            // 
-            lbFilteredLanguages.AutoSize = true;
-            lbFilteredLanguages.Location = new Point(296, 27);
-            lbFilteredLanguages.Name = "lbFilteredLanguages";
-            lbFilteredLanguages.Size = new Size(300, 20);
-            lbFilteredLanguages.TabIndex = 1;
-            lbFilteredLanguages.Text = "Подобранные языки программирования";
-            // 
-            // button5
-            // 
-            button5.Location = new Point(345, 280);
-            button5.Name = "button5";
-            button5.Size = new Size(212, 63);
-            button5.TabIndex = 2;
-            button5.Text = "Заполнить анкету";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(61, 376);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(769, 240);
-            textBox1.TabIndex = 3;
-            // 
-            // lbLanguageInfo
-            // 
-            lbLanguageInfo.AutoSize = true;
-            lbLanguageInfo.Location = new Point(387, 353);
-            lbLanguageInfo.Name = "lbLanguageInfo";
-            lbLanguageInfo.Size = new Size(124, 20);
-            lbLanguageInfo.TabIndex = 4;
-            lbLanguageInfo.Text = "Описание языка";
-            lbLanguageInfo.Click += lbLanguageInfo_Click;
+            panelMainMenu.Location = new Point(2, 1);
+            panelMainMenu.Name = "panelMainMenu";
+            panelMainMenu.Size = new Size(873, 627);
+            panelMainMenu.TabIndex = 0;
             // 
             // MainMenu
             // 
@@ -184,12 +157,11 @@
             Controls.Add(splitContainer1);
             Name = "MainMenu";
             Text = "MainMenu";
-            Load += MainMenu_Load;
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
-            splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pbTeamRSF).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
@@ -198,15 +170,12 @@
 
         private SplitContainer splitContainer1;
         private PictureBox pictureBox1;
-        private Button btn;
-        private Button button4;
-        private Button button3;
-        private Button button2;
+        private Button btnGoMainMenu;
+        private Button btnGoForm;
+        private Button btnGoProfile;
+        private Button btnGoProgLang;
         private Button btnLogoutMainMenu;
-        private ListBox listBoxFilteredLanguages;
-        private Button button5;
-        private Label lbFilteredLanguages;
-        private Label lbLanguageInfo;
-        private TextBox textBox1;
+        private PictureBox pbTeamRSF;
+        private Panel panelMainMenu;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -17,9 +18,9 @@ namespace RSFRecomendations.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
-                    Purpose = table.Column<string>(type: "text", nullable: false),
-                    Difficulty = table.Column<string>(type: "text", nullable: false),
-                    Description = table.Column<string>(type: "text", nullable: false)
+                    Purpose = table.Column<List<string>>(type: "text[]", nullable: false),
+                    DifficultyLanguage = table.Column<int>(type: "integer", nullable: false),
+                    DescriptionLanguage = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -45,9 +46,9 @@ namespace RSFRecomendations.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Purpose = table.Column<string>(type: "text", nullable: false),
-                    Difficulty = table.Column<string>(type: "text", nullable: false),
-                    ProgrammingSkill = table.Column<string>(type: "text", nullable: false),
+                    Purpose = table.Column<List<string>>(type: "text[]", nullable: false),
+                    DifficultyForm = table.Column<int>(type: "integer", nullable: false),
+                    ProgrammingSkillUser = table.Column<int>(type: "integer", nullable: false),
                     UserId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>

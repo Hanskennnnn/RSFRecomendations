@@ -5,6 +5,44 @@
     /// </summary>
     public class FormModel
     {
+        /// <summary>
+        /// Перечисление сложности языка
+        /// </summary>
+        public enum Difficulty
+        {
+            /// <summary>
+            /// Легкий
+            /// </summary>
+            Easy,
+            /// <summary>
+            /// Средний
+            /// </summary>
+            Medium,
+            /// <summary>
+            /// Сложный
+            /// </summary>
+            Difficult
+        }
+
+        /// <summary>
+        /// Перечисление умения программировать
+        /// </summary>
+        public enum ProgrammingSkill
+        {
+            /// <summary>
+            /// Начинающий
+            /// </summary>
+            Nocturnal,
+            /// <summary>
+            /// Средний
+            /// </summary>
+            Intermediate,
+            /// <summary>
+            /// Продвинутый
+            /// </summary>
+            Advanced
+        }
+
         public FormModel()
         {
             Id = Guid.NewGuid();
@@ -17,17 +55,17 @@
         /// <summary>
         /// Область применения языка
         /// </summary>
-        public string Purpose { get; set; }
+        public List<string> Purpose { get; set; }
 
         /// <summary>
         /// Сложность языка
         /// </summary>
-        public string Difficulty { get; set; }
+        public Difficulty DifficultyForm { get; set; }
 
         /// <summary>
         /// Уровень программирования пользователя
         /// </summary>
-        public string ProgrammingSkill { get; set; }
+        public ProgrammingSkill ProgrammingSkillUser { get; set; }
 
         /// <summary>
         /// Объект User для связки 
