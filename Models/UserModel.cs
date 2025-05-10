@@ -6,21 +6,13 @@
     public class UserModel
     {
         /// <summary>
-        /// Конструктор для присвоения уникального Id
-        /// </summary>
-        public UserModel()
-        {
-            Id = Guid.NewGuid();
-        }
-
-        /// <summary>
         /// Униыерсальный ключ пользователя
         /// </summary>
         public Guid Id { get; set; }
         /// <summary>
         /// Имя пользователя
         /// </summary>
-        public string Name { get; set; }
+        public string Login { get; set; }
         /// <summary>
         /// Электронная почта пользователя
         /// </summary>
@@ -28,10 +20,11 @@
         /// <summary>
         /// Пароль пользователся
         /// </summary>
-        public string Password { get; set; }
+        public byte[] Password { get; set; }
         /// <summary>
-        /// Объект FormModel для связки
+        /// Уникальная соль для хэширования пароля
         /// </summary>
+        public byte[] Salt { get; set; }
         public FormModel FormModel { get; set; }
         /// <summary>
         /// Список объектов UserProgrammingLanguage для связки

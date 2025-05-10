@@ -1,27 +1,35 @@
-﻿
-using System.Text.RegularExpressions;
-using Microsoft.VisualBasic.Logging;
-using NLog;
+﻿using NLog;
+using Microsoft.EntityFrameworkCore;
 
 namespace RSFRecomendations
 {
-    
+
 
     public partial class LoginForm : Form
     {
         private readonly MyDBContext db;
+
+        private AdditionalMethodsClass am;
+
+        private Logger Log;
 
         public LoginForm()
         {
 
             InitializeComponent();
 
-            textBoxLogName.Text = Properties.Resources.EnterName;
-            textBoxLogName.ForeColor = Color.Gray;
+            textBoxLogLogin.Text = Properties.Resources.EnterLogin;
+            textBoxLogLogin.ForeColor = Color.Gray;
             textBoxLogPassword.Text = Properties.Resources.EnterPassword;
             textBoxLogPassword.ForeColor = Color.Gray;
 
+            Log = LogManager.GetCurrentClassLogger();
+
             db = new MyDBContext();
+            am = new AdditionalMethodsClass();
+
+            Log.Info("Переход к форме входа");
+
         }
 
         private void linkLabelToRegistration_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -29,89 +37,87 @@ namespace RSFRecomendations
             this.Hide();
             var register = new RegisterForm();
             register.Show();
+            Log.Info("Переход к форме регистрации по ссылке 'У вас нет аккаунта?'");
         }
 
-        private void buttonLogin_Click(object sender, EventArgs e)
+        private async void buttonLogin_Click(object sender, EventArgs e)
         {
-
-            if (string.IsNullOrWhiteSpace(textBoxLogName.Text))
+            // Проверка полей
+            if (string.IsNullOrWhiteSpace(textBoxLogLogin.Text))
             {
-                MessageBox.Show(Properties.Resources.EmptyName);
+                MessageBox.Show(Properties.Resources.EmptyLogin);
+                Log.Warn(Properties.Resources.EmptyLoginLog);
                 return;
             }
-            if (textBoxLogName.Text.Contains(" "))
+            if (textBoxLogLogin.Text.Contains(" "))
             {
-                MessageBox.Show(Properties.Resources.NoContainsSpaceName);
+                MessageBox.Show(Properties.Resources.NoContainsSpaceLogin);
+                Log.Warn(Properties.Resources.NoContainsSpaceLoginLog);
                 return;
             }
             if (string.IsNullOrWhiteSpace(textBoxLogPassword.Text))
             {
                 MessageBox.Show(Properties.Resources.EmptyPassword);
+                Log.Warn(Properties.Resources.EmptyPasswordLog);
                 return;
             }
             if (textBoxLogPassword.Text.Contains(" "))
             {
                 MessageBox.Show(Properties.Resources.NoContainsSpacePassword);
+                Log.Warn(Properties.Resources.NoContainsSpacePasswordLog);
                 return;
             }
 
-            var us = db.Users.FirstOrDefault(c => c.Name == textBoxLogName.Text);
+            // Проверка на сущ логина
+            var us = await db.Users.FirstOrDefaultAsync(c => c.Login == textBoxLogLogin.Text);
 
             if (us == null)
             {
                 MessageBox.Show(Properties.Resources.NoUser);
+                Log.Warn(Properties.Resources.NoUserLog + $"{textBoxLogLogin.Text}");
                 return;
             }
 
-            if (textBoxLogPassword.Text != us.Password)
+            // Проверка пароля
+            var checkPassword = am.HashPassword(textBoxLogPassword.Text, us.Salt);
+
+            if (!checkPassword.SequenceEqual(us.Password))
             {
                 MessageBox.Show(Properties.Resources.WrongPassword);
+                Log.Warn(Properties.Resources.WrongPasswordLog);
                 return;
             }
 
             this.Hide();
             var main = new MainMenu(us);
             main.Show();
+
+            Log.Info("Пользователь нажал кнопку входа.");
         }
 
-        private void textBoxLogName_Enter(object sender, EventArgs e)
+        private void textBoxLogLogin_Enter(object sender, EventArgs e)
         {
-            EnterText(textBoxLogName, Properties.Resources.EnterName);
+            am.EnterText(textBoxLogLogin, Properties.Resources.EnterLogin);
         }
 
-        private void textBoxLogName_Leave(object sender, EventArgs e)
+        private void textBoxLogLogin_Leave(object sender, EventArgs e)
         {
-            LeaveText(textBoxLogName, Properties.Resources.EnterName);
+            am.LeaveText(textBoxLogLogin, Properties.Resources.EnterLogin);
         }
 
         private void textBoxLogPassword_Enter(object sender, EventArgs e)
         {
-            EnterText(textBoxLogPassword, Properties.Resources.EnterPassword, true);
+            am.EnterText(textBoxLogPassword, Properties.Resources.EnterPassword, true);
         }
 
         private void textBoxLogPassword_Leave(object sender, EventArgs e)
         {
-            LeaveText(textBoxLogPassword, Properties.Resources.EnterPassword);
+            am.LeaveText(textBoxLogPassword, Properties.Resources.EnterPassword);
         }
 
-        public void EnterText(TextBox textBox, string res, bool pass = false)
+        private void buttonLogin_Paint(object sender, PaintEventArgs e)
         {
-            if (textBox.Text == res)
-            {
-                textBox.Text = String.Empty;
-                textBox.ForeColor = Color.Black;
-                textBox.UseSystemPasswordChar = pass;
-            }
-        }
-
-        public void LeaveText(TextBox textBox, string res, bool pass = false)
-        {
-            if (textBox.Text == String.Empty)
-            {
-                textBox.Text = res;
-                textBox.ForeColor = Color.Gray;
-                textBox.UseSystemPasswordChar = pass;
-            }
+            am.ButtonPaint(sender, e);
         }
     }
 }

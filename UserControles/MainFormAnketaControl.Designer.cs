@@ -160,7 +160,6 @@
             clbPurposes.Name = "clbPurposes";
             clbPurposes.Size = new Size(631, 180);
             clbPurposes.TabIndex = 17;
-            clbPurposes.SelectedIndexChanged += clbPurposes_SelectedIndexChanged;
             // 
             // labelLanguageDifficulty
             // 

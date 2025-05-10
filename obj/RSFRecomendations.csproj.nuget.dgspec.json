@@ -91,7 +91,19 @@
               "target": "Package",
               "version": "[9.0.4, )"
             },
+            "NLog": {
+              "target": "Package",
+              "version": "[5.4.0, )"
+            },
+            "NLog.Config": {
+              "target": "Package",
+              "version": "[4.7.15, )"
+            },
             "NLog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[5.4.0, )"
+            },
+            "NLog.Schema": {
               "target": "Package",
               "version": "[5.4.0, )"
             },

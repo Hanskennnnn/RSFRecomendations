@@ -42,11 +42,6 @@
             /// </summary>
             Advanced
         }
-
-        public FormModel()
-        {
-            Id = Guid.NewGuid();
-        }
         /// <summary>
         /// Уникальный ключ анкеты
         /// </summary>

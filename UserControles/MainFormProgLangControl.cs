@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using NLog;
 using RSFRecomendations.Models;
 
 namespace RSFRecomendations.UserControles
@@ -14,8 +6,10 @@ namespace RSFRecomendations.UserControles
     public partial class MainFormProgLangControl : UserControl
     {
         private readonly MyDBContext db;
+
+        private Logger Log;
         public UserModel User { get; set; }
-        public ProgrammingLanguageModel Python { get; set;}
+        public ProgrammingLanguageModel Python { get; set; }
         public ProgrammingLanguageModel CSharp { get; set; }
         public ProgrammingLanguageModel JavaScript { get; set; }
         public ProgrammingLanguageModel CPlus { get; set; }
@@ -23,6 +17,8 @@ namespace RSFRecomendations.UserControles
         public MainFormProgLangControl(UserModel user)
         {
             InitializeComponent();
+
+            Log = LogManager.GetCurrentClassLogger();
 
             db = new MyDBContext();
 
@@ -102,11 +98,19 @@ namespace RSFRecomendations.UserControles
             db.Add(CPlus);
             db.Add(Java);
             db.SaveChanges();
+
+
+            Log.Info("Переход к форме языков программирования");
         }
 
-        
+
 
         private void listBoxFilteredLanguages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbDescriptionLanguage_TextChanged(object sender, EventArgs e)
         {
 
         }

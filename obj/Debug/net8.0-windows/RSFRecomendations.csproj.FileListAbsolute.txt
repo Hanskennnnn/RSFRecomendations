@@ -278,3 +278,4 @@ C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\
 C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\RSFRecomendations.UserControles.MainFormAnketaControl.resources
 C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\RSFRecomendations.UserControles.MainFormProfileControl.resources
 C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\RSFRecomendations.UserControles.MainFormProgLangControl.resources
+C:\Users\user\source\repos\RSFRecomendations-master\RSFRecomendations\obj\Debug\net8.0-windows\RSFRecomendations.UserControles.MainMenuFirstLogControl.resources

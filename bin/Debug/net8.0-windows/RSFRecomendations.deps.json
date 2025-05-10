@@ -17,7 +17,10 @@
           "Microsoft.Extensions.DependencyInjection": "9.0.4",
           "Microsoft.Extensions.Logging": "9.0.4",
           "Microsoft.Extensions.Logging.Console": "9.0.4",
+          "NLog": "5.4.0",
+          "NLog.Config": "4.7.15",
           "NLog.Extensions.Logging": "5.4.0",
+          "NLog.Schema": "5.4.0",
           "NLog.Web.AspNetCore": "5.4.0",
           "NLog.Windows.Forms": "5.2.3",
           "Npgsql": "9.0.3",
@@ -662,6 +665,12 @@
           }
         }
       },
+      "NLog.Config/4.7.15": {
+        "dependencies": {
+          "NLog": "5.4.0",
+          "NLog.Schema": "5.4.0"
+        }
+      },
       "NLog.Extensions.Logging/5.4.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "9.0.4",
@@ -675,6 +684,7 @@
           }
         }
       },
+      "NLog.Schema/5.4.0": {},
       "NLog.Web.AspNetCore/5.4.0": {
         "dependencies": {
           "NLog.Extensions.Logging": "5.4.0"
@@ -1108,12 +1118,26 @@
       "path": "nlog/5.4.0",
       "hashPath": "nlog.5.4.0.nupkg.sha512"
     },
+    "NLog.Config/4.7.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-njc2NvwgAzEuH609TGO4yqpokcxXFdypHwG3I8hyLYIE4pr+j4KJB4ZhsyODVwkP/n2F2V4uJ24VW4icNyJMcA==",
+      "path": "nlog.config/4.7.15",
+      "hashPath": "nlog.config.4.7.15.nupkg.sha512"
+    },
     "NLog.Extensions.Logging/5.4.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-5T19INfbzRywZpyBGoQChsB/R7eHW9hR4Ml9O22NRjJpfltGIJ+rsoCcjwr2/V/E6i3/eXLTQwRAeDMICjWpTA==",
       "path": "nlog.extensions.logging/5.4.0",
       "hashPath": "nlog.extensions.logging.5.4.0.nupkg.sha512"
+    },
+    "NLog.Schema/5.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SSC0lkZ/KozUNLOk7JTnDkPxVgGS4ycjHY/tZFwn6++3dFqRDA+HDqh5oVsIWo2MDlLgXLl9xerK9sgkipMZvw==",
+      "path": "nlog.schema/5.4.0",
+      "hashPath": "nlog.schema.5.4.0.nupkg.sha512"
     },
     "NLog.Web.AspNetCore/5.4.0": {
       "type": "package",

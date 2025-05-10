@@ -1,15 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data;
+using NLog;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic.ApplicationServices;
 using RSFRecomendations.Models;
 
 namespace RSFRecomendations.UserControles
@@ -17,17 +8,26 @@ namespace RSFRecomendations.UserControles
     public partial class MainFormProfileControl : UserControl
     {
         private readonly MyDBContext db;
+
+        private AdditionalMethodsClass am;
+
+        private Logger Log;
         UserModel User { get; set; }
         public MainFormProfileControl(UserModel user)
         {
             InitializeComponent();
 
             db = new MyDBContext();
+            am = new AdditionalMethodsClass();
 
             User = user;
+            Log = LogManager.GetCurrentClassLogger();
 
-            tbUserNameProfile.Text = User.Name;
+            tbUserLoginProfile.Text = User.Login;
             tbUserEmailProfile.Text = User.Email;
+
+
+            Log.Info("Переход к форме профиля");
         }
 
         private void btAddPictureProfile_Click(object sender, EventArgs e)
@@ -35,62 +35,89 @@ namespace RSFRecomendations.UserControles
 
         }
 
-        private void btnEditProfile_Click(object sender, EventArgs e)
+        private async void btnEditProfile_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(tbUserNameProfile.Text))
+            // Проверка полей
+            if (string.IsNullOrWhiteSpace(tbUserLoginProfile.Text))
             {
-                MessageBox.Show(Properties.Resources.EmptyName);
+                MessageBox.Show(Properties.Resources.EmptyLogin);
+                Log.Warn(Properties.Resources.ChangeEmptyLoginLog);
                 return;
             }
-            if (tbUserNameProfile.Text.Contains(" "))
+            if (tbUserLoginProfile.Text.Contains(" "))
             {
-                MessageBox.Show(Properties.Resources.NoContainsSpaceName);
+                MessageBox.Show(Properties.Resources.NoContainsSpaceLogin);
+                Log.Warn(Properties.Resources.ChangeNoContainsSpaceLoginLog);
                 return;
             }
             if (string.IsNullOrWhiteSpace(tbUserEmailProfile.Text))
             {
                 MessageBox.Show(Properties.Resources.EmptyEmail);
+                Log.Warn(Properties.Resources.ChangeEmptyEmailLog);
                 return;
             }
-            if (!tbUserEmailProfile.Text.Contains('@'))
-            {
-                MessageBox.Show(Properties.Resources.NotSobachkaInEmail);
-                return;
-            }
-            if (tbUserEmailProfile.Text.Contains(" "))
-            {
-                MessageBox.Show(Properties.Resources.NoContainsSpaceEmail);
-                return;
-            }
-            if (!IsValidEmail(tbUserEmailProfile.Text))
+            if (!am.IsValidEmail(tbUserEmailProfile.Text))
             {
                 MessageBox.Show(Properties.Resources.IncorrectMail);
+                Log.Warn(Properties.Resources.ChangeIncorrectMailLog);
                 return;
             }
-            if (User.Name == tbUserNameProfile.Text && User.Email == tbUserEmailProfile.Text)
+            if (User.Login == tbUserLoginProfile.Text && User.Email == tbUserEmailProfile.Text)
             {
                 MessageBox.Show(Properties.Resources.NoEditAnything);
+                Log.Warn(Properties.Resources.ChangeNoEditAnythingLog);
                 return;
             }
 
-            db.Users.
-                Where(c => c.Name == User.Name)
-                .ExecuteUpdate(s =>
-                s.SetProperty(c => c.Name, tbUserNameProfile.Text)
+            // Проверка на сущ логин
+            var usLogin = await db.Users.FirstOrDefaultAsync(c => c.Login == tbUserLoginProfile.Text);
+
+            if (usLogin != null && usLogin.Id != User.Id)
+            {
+                MessageBox.Show(Properties.Resources.UserExistsRegLogin);
+                Log.Warn(Properties.Resources.UserExistsLoginToEdit);
+                tbUserLoginProfile.Text = User.Login;
+                return;
+            }
+
+            // Проверка на сущ почту
+            var usEmail = await db.Users.FirstOrDefaultAsync(c => c.Email == tbUserEmailProfile.Text);
+
+            if (usEmail != null && usEmail.Id != User.Id)
+            {
+                MessageBox.Show(Properties.Resources.UserExistsRegEmail);
+                tbUserEmailProfile.Text = User.Email;
+                Log.Warn(Properties.Resources.UserExistsEmailToEdit);
+                return;
+            }
+            // Изм данных
+            await db.Users.
+                Where(c => c.Login == User.Login)
+                .ExecuteUpdateAsync(s =>
+                s.SetProperty(c => c.Login, tbUserLoginProfile.Text)
                 .SetProperty(c => c.Email, tbUserEmailProfile.Text));
 
+            User.Login = tbUserLoginProfile.Text;
+            User.Email = tbUserEmailProfile.Text;
 
-            MainMenu.User = db.Users.FirstOrDefault(c => c.Name == tbUserNameProfile.Text);
+            MainMenu.User = User;
 
-            db.SaveChanges();
+            await db.SaveChangesAsync();
 
             MessageBox.Show("Изменения успешно сохранены!");
+
+            Log.Info("Успешное изменение данных пользователя");
         }
 
-        private bool IsValidEmail(string email)
+        private void btnEditProfile_Paint(object sender, PaintEventArgs e)
         {
-            string pattern = @"^[^@\s]+@[a-zA-Z]+\.[a-zA-Z]+$";
-            return Regex.IsMatch(email, pattern);
+            am.ButtonPaint(sender, e);
         }
+
+        private void panelToUserInfo_Paint(object sender, PaintEventArgs e)
+        {
+            am.Panel_Paint(panelToUserInfo);
+        }
+
     }
 }

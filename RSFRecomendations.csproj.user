@@ -8,6 +8,9 @@
     <Compile Update="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UserControles\MainMenuFirstLogControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControles\MainFormAnketaControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

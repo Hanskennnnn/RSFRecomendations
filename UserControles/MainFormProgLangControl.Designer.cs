@@ -50,6 +50,7 @@
             tbDescriptionLanguage.Name = "tbDescriptionLanguage";
             tbDescriptionLanguage.Size = new Size(769, 290);
             tbDescriptionLanguage.TabIndex = 12;
+            tbDescriptionLanguage.TextChanged += tbDescriptionLanguage_TextChanged;
             // 
             // lbFilteredLanguages
             // 

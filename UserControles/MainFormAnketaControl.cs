@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using NLog;
 using RSFRecomendations.Models;
 
 namespace RSFRecomendations.UserControles
@@ -16,6 +8,8 @@ namespace RSFRecomendations.UserControles
         private readonly MyDBContext db;
         public UserModel User { get; set; }
 
+        private Logger Log;
+
         public FormModel model { get; set; }
         public MainFormAnketaControl(UserModel user)
         {
@@ -23,6 +17,8 @@ namespace RSFRecomendations.UserControles
 
             db = new MyDBContext();
             model = new FormModel();
+
+            Log = LogManager.GetCurrentClassLogger();
 
             User = user;
 
@@ -35,6 +31,9 @@ namespace RSFRecomendations.UserControles
             clbPurposes.Items.Add("Системное ПО");
             clbPurposes.Items.Add("Серверы");
             clbPurposes.Items.Add("Веб-разработка");
+
+
+            Log.Info("Переход к форме анкеты");
         }
 
         private void btnChoose_Click(object sender, EventArgs e)
@@ -42,9 +41,5 @@ namespace RSFRecomendations.UserControles
 
         }
 
-        private void clbPurposes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

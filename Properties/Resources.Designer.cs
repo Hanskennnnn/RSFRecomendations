@@ -61,6 +61,60 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка изменить данные пользователя с пустой почтой.
+        /// </summary>
+        internal static string ChangeEmptyEmailLog {
+            get {
+                return ResourceManager.GetString("ChangeEmptyEmailLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка изменить данные пользователя с пустым логином.
+        /// </summary>
+        internal static string ChangeEmptyLoginLog {
+            get {
+                return ResourceManager.GetString("ChangeEmptyLoginLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка изменить данны профиля с почтой не по маске &quot;____@__.__&quot;.
+        /// </summary>
+        internal static string ChangeIncorrectMailLog {
+            get {
+                return ResourceManager.GetString("ChangeIncorrectMailLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка изменить данные пользователя с пробелами в почте.
+        /// </summary>
+        internal static string ChangeNoContainsSpaceEmailLog {
+            get {
+                return ResourceManager.GetString("ChangeNoContainsSpaceEmailLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка изменить данные пользователя с пробелами в логине.
+        /// </summary>
+        internal static string ChangeNoContainsSpaceLoginLog {
+            get {
+                return ResourceManager.GetString("ChangeNoContainsSpaceLoginLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка изменить данные ничего не поменяв.
+        /// </summary>
+        internal static string ChangeNoEditAnythingLog {
+            get {
+                return ResourceManager.GetString("ChangeNoEditAnythingLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Вы не ввели почту!.
         /// </summary>
         internal static string EmptyEmail {
@@ -70,16 +124,43 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Вы не ввели имя!.
+        ///   Ищет локализованную строку, похожую на Попытка создания аккаунта с пустой почтой.
         /// </summary>
-        internal static string EmptyName {
+        internal static string EmptyEmailRegLog {
             get {
-                return ResourceManager.GetString("EmptyName", resourceCulture);
+                return ResourceManager.GetString("EmptyEmailRegLog", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Вы не ввели пароль!.
+        ///   Ищет локализованную строку, похожую на Вы не ввели логин!.
+        /// </summary>
+        internal static string EmptyLogin {
+            get {
+                return ResourceManager.GetString("EmptyLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка входа с пустым логином.
+        /// </summary>
+        internal static string EmptyLoginLog {
+            get {
+                return ResourceManager.GetString("EmptyLoginLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытки создания аккаунта с пустым логином.
+        /// </summary>
+        internal static string EmptyLoginRegLog {
+            get {
+                return ResourceManager.GetString("EmptyLoginRegLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Вы не ввели пароль или ввели только пробелы!.
         /// </summary>
         internal static string EmptyPassword {
             get {
@@ -88,11 +169,38 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Вы не ввели повторный пароль!.
+        ///   Ищет локализованную строку, похожую на Попытка входа с пустым паролем.
+        /// </summary>
+        internal static string EmptyPasswordLog {
+            get {
+                return ResourceManager.GetString("EmptyPasswordLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка создания аккаунта с пустым паролем.
+        /// </summary>
+        internal static string EmptyPasswordRegLog {
+            get {
+                return ResourceManager.GetString("EmptyPasswordRegLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Вы не ввели повторный пароль или ввели только пробелы!.
         /// </summary>
         internal static string EmptyRepeatPassword {
             get {
                 return ResourceManager.GetString("EmptyRepeatPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка создания аккаунта с пустым повторным паролем.
+        /// </summary>
+        internal static string EmptyRepeatPasswordRegLog {
+            get {
+                return ResourceManager.GetString("EmptyRepeatPasswordRegLog", resourceCulture);
             }
         }
         
@@ -106,11 +214,11 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Введитя имя.
+        ///   Ищет локализованную строку, похожую на Введите логин.
         /// </summary>
-        internal static string EnterName {
+        internal static string EnterLogin {
             get {
-                return ResourceManager.GetString("EnterName", resourceCulture);
+                return ResourceManager.GetString("EnterLogin", resourceCulture);
             }
         }
         
@@ -133,11 +241,103 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Пользователь нажал кнопку перехода к анкете.
+        /// </summary>
+        internal static string GoAnketaLog {
+            get {
+                return ResourceManager.GetString("GoAnketaLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пользователь нажал на кнопку перехода к главному меню, до заполнения анкеты.
+        /// </summary>
+        internal static string GoFirstMainMenuLog {
+            get {
+                return ResourceManager.GetString("GoFirstMainMenuLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пользователь нажал на кнопку перехода к главному меню.
+        /// </summary>
+        internal static string GoMainMenuLog {
+            get {
+                return ResourceManager.GetString("GoMainMenuLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пользователь нажал кнопку перехода к профилю.
+        /// </summary>
+        internal static string GoProfileLog {
+            get {
+                return ResourceManager.GetString("GoProfileLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пользователь нажал кнопку перехода к языкам программирования.
+        /// </summary>
+        internal static string GoProgLangLog {
+            get {
+                return ResourceManager.GetString("GoProgLangLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Почта должна быть вида &quot;____@__.__&quot;!.
         /// </summary>
         internal static string IncorrectMail {
             get {
                 return ResourceManager.GetString("IncorrectMail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка создания аккаунта с почтой не по маске &quot;____@__.__&quot;.
+        /// </summary>
+        internal static string IncorrectMailLog {
+            get {
+                return ResourceManager.GetString("IncorrectMailLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на В пароле должно быть минимум 8 символов!.
+        /// </summary>
+        internal static string LengthPassword {
+            get {
+                return ResourceManager.GetString("LengthPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка создания аккаунта с паролем, у которого меньше 8 символов.
+        /// </summary>
+        internal static string LengthPasswordRegLog {
+            get {
+                return ResourceManager.GetString("LengthPasswordRegLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MainMenuFirst {
+            get {
+                object obj = ResourceManager.GetObject("MainMenuFirst", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MainMenuFirstLog {
+            get {
+                object obj = ResourceManager.GetObject("MainMenuFirstLog", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -153,9 +353,27 @@ namespace RSFRecomendations.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на Имя не может содержать пробелы!.
         /// </summary>
-        internal static string NoContainsSpaceName {
+        internal static string NoContainsSpaceLogin {
             get {
-                return ResourceManager.GetString("NoContainsSpaceName", resourceCulture);
+                return ResourceManager.GetString("NoContainsSpaceLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка входа с пробелами в логине.
+        /// </summary>
+        internal static string NoContainsSpaceLoginLog {
+            get {
+                return ResourceManager.GetString("NoContainsSpaceLoginLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка создания аккаунта с пробелами в логине.
+        /// </summary>
+        internal static string NoContainsSpaceLoginRegLog {
+            get {
+                return ResourceManager.GetString("NoContainsSpaceLoginRegLog", resourceCulture);
             }
         }
         
@@ -165,6 +383,42 @@ namespace RSFRecomendations.Properties {
         internal static string NoContainsSpacePassword {
             get {
                 return ResourceManager.GetString("NoContainsSpacePassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Повторный пароль не может содержать пробелы!.
+        /// </summary>
+        internal static string NoContainsSpacePassword2 {
+            get {
+                return ResourceManager.GetString("NoContainsSpacePassword2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка создания аккаунта с пробелами в повторном пароле.
+        /// </summary>
+        internal static string NoContainsSpacePassword2RegLog {
+            get {
+                return ResourceManager.GetString("NoContainsSpacePassword2RegLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка входа с пробелами в пароле.
+        /// </summary>
+        internal static string NoContainsSpacePasswordLog {
+            get {
+                return ResourceManager.GetString("NoContainsSpacePasswordLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка создания аккаунта с пробелами в пароле.
+        /// </summary>
+        internal static string NoContainsSpacePasswordRegLog {
+            get {
+                return ResourceManager.GetString("NoContainsSpacePasswordRegLog", resourceCulture);
             }
         }
         
@@ -187,11 +441,20 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Пользователя с таким именем не существует!.
+        ///   Ищет локализованную строку, похожую на Пользователя с таким логином не существует!.
         /// </summary>
         internal static string NoUser {
             get {
                 return ResourceManager.GetString("NoUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка входа с несуществующим логином.
+        /// </summary>
+        internal static string NoUserLog {
+            get {
+                return ResourceManager.GetString("NoUserLog", resourceCulture);
             }
         }
         
@@ -201,6 +464,25 @@ namespace RSFRecomendations.Properties {
         internal static string PasswordsDontMatch {
             get {
                 return ResourceManager.GetString("PasswordsDontMatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка создания аккаунта с не правильным повторяющим паролем.
+        /// </summary>
+        internal static string PasswordsDontMatchRegLog {
+            get {
+                return ResourceManager.GetString("PasswordsDontMatchRegLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Register {
+            get {
+                object obj = ResourceManager.GetObject("Register", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -215,11 +497,56 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Пользователь с таким именем уже сущетсвует!.
+        ///   Ищет локализованную строку, похожую на Попытка изменить почту на уже существующую.
         /// </summary>
-        internal static string UserExists {
+        internal static string UserExistsEmailToEdit {
             get {
-                return ResourceManager.GetString("UserExists", resourceCulture);
+                return ResourceManager.GetString("UserExistsEmailToEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка изменить логин на уже существующий.
+        /// </summary>
+        internal static string UserExistsLoginToEdit {
+            get {
+                return ResourceManager.GetString("UserExistsLoginToEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пользователь с такой почтой уже существует.
+        /// </summary>
+        internal static string UserExistsRegEmail {
+            get {
+                return ResourceManager.GetString("UserExistsRegEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка создать аккаунт уже с существующей почтой.
+        /// </summary>
+        internal static string UserExistsRegEmailLog {
+            get {
+                return ResourceManager.GetString("UserExistsRegEmailLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пользователь с таким логином уже сущетсвует!.
+        /// </summary>
+        internal static string UserExistsRegLogin {
+            get {
+                return ResourceManager.GetString("UserExistsRegLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка создать аккаунт уже с существующим логином.
+        /// </summary>
+        internal static string UserExistsRegLoginLog {
+            get {
+                return ResourceManager.GetString("UserExistsRegLoginLog", resourceCulture);
             }
         }
         
@@ -233,11 +560,40 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка входа с не правильным паролем.
+        /// </summary>
+        internal static string WrongPasswordLog {
+            get {
+                return ResourceManager.GetString("WrongPasswordLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Без {
             get {
                 object obj = ResourceManager.GetObject("Без", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Снимок_экрана_2025_05_03_192332 {
+            get {
+                object obj = ResourceManager.GetObject("Снимок экрана 2025-05-03 192332", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Снимок_экрана_2025_05_03_192336 {
+            get {
+                object obj = ResourceManager.GetObject("Снимок экрана 2025-05-03 192336", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

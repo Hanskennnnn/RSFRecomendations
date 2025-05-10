@@ -32,7 +32,7 @@
             linkLabelToRegistration = new LinkLabel();
             buttonLogin = new Button();
             textBoxLogPassword = new TextBox();
-            textBoxLogName = new TextBox();
+            textBoxLogLogin = new TextBox();
             labelLogin = new Label();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -42,62 +42,72 @@
             panel2.Controls.Add(linkLabelToRegistration);
             panel2.Controls.Add(buttonLogin);
             panel2.Controls.Add(textBoxLogPassword);
-            panel2.Controls.Add(textBoxLogName);
+            panel2.Controls.Add(textBoxLogLogin);
             panel2.Controls.Add(labelLogin);
             panel2.Location = new Point(1, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(515, 502);
+            panel2.Size = new Size(503, 502);
             panel2.TabIndex = 13;
+            panel2.BackColor = Color.White;
             // 
             // linkLabelToRegistration
             // 
             linkLabelToRegistration.AutoSize = true;
-            linkLabelToRegistration.Location = new Point(364, 473);
+            linkLabelToRegistration.Location = new Point(169, 351);
             linkLabelToRegistration.Name = "linkLabelToRegistration";
-            linkLabelToRegistration.Size = new Size(135, 20);
+            linkLabelToRegistration.Size = new Size(143, 20);
             linkLabelToRegistration.TabIndex = 11;
             linkLabelToRegistration.TabStop = true;
-            linkLabelToRegistration.Text = "Еще нет аккаунта?";
+            linkLabelToRegistration.Text = "У вас нет аккаунта?";
             linkLabelToRegistration.LinkClicked += linkLabelToRegistration_LinkClicked;
             // 
             // buttonLogin
             // 
-            buttonLogin.Font = new Font("Segoe UI", 13F);
-            buttonLogin.Location = new Point(123, 306);
+            buttonLogin.BackColor = Color.FromArgb(125, 115, 235);
+            buttonLogin.FlatAppearance.BorderSize = 0;
+            buttonLogin.FlatStyle = FlatStyle.Flat;
+            buttonLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            buttonLogin.ForeColor = Color.White;
+            buttonLogin.Location = new Point(119, 279);
             buttonLogin.Name = "buttonLogin";
-            buttonLogin.Size = new Size(254, 60);
+            buttonLogin.Size = new Size(250, 60);
             buttonLogin.TabIndex = 10;
             buttonLogin.Text = "Войти";
-            buttonLogin.UseVisualStyleBackColor = true;
+            buttonLogin.UseVisualStyleBackColor = false;
             buttonLogin.Click += buttonLogin_Click;
+            buttonLogin.Paint += buttonLogin_Paint;
             // 
             // textBoxLogPassword
             // 
             textBoxLogPassword.Font = new Font("Segoe UI", 16F);
-            textBoxLogPassword.Location = new Point(33, 204);
+            textBoxLogPassword.Location = new Point(73, 217);
             textBoxLogPassword.Name = "textBoxLogPassword";
-            textBoxLogPassword.Size = new Size(448, 43);
+            textBoxLogPassword.Size = new Size(342, 43);
             textBoxLogPassword.TabIndex = 7;
             textBoxLogPassword.Enter += textBoxLogPassword_Enter;
             textBoxLogPassword.Leave += textBoxLogPassword_Leave;
+            textBoxLogPassword.BorderStyle = BorderStyle.FixedSingle;
+            textBoxLogPassword.BackColor = SystemColors.Window; 
             // 
-            // textBoxLogName
+            // textBoxLogLogin
             // 
-            textBoxLogName.Font = new Font("Segoe UI", 16F);
-            textBoxLogName.Location = new Point(33, 144);
-            textBoxLogName.Name = "textBoxLogName";
-            textBoxLogName.Size = new Size(448, 43);
-            textBoxLogName.TabIndex = 6;
-            textBoxLogName.Enter += textBoxLogName_Enter;
-            textBoxLogName.Leave += textBoxLogName_Leave;
+            textBoxLogLogin.Font = new Font("Segoe UI", 16F);
+            textBoxLogLogin.Location = new Point(73, 157);
+            textBoxLogLogin.Name = "textBoxLogLogin";
+            textBoxLogLogin.Size = new Size(342, 43);
+            textBoxLogLogin.TabIndex = 6;
+            textBoxLogLogin.Enter += textBoxLogLogin_Enter;
+            textBoxLogLogin.Leave += textBoxLogLogin_Leave;
+            textBoxLogLogin.BorderStyle = BorderStyle.FixedSingle;
+            textBoxLogLogin.BackColor = SystemColors.Window; 
             // 
             // labelLogin
             // 
             labelLogin.AutoSize = true;
-            labelLogin.Font = new Font("Segoe UI", 13F);
-            labelLogin.Location = new Point(217, 66);
+            labelLogin.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            labelLogin.Location = new Point(210, 86);
             labelLogin.Name = "labelLogin";
-            labelLogin.Size = new Size(71, 30);
+            labelLogin.Size = new Size(75, 30);
             labelLogin.TabIndex = 0;
             labelLogin.Text = "ВХОД";
             // 
@@ -105,10 +115,11 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(516, 502);
+            ClientSize = new Size(484, 502);
             Controls.Add(panel2);
+            MinimizeBox = false;
             Name = "LoginForm";
-            Text = "LoginForm";
+            Text = "Вход";
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
@@ -120,7 +131,7 @@
         private LinkLabel linkLabelToRegistration;
         private Button buttonLogin;
         private TextBox textBoxLogPassword;
-        private TextBox textBoxLogName;
+        private TextBox textBoxLogLogin;
         private Label labelLogin;
     }
 }

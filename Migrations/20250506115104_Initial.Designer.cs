@@ -13,7 +13,7 @@ using RSFRecomendations;
 namespace RSFRecomendations.Migrations
 {
     [DbContext(typeof(MyDBContext))]
-    [Migration("20250430185754_Initial")]
+    [Migration("20250506115104_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -88,13 +88,17 @@ namespace RSFRecomendations.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Login")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Password")
+                    b.Property<byte[]>("Password")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("bytea");
+
+                    b.Property<byte[]>("Salt")
+                        .IsRequired()
+                        .HasColumnType("bytea");
 
                     b.HasKey("Id");
 

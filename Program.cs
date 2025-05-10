@@ -1,12 +1,6 @@
-using Npgsql.EntityFrameworkCore.PostgreSQL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.IO;
-using System.Windows.Forms;
-using RSFRecomendations;
-
 
 namespace RSFRecomendations
 {
@@ -32,6 +26,25 @@ namespace RSFRecomendations
                 options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
             var serviceProvider = services.BuildServiceProvider();
+
+            var config = new NLog.Config.LoggingConfiguration();
+
+            var logfile = new NLog.Targets.FileTarget("logfile")
+            {
+                FileName = "log.txt"
+            };
+
+            config.AddRule(NLog.LogLevel.Trace, NLog.LogLevel.Fatal, logfile);
+
+            NLog.LogManager.Configuration = config;
+
+            var logger = NLog.LogManager.GetCurrentClassLogger();
+
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+
 
             Application.Run(new LoginForm());
 

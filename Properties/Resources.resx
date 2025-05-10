@@ -117,26 +117,57 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="NoContainsSpaceLogin" xml:space="preserve">
+    <value>Имя не может содержать пробелы!</value>
+  </data>
+  <data name="EnterLogin" xml:space="preserve">
+    <value>Введите логин</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Register" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Register1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="NoUser" xml:space="preserve">
-    <value>Пользователя с таким именем не существует!</value>
+    <value>Пользователя с таким логином не существует!</value>
   </data>
-  <data name="UserExists" xml:space="preserve">
-    <value>Пользователь с таким именем уже сущетсвует!</value>
+  <data name="UserExistsRegLogin" xml:space="preserve">
+    <value>Пользователь с таким логином уже сущетсвует!</value>
   </data>
-  <data name="EmptyRepeatPassword" xml:space="preserve">
-    <value>Вы не ввели повторный пароль!</value>
+  <data name="TeamRSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\TeamRSF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EnterName" xml:space="preserve">
-    <value>Введитя имя</value>
+  <data name="NoEditAnything" xml:space="preserve">
+    <value>Вы ничего не изменили!</value>
+  </data>
+  <data name="NoContainsSpacePassword" xml:space="preserve">
+    <value>Пароль не может содержать пробелы!</value>
   </data>
   <data name="EmptyPassword" xml:space="preserve">
-    <value>Вы не ввели пароль!</value>
+    <value>Вы не ввели пароль или ввели только пробелы!</value>
+  </data>
+  <data name="MainMenuFirstLog" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MainMenuFirstLog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EnterEmail" xml:space="preserve">
     <value>Введите почту</value>
   </data>
-  <data name="EmptyName" xml:space="preserve">
-    <value>Вы не ввели имя!</value>
+  <data name="Снимок экрана 2025-05-03 192332" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Снимок экрана 2025-05-03 192332.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LengthPassword" xml:space="preserve">
+    <value>В пароле должно быть минимум 8 символов!</value>
+  </data>
+  <data name="Без" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Без.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Снимок экрана 2025-05-03 192336" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Снимок экрана 2025-05-03 192336.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EmptyLogin" xml:space="preserve">
+    <value>Вы не ввели логин!</value>
+  </data>
+  <data name="IncorrectMail" xml:space="preserve">
+    <value>Почта должна быть вида "____@__.__"!</value>
   </data>
   <data name="PasswordsDontMatch" xml:space="preserve">
     <value>Ваши пароли не совпадают!</value>
@@ -150,32 +181,118 @@
   <data name="EmptyEmail" xml:space="preserve">
     <value>Вы не ввели почту!</value>
   </data>
+  <data name="EmptyRepeatPassword" xml:space="preserve">
+    <value>Вы не ввели повторный пароль или ввели только пробелы!</value>
+  </data>
   <data name="EnterRepeatPassword" xml:space="preserve">
     <value>Введите пароль повторно</value>
   </data>
   <data name="EnterPassword" xml:space="preserve">
     <value>Введите пароль</value>
   </data>
-  <data name="NoEditAnything" xml:space="preserve">
-    <value>Вы ничего не изменили!</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Без" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Без.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TeamRSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\TeamRSF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="NoContainsSpaceName" xml:space="preserve">
-    <value>Имя не может содержать пробелы!</value>
-  </data>
   <data name="NoContainsSpaceEmail" xml:space="preserve">
     <value>Почта не может содержать пробелы!</value>
   </data>
-  <data name="NoContainsSpacePassword" xml:space="preserve">
-    <value>Пароль не может содержать пробелы!</value>
+  <data name="MainMenuFirst" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MainMenuFirst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IncorrectMail" xml:space="preserve">
-    <value>Почта должна быть вида "____@__.__"!</value>
+  <data name="EmptyLoginLog" xml:space="preserve">
+    <value>Попытка входа с пустым логином</value>
+  </data>
+  <data name="NoContainsSpaceLoginLog" xml:space="preserve">
+    <value>Попытка входа с пробелами в логине</value>
+  </data>
+  <data name="EmptyPasswordLog" xml:space="preserve">
+    <value>Попытка входа с пустым паролем</value>
+  </data>
+  <data name="NoContainsSpacePasswordLog" xml:space="preserve">
+    <value>Попытка входа с пробелами в пароле</value>
+  </data>
+  <data name="NoUserLog" xml:space="preserve">
+    <value>Попытка входа с несуществующим логином</value>
+  </data>
+  <data name="WrongPasswordLog" xml:space="preserve">
+    <value>Попытка входа с не правильным паролем</value>
+  </data>
+  <data name="EmptyLoginRegLog" xml:space="preserve">
+    <value>Попытки создания аккаунта с пустым логином</value>
+  </data>
+  <data name="NoContainsSpaceLoginRegLog" xml:space="preserve">
+    <value>Попытка создания аккаунта с пробелами в логине</value>
+  </data>
+  <data name="EmptyEmailRegLog" xml:space="preserve">
+    <value>Попытка создания аккаунта с пустой почтой</value>
+  </data>
+  <data name="IncorrectMailLog" xml:space="preserve">
+    <value>Попытка создания аккаунта с почтой не по маске "____@__.__"</value>
+  </data>
+  <data name="EmptyPasswordRegLog" xml:space="preserve">
+    <value>Попытка создания аккаунта с пустым паролем</value>
+  </data>
+  <data name="NoContainsSpacePasswordRegLog" xml:space="preserve">
+    <value>Попытка создания аккаунта с пробелами в пароле</value>
+  </data>
+  <data name="EmptyRepeatPasswordRegLog" xml:space="preserve">
+    <value>Попытка создания аккаунта с пустым повторным паролем</value>
+  </data>
+  <data name="PasswordsDontMatchRegLog" xml:space="preserve">
+    <value>Попытка создания аккаунта с не правильным повторяющим паролем</value>
+  </data>
+  <data name="LengthPasswordRegLog" xml:space="preserve">
+    <value>Попытка создания аккаунта с паролем, у которого меньше 8 символов</value>
+  </data>
+  <data name="NoContainsSpacePassword2" xml:space="preserve">
+    <value>Повторный пароль не может содержать пробелы!</value>
+  </data>
+  <data name="NoContainsSpacePassword2RegLog" xml:space="preserve">
+    <value>Попытка создания аккаунта с пробелами в повторном пароле</value>
+  </data>
+  <data name="UserExistsRegLoginLog" xml:space="preserve">
+    <value>Попытка создать аккаунт уже с существующим логином</value>
+  </data>
+  <data name="GoAnketaLog" xml:space="preserve">
+    <value>Пользователь нажал кнопку перехода к анкете</value>
+  </data>
+  <data name="GoProgLangLog" xml:space="preserve">
+    <value>Пользователь нажал кнопку перехода к языкам программирования</value>
+  </data>
+  <data name="GoProfileLog" xml:space="preserve">
+    <value>Пользователь нажал кнопку перехода к профилю</value>
+  </data>
+  <data name="GoFirstMainMenuLog" xml:space="preserve">
+    <value>Пользователь нажал на кнопку перехода к главному меню, до заполнения анкеты</value>
+  </data>
+  <data name="GoMainMenuLog" xml:space="preserve">
+    <value>Пользователь нажал на кнопку перехода к главному меню</value>
+  </data>
+  <data name="ChangeEmptyLoginLog" xml:space="preserve">
+    <value>Попытка изменить данные пользователя с пустым логином</value>
+  </data>
+  <data name="ChangeNoContainsSpaceLoginLog" xml:space="preserve">
+    <value>Попытка изменить данные пользователя с пробелами в логине</value>
+  </data>
+  <data name="ChangeEmptyEmailLog" xml:space="preserve">
+    <value>Попытка изменить данные пользователя с пустой почтой</value>
+  </data>
+  <data name="ChangeNoContainsSpaceEmailLog" xml:space="preserve">
+    <value>Попытка изменить данные пользователя с пробелами в почте</value>
+  </data>
+  <data name="ChangeIncorrectMailLog" xml:space="preserve">
+    <value>Попытка изменить данны профиля с почтой не по маске "____@__.__"</value>
+  </data>
+  <data name="ChangeNoEditAnythingLog" xml:space="preserve">
+    <value>Попытка изменить данные ничего не поменяв</value>
+  </data>
+  <data name="UserExistsLoginToEdit" xml:space="preserve">
+    <value>Попытка изменить логин на уже существующий</value>
+  </data>
+  <data name="UserExistsEmailToEdit" xml:space="preserve">
+    <value>Попытка изменить почту на уже существующую</value>
+  </data>
+  <data name="UserExistsRegEmail" xml:space="preserve">
+    <value>Пользователь с такой почтой уже существует</value>
+  </data>
+  <data name="UserExistsRegEmailLog" xml:space="preserve">
+    <value>Попытка создать аккаунт уже с существующей почтой</value>
   </data>
 </root>

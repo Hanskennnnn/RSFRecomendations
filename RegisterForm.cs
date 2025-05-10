@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Security.Cryptography;
 using Microsoft.EntityFrameworkCore;
+using NLog;
 using RSFRecomendations.Models;
 
 namespace RSFRecomendations
@@ -16,20 +8,39 @@ namespace RSFRecomendations
     public partial class RegisterForm : Form
     {
         private readonly MyDBContext db;
+
+        private AdditionalMethodsClass am;
+
+        private Logger Log;
         public RegisterForm()
         {
             InitializeComponent();
 
             db = new MyDBContext();
+            am = new AdditionalMethodsClass();
 
-            textBoxRegName.Text = Properties.Resources.EnterName;
-            textBoxRegName.ForeColor = Color.Gray;
+            Log = LogManager.GetCurrentClassLogger();
+
+            textBoxRegLogin.Text = Properties.Resources.EnterLogin;
+            textBoxRegLogin.ForeColor = Color.Gray;
+            textBoxRegLogin.Tag = "Mask";
             textBoxRegEmail.Text = Properties.Resources.EnterEmail;
             textBoxRegEmail.ForeColor = Color.Gray;
+            textBoxRegEmail.Tag = "Mask";
             textBoxRegPassword.Text = Properties.Resources.EnterPassword;
             textBoxRegPassword.ForeColor = Color.Gray;
+            textBoxRegPassword.Tag = "Mask";
             textBoxRegPassword2.Text = Properties.Resources.EnterRepeatPassword;
             textBoxRegPassword2.ForeColor = Color.Gray;
+            textBoxRegPassword2.Tag = "Mask";
+
+            textBoxRegLogin.BorderStyle = BorderStyle.FixedSingle;
+            textBoxRegEmail.BorderStyle = BorderStyle.FixedSingle;
+            textBoxRegPassword.BorderStyle = BorderStyle.FixedSingle;
+            textBoxRegPassword2.BorderStyle = BorderStyle.FixedSingle;
+
+            Log.Info("Переход к форме регистрации");
+
         }
 
         private void linkLabelToLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -37,156 +48,185 @@ namespace RSFRecomendations
             this.Hide();
             var loginForm = new LoginForm();
             loginForm.Show();
+
+            Log.Info("Переход к форме входа по ссылке 'Уже есть аккаунт?'");
         }
 
-        private void buttonRegister_Click(object sender, EventArgs e)
+        private async void buttonRegister_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBoxRegName.Text))
+            //  Проверка полей
+            if (string.IsNullOrWhiteSpace(textBoxRegLogin.Text) || textBoxRegLogin.Tag?.ToString() == "Mask")
             {
-                MessageBox.Show(Properties.Resources.EmptyName);
+                MessageBox.Show(Properties.Resources.EmptyLogin);
+                Log.Warn(Properties.Resources.EmptyLoginRegLog);
                 return;
             }
-            if (textBoxRegName.Text.Contains(" "))
+            if (textBoxRegLogin.Text.Contains(" "))
             {
-                MessageBox.Show(Properties.Resources.NoContainsSpaceName);
+                MessageBox.Show(Properties.Resources.NoContainsSpaceLogin);
+                Log.Warn(Properties.Resources.NoContainsSpaceLoginRegLog);
                 return;
             }
-            if (string.IsNullOrWhiteSpace(textBoxRegEmail.Text))
+            if (string.IsNullOrWhiteSpace(textBoxRegEmail.Text) || textBoxRegEmail.Tag?.ToString() == "Mask")
             {
                 MessageBox.Show(Properties.Resources.EmptyEmail);
+                Log.Warn(Properties.Resources.EmptyEmailRegLog);
                 return;
             }
-            if (!textBoxRegEmail.Text.Contains('@'))
-            {
-                MessageBox.Show(Properties.Resources.NotSobachkaInEmail);
-                return;
-            }
-            if (textBoxRegEmail.Text.Contains(" "))
-            {
-                MessageBox.Show(Properties.Resources.NoContainsSpaceEmail);
-                return;
-            }
-            if (!IsValidEmail(textBoxRegEmail.Text))
+            if (!am.IsValidEmail(textBoxRegEmail.Text))
             {
                 MessageBox.Show(Properties.Resources.IncorrectMail);
+                Log.Warn(Properties.Resources.IncorrectMailLog);
                 return;
             }
-            if (string.IsNullOrWhiteSpace(textBoxRegPassword.Text))
+            if (string.IsNullOrWhiteSpace(textBoxRegPassword.Text) || textBoxRegPassword.Tag?.ToString() == "Mask")
             {
                 MessageBox.Show(Properties.Resources.EmptyPassword);
+                Log.Warn(Properties.Resources.EmptyPasswordRegLog);
                 return;
             }
             if (textBoxRegPassword.Text.Contains(" "))
             {
                 MessageBox.Show(Properties.Resources.NoContainsSpacePassword);
+                Log.Warn(Properties.Resources.NoContainsSpacePasswordRegLog);
                 return;
             }
-            if (string.IsNullOrWhiteSpace(textBoxRegPassword2.Text))
+            if (string.IsNullOrWhiteSpace(textBoxRegPassword2.Text) || textBoxRegPassword2.Tag?.ToString() == "Mask")
             {
                 MessageBox.Show(Properties.Resources.EmptyRepeatPassword);
+                Log.Warn(Properties.Resources.EmptyRepeatPasswordRegLog);
+                return;
+            }
+            if (textBoxRegPassword2.Text.Contains(" "))
+            {
+                MessageBox.Show(Properties.Resources.NoContainsSpacePassword2);
+                Log.Warn(Properties.Resources.NoContainsSpacePassword2RegLog);
                 return;
             }
             if (textBoxRegPassword.Text != textBoxRegPassword2.Text)
             {
                 MessageBox.Show(Properties.Resources.PasswordsDontMatch);
+                Log.Warn(Properties.Resources.PasswordsDontMatchRegLog);
                 return;
             }
-            if (textBoxRegPassword2.Text.Contains(" "))
+            if (textBoxRegPassword.TextLength < 8)
             {
-                MessageBox.Show(Properties.Resources.NoContainsSpacePassword);
+                MessageBox.Show(Properties.Resources.LengthPassword);
+                Log.Warn(Properties.Resources.LengthPasswordRegLog);
                 return;
             }
 
-            var us = db.Users.FirstOrDefault(c => c.Name == textBoxRegName.Text);
-
-            if (us != null)
+            // Проверка на сущ логина
+            var usLogin = await db.Users.FirstOrDefaultAsync(c => c.Login == textBoxRegLogin.Text);
+            if (usLogin != null)
             {
-                MessageBox.Show(Properties.Resources.UserExists);
+                MessageBox.Show(Properties.Resources.UserExistsRegLogin);
+                Log.Warn(Properties.Resources.UserExistsRegLoginLog);
                 return;
             }
 
+            // Проверка на сущ почты
+            var usEmail = await db.Users.FirstOrDefaultAsync(c => c.Email == textBoxRegEmail.Text);
+            if (usEmail != null)
+            {
+                MessageBox.Show(Properties.Resources.UserExistsRegEmail);
+                Log.Warn(Properties.Resources.UserExistsRegEmailLog);
+                return;
+            }
+
+            // Создание случ соли для хэш пароля
+            var salt = new byte[16];
+            RandomNumberGenerator.Fill(salt);
+
+            // хэш пароля
+            var saltedPassword = am.HashPassword(textBoxRegPassword.Text, salt);
+
+            // Созд и сохр пользователя
             var user = new UserModel
             {
-                Name = textBoxRegName.Text,
+                Id = Guid.NewGuid(),
+                Login = textBoxRegLogin.Text,
                 Email = textBoxRegEmail.Text,
-                Password = textBoxRegPassword.Text
+                Password = saltedPassword,
+                Salt = salt
             };
 
-            db.Add(user);
-            db.SaveChanges();
+            await db.AddAsync(user);
+            await db.SaveChangesAsync();
 
-            MessageBox.Show("Регистрация прошла успешно!!!");
+            MessageBox.Show("Регистрация прошла успешно!");
 
 
             this.Hide();
             var loginForm = new LoginForm();
             loginForm.Show();
-        }
 
-        private bool IsValidEmail(string email)
-        {
-            string pattern = @"^[^@\s]+@[a-zA-Z]+\.[a-zA-Z]+$";
-            return Regex.IsMatch(email, pattern);
-        }
-
-        public void EnterText(TextBox textBox, string res, bool pass = false)
-        {
-            if (textBox.Text == res)
-            {
-                textBox.Text = String.Empty;
-                textBox.ForeColor = Color.Black;
-                textBox.UseSystemPasswordChar = pass;
-            }
-        }
-
-        public void LeaveText(TextBox textBox, string res, bool pass = false)
-        {
-            if (textBox.Text == String.Empty)
-            {
-                textBox.Text = res;
-                textBox.ForeColor = Color.Gray;
-                textBox.UseSystemPasswordChar = pass;
-            }
+            Log.Info("Успешная регистрация");
         }
 
         private void textBoxRegName_Enter(object sender, EventArgs e)
         {
-            EnterText(textBoxRegName, Properties.Resources.EnterName);
+            am.EnterText(textBoxRegLogin, Properties.Resources.EnterLogin);
         }
 
         private void textBoxRegName_Leave(object sender, EventArgs e)
         {
-            LeaveText(textBoxRegName, Properties.Resources.EnterName);
+            am.LeaveText(textBoxRegLogin, Properties.Resources.EnterLogin);
         }
 
         private void textBoxRegEmail_Enter(object sender, EventArgs e)
         {
-            EnterText(textBoxRegEmail, Properties.Resources.EnterEmail);
+            am.EnterText(textBoxRegEmail, Properties.Resources.EnterEmail);
         }
 
         private void textBoxRegEmail_Leave(object sender, EventArgs e)
         {
-            LeaveText(textBoxRegEmail, Properties.Resources.EnterEmail);
+            am.LeaveText(textBoxRegEmail, Properties.Resources.EnterEmail);
         }
 
         private void textBoxRegPassword_Enter(object sender, EventArgs e)
         {
-            EnterText(textBoxRegPassword, Properties.Resources.EnterPassword, true);
+            am.EnterText(textBoxRegPassword, Properties.Resources.EnterPassword, true);
         }
 
         private void textBoxRegPassword_Leave(object sender, EventArgs e)
         {
-            LeaveText(textBoxRegPassword, Properties.Resources.EnterPassword);
+            am.LeaveText(textBoxRegPassword, Properties.Resources.EnterPassword);
         }
 
         private void textBoxRegPassword2_Enter(object sender, EventArgs e)
         {
-            EnterText(textBoxRegPassword2, Properties.Resources.EnterRepeatPassword, true);
+            am.EnterText(textBoxRegPassword2, Properties.Resources.EnterRepeatPassword, true);
         }
 
         private void textBoxRegPassword2_Leave(object sender, EventArgs e)
         {
-            LeaveText(textBoxRegPassword2, Properties.Resources.EnterRepeatPassword);
+            am.LeaveText(textBoxRegPassword2, Properties.Resources.EnterRepeatPassword);
+        }
+
+        private void labelVisitPassword_Click(object sender, EventArgs e)
+        {
+            am.VisitPassword(labelVisitPassword,textBoxRegPassword);
+        }
+
+        private void labelHidePassword_Click(object sender, EventArgs e)
+        {
+            am.HidePassword(labelVisitPassword, textBoxRegPassword);
+        }
+
+        private void labelVisitPassword2_Click(object sender, EventArgs e)
+        {
+            am.VisitPassword(labelVisitPassword2, textBoxRegPassword2);
+        }
+
+        private void labelHidePassword2_Click(object sender, EventArgs e)
+        {
+            am.HidePassword(labelVisitPassword2, textBoxRegPassword2);
+        }
+
+        private void buttonRegister_Paint(object sender, PaintEventArgs e)
+        {
+            am.ButtonPaint(sender, e);
         }
     }
 }
