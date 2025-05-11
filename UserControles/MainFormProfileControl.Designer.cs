@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panelToUserInfo = new Panel();
+            buttonAddImage = new Button();
             btnEditProfile = new Button();
             pbImageUser = new PictureBox();
             tbUserEmailProfile = new TextBox();
@@ -41,6 +42,7 @@
             // panelToUserInfo
             // 
             panelToUserInfo.BackColor = Color.White;
+            panelToUserInfo.Controls.Add(buttonAddImage);
             panelToUserInfo.Controls.Add(btnEditProfile);
             panelToUserInfo.Controls.Add(pbImageUser);
             panelToUserInfo.Controls.Add(tbUserEmailProfile);
@@ -51,6 +53,22 @@
             panelToUserInfo.TabIndex = 3;
             panelToUserInfo.Paint += panelToUserInfo_Paint;
             // 
+            // buttonAddImage
+            // 
+            buttonAddImage.BackColor = Color.FromArgb(125, 115, 235);
+            buttonAddImage.FlatAppearance.BorderSize = 0;
+            buttonAddImage.FlatStyle = FlatStyle.Flat;
+            buttonAddImage.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            buttonAddImage.ForeColor = Color.White;
+            buttonAddImage.Location = new Point(275, 375);
+            buttonAddImage.Name = "buttonAddImage";
+            buttonAddImage.Size = new Size(278, 61);
+            buttonAddImage.TabIndex = 6;
+            buttonAddImage.Text = "Изменить фото профиля";
+            buttonAddImage.UseVisualStyleBackColor = false;
+            buttonAddImage.Click += buttonAddImage_Click;
+            buttonAddImage.Paint += buttonAddImage_Paint;
+            // 
             // btnEditProfile
             // 
             btnEditProfile.BackColor = Color.FromArgb(125, 115, 235);
@@ -58,9 +76,9 @@
             btnEditProfile.FlatStyle = FlatStyle.Flat;
             btnEditProfile.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEditProfile.ForeColor = Color.White;
-            btnEditProfile.Location = new Point(286, 312);
+            btnEditProfile.Location = new Point(275, 297);
             btnEditProfile.Name = "btnEditProfile";
-            btnEditProfile.Size = new Size(228, 61);
+            btnEditProfile.Size = new Size(278, 61);
             btnEditProfile.TabIndex = 2;
             btnEditProfile.Text = "Редактировать";
             btnEditProfile.UseVisualStyleBackColor = false;
@@ -69,7 +87,6 @@
             // 
             // pbImageUser
             // 
-            pbImageUser.Image = Properties.Resources.Без;
             pbImageUser.Location = new Point(331, 18);
             pbImageUser.Name = "pbImageUser";
             pbImageUser.Size = new Size(148, 150);
@@ -127,5 +144,6 @@
         private TextBox tbUserLoginProfile;
         private PictureBox pbImageUser;
         private Label labelMainProfile;
+        private Button buttonAddImage;
     }
 }

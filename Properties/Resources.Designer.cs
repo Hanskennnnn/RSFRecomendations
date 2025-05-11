@@ -61,6 +61,16 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap camera_icon {
+            get {
+                object obj = ResourceManager.GetObject("camera_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Попытка изменить данные пользователя с пустой почтой.
         /// </summary>
         internal static string ChangeEmptyEmailLog {
@@ -111,6 +121,16 @@ namespace RSFRecomendations.Properties {
         internal static string ChangeNoEditAnythingLog {
             get {
                 return ResourceManager.GetString("ChangeNoEditAnythingLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dislike {
+            get {
+                object obj = ResourceManager.GetObject("Dislike", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -318,6 +338,16 @@ namespace RSFRecomendations.Properties {
         internal static string LengthPasswordRegLog {
             get {
                 return ResourceManager.GetString("LengthPasswordRegLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Like {
+            get {
+                object obj = ResourceManager.GetObject("Like", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -571,9 +601,9 @@ namespace RSFRecomendations.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Без {
+        internal static System.Drawing.Bitmap Аватарка {
             get {
-                object obj = ResourceManager.GetObject("Без", resourceCulture);
+                object obj = ResourceManager.GetObject("Аватарка", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -18,9 +18,11 @@ namespace RSFRecomendations.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: false),
                     Purpose = table.Column<List<string>>(type: "text[]", nullable: false),
+                    Image = table.Column<byte[]>(type: "bytea", nullable: true),
                     DifficultyLanguage = table.Column<int>(type: "integer", nullable: false),
-                    DescriptionLanguage = table.Column<int>(type: "integer", nullable: false)
+                    LevelLanguage = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -35,7 +37,8 @@ namespace RSFRecomendations.Migrations
                     Login = table.Column<string>(type: "text", nullable: false),
                     Email = table.Column<string>(type: "text", nullable: false),
                     Password = table.Column<byte[]>(type: "bytea", nullable: false),
-                    Salt = table.Column<byte[]>(type: "bytea", nullable: false)
+                    Salt = table.Column<byte[]>(type: "bytea", nullable: false),
+                    Image = table.Column<byte[]>(type: "bytea", nullable: true)
                 },
                 constraints: table =>
                 {

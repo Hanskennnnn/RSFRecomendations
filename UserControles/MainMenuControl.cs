@@ -6,6 +6,7 @@ namespace RSFRecomendations
     public partial class MainMenuControl : UserControl
     {
         public UserModel User { get; set; }
+        public AdditionalMethodsClass am { get; set; }
 
         private Logger Log;
         public MainMenuControl(UserModel user)
@@ -15,17 +16,15 @@ namespace RSFRecomendations
             Log = LogManager.GetCurrentClassLogger();
 
             User = user;
-
-            listBoxMainMenu.Items.Add("Вы еще не заполнили анкету. Заполните анкету чтобы получить свою первую рекомендацию");
-            listBoxMainMenu.ForeColor = Color.Gray;
-
+            am = new AdditionalMethodsClass();
 
             Log.Info("Переход к форме главного меню");
         }
 
-        private void btnGoFormInMainMenu_Click(object sender, EventArgs e)
-        {
 
+        private void panelMainMenu_Paint(object sender, PaintEventArgs e)
+        {
+            am.Panel_Paint(panelMainMenu);
         }
     }
 }

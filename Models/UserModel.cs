@@ -25,6 +25,13 @@
         /// Уникальная соль для хэширования пароля
         /// </summary>
         public byte[] Salt { get; set; }
+        /// <summary>
+        /// Аватарка пользователя
+        /// </summary>
+        public byte[]? Image { get; set; }
+        /// <summary>
+        /// Анкета пользователя
+        /// </summary>
         public FormModel FormModel { get; set; }
         /// <summary>
         /// Список объектов UserProgrammingLanguage для связки

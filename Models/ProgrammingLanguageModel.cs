@@ -23,7 +23,7 @@
     /// <summary>
     /// Перечисление умения программировать
     /// </summary>
-    public enum Description
+    public enum Level
     {
         /// <summary>
         /// Начинающий
@@ -53,9 +53,17 @@
         /// </summary>
         public string Name { get; set; }
         /// <summary>
+        /// Описание языка
+        /// </summary>
+        public string Description { get; set; }
+        /// <summary>
         /// Область применения языка
         /// </summary>
         public List<string> Purpose { get; set; }
+        /// <summary>
+        /// Фото языка
+        /// </summary>
+        public byte[]? Image { get; set; }
         /// <summary>
         /// Сложность языка
         /// </summary>
@@ -63,10 +71,19 @@
         /// <summary>
         /// Уровень программирования
         /// </summary>
-        public Description DescriptionLanguage { get; set; }
+        public Level LevelLanguage { get; set; }
         /// <summary>
         /// Список объектов UserProgrammingLanguage для связки
         /// </summary>
         public ICollection<UserProgrammingLanguageModel> UsersProgrammingLanguage { get; set; }
+
+        /// <summary>
+        /// Переопределение метода ToString для вывода имени
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

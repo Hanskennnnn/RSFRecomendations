@@ -147,6 +147,7 @@ namespace RSFRecomendations
                 Id = Guid.NewGuid(),
                 Login = textBoxRegLogin.Text,
                 Email = textBoxRegEmail.Text,
+                Image = am.ImageToBytes(Properties.Resources.Аватарка),
                 Password = saltedPassword,
                 Salt = salt
             };

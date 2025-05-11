@@ -13,7 +13,7 @@ using RSFRecomendations;
 namespace RSFRecomendations.Migrations
 {
     [DbContext(typeof(MyDBContext))]
-    [Migration("20250506115104_Initial")]
+    [Migration("20250510140955_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -59,10 +59,17 @@ namespace RSFRecomendations.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<int>("DescriptionLanguage")
-                        .HasColumnType("integer");
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("DifficultyLanguage")
+                        .HasColumnType("integer");
+
+                    b.Property<byte[]>("Image")
+                        .HasColumnType("bytea");
+
+                    b.Property<int>("LevelLanguage")
                         .HasColumnType("integer");
 
                     b.Property<string>("Name")
@@ -87,6 +94,9 @@ namespace RSFRecomendations.Migrations
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<byte[]>("Image")
+                        .HasColumnType("bytea");
 
                     b.Property<string>("Login")
                         .IsRequired()

@@ -122,6 +122,7 @@ namespace RSFRecomendations
             am.BtnMouseLeave(btnLogoutMainMenu);
         }
 
+        // Прорисвка углов
         private void Btn_PaintBotton(object sender, PaintEventArgs e)
         {
             if (sender is Button btn)

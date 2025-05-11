@@ -25,6 +25,43 @@ namespace RSFRecomendations
             return sha256.ComputeHash(saltedPassword);
         }
 
+        public byte[] ImageToBytes(Image imageToBytes)
+        {
+            var image = imageToBytes;
+            using (MemoryStream ms = new MemoryStream())
+            {
+                image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                return ms.ToArray();
+            }
+        }
+
+        public Image ByteToImage(byte[] byteToImage)
+        {
+            byte[] imageBytes = byteToImage;
+
+            // Преобразование byte[] в Image
+            using (MemoryStream ms = new MemoryStream(imageBytes))
+            {
+                Image image = Image.FromStream(ms);
+
+                return image;
+            }
+        }
+
+        public string GetImageHash(Image image)
+        {
+            using (var ms = new MemoryStream())
+            {
+                image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                using (var sha = SHA256.Create())
+                {
+                    var hashBytes = sha.ComputeHash(ms.ToArray());
+                    return Convert.ToBase64String(hashBytes);
+                }
+            }
+        }
+
+
         public void ButtonPaint(object sender, PaintEventArgs e)
         {
             var cornerRadius = 50;
