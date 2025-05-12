@@ -791,3 +791,289 @@
 2025-05-11 14:39:10.0458|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Успешное изменение данных пользователя
 2025-05-11 14:39:10.7305|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
 2025-05-11 14:39:10.7364|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-11 20:56:53.6383|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-11 20:57:02.1128|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-11 20:57:11.1546|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-11 20:57:11.1748|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-11 20:57:12.3690|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-11 20:57:12.3690|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-11 22:34:52.5704|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-11 22:35:01.9489|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-11 23:03:46.9461|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-11 23:03:55.5804|INFO|RSFRecomendations.RegisterForm|Переход к форме регистрации
+2025-05-11 23:03:55.6098|INFO|RSFRecomendations.LoginForm|Переход к форме регистрации по ссылке 'У вас нет аккаунта?'
+2025-05-11 23:04:16.0330|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-11 23:04:16.0653|INFO|RSFRecomendations.RegisterForm|Успешная регистрация
+2025-05-11 23:04:24.2258|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-11 23:04:24.2602|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-11 23:09:02.5204|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-11 23:09:10.4017|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-11 23:09:10.4365|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-11 23:11:02.5132|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-11 23:11:09.9742|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-11 23:11:10.0089|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 20:55:12.5393|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 20:55:14.9371|INFO|RSFRecomendations.RegisterForm|Переход к форме регистрации
+2025-05-12 20:55:14.9605|INFO|RSFRecomendations.LoginForm|Переход к форме регистрации по ссылке 'У вас нет аккаунта?'
+2025-05-12 20:55:36.1998|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 20:55:36.2296|INFO|RSFRecomendations.RegisterForm|Успешная регистрация
+2025-05-12 20:55:42.0838|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 20:55:42.1224|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 20:55:47.7500|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 20:55:47.7557|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню, до заполнения анкеты
+2025-05-12 20:55:48.2436|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
+2025-05-12 20:55:48.2568|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
+2025-05-12 20:55:48.6853|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-12 20:55:48.6853|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-12 20:55:49.9200|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-12 20:55:49.9200|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-12 20:55:50.8581|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-12 20:55:50.8581|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-12 20:55:51.2231|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
+2025-05-12 20:55:51.2231|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
+2025-05-12 20:56:04.5604|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-12 20:56:04.5604|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-12 20:56:05.6982|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-12 20:56:05.6982|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-12 20:56:06.0982|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-12 20:56:06.0982|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-12 20:56:06.4670|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 20:56:06.4670|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню, до заполнения анкеты
+2025-05-12 20:56:06.9313|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-12 20:56:06.9313|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-12 20:56:08.7655|WARN|RSFRecomendations.UserControles.MainFormProfileControl|Попытка изменить данные ничего не поменяв
+2025-05-12 20:56:15.5505|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Успешное изменение данных пользователя
+2025-05-12 20:56:18.9120|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 20:56:18.9120|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню, до заполнения анкеты
+2025-05-12 20:56:19.6533|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
+2025-05-12 20:56:19.6660|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
+2025-05-12 20:56:20.1130|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-12 20:56:20.1130|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-12 20:56:20.5520|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-12 20:56:20.5569|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-12 20:56:21.0066|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
+2025-05-12 20:56:21.0206|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
+2025-05-12 20:56:21.3298|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 20:56:21.3329|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню, до заполнения анкеты
+2025-05-12 20:56:21.6913|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-12 20:56:21.6958|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-12 20:56:22.7320|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-12 20:56:22.7400|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-12 20:56:24.9853|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 20:56:25.0196|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку выход из аккаунта
+2025-05-12 20:56:26.0634|INFO|RSFRecomendations.RegisterForm|Переход к форме регистрации
+2025-05-12 20:56:26.0948|INFO|RSFRecomendations.LoginForm|Переход к форме регистрации по ссылке 'У вас нет аккаунта?'
+2025-05-12 20:56:45.3296|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 20:56:45.3547|INFO|RSFRecomendations.RegisterForm|Успешная регистрация
+2025-05-12 20:56:52.2863|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 20:56:52.3287|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 20:56:59.3186|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 20:56:59.3298|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 20:57:00.0444|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 20:57:00.0558|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 20:57:00.9693|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
+2025-05-12 20:57:00.9832|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
+2025-05-12 20:57:01.3556|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 20:57:01.3556|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню, до заполнения анкеты
+2025-05-12 20:57:01.7322|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-12 20:57:01.7322|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-12 20:57:02.0928|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 20:57:02.1025|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 20:57:06.3816|WARN|RSFRecomendations.AdditionalMethodsClass|Попытка создать язык без изображения
+2025-05-12 20:58:29.8767|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 20:58:42.0451|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 20:58:42.0666|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 20:58:44.1490|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 20:58:44.1654|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 20:58:45.2906|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
+2025-05-12 20:58:45.3050|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
+2025-05-12 20:58:45.9393|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 20:58:45.9424|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню, до заполнения анкеты
+2025-05-12 20:58:47.1391|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
+2025-05-12 20:58:47.1516|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
+2025-05-12 20:58:47.6039|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
+2025-05-12 20:58:47.6280|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
+2025-05-12 20:58:48.3762|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 20:58:48.3806|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню, до заполнения анкеты
+2025-05-12 20:58:48.9897|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
+2025-05-12 20:58:49.0074|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
+2025-05-12 20:58:49.3969|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-12 20:58:49.3969|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-12 20:58:49.7051|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
+2025-05-12 20:58:49.7175|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
+2025-05-12 20:58:50.2046|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 20:58:50.2046|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню, до заполнения анкеты
+2025-05-12 20:58:50.5696|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-12 20:58:50.5756|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-12 20:58:50.8631|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-12 20:58:50.8631|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-12 20:58:51.2364|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 20:58:51.2465|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:03:43.7536|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:03:53.2962|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:03:53.3170|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 21:03:56.1206|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-12 21:03:56.1288|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-12 21:03:57.9696|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-12 21:03:57.9758|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-12 21:03:58.6184|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:03:58.6315|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:04:01.2049|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-12 21:04:01.2108|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-12 21:04:01.5243|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
+2025-05-12 21:04:01.5376|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
+2025-05-12 21:04:01.7767|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:04:01.7767|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню, до заполнения анкеты
+2025-05-12 21:04:02.2605|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-12 21:04:02.2605|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-12 21:04:02.5858|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-12 21:04:02.5858|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-12 21:04:02.9739|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:04:02.9739|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:07:31.2048|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:07:38.2587|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:07:38.2790|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 21:07:44.6786|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:07:44.7003|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:10:50.0104|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:11:00.7593|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:11:00.7775|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 21:11:01.7935|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:11:01.8097|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:12:17.2048|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:12:28.2736|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:12:28.2937|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 21:12:29.1199|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:12:29.1358|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:13:14.7776|WARN|RSFRecomendations.UserControles.MainAddLanguageControl|Попытка создать язык с пробелами в описании
+2025-05-12 21:13:33.6409|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:13:41.2578|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:13:41.2778|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 21:13:42.2657|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:13:42.2813|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:17:07.4827|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:17:15.5746|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:17:15.5959|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 21:17:17.0103|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:17:17.0261|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:18:18.9302|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:18:27.6051|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:18:27.6280|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 21:18:28.6879|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:18:28.7042|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:18:48.6086|WARN|RSFRecomendations.UserControles.MainAddLanguageControl|Попытка создать язык без сложности
+2025-05-12 21:21:39.7181|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:28:06.3395|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:28:14.6372|WARN|RSFRecomendations.LoginForm|Попытка входа с несуществующим логиномAdmin
+2025-05-12 21:28:15.9871|INFO|RSFRecomendations.RegisterForm|Переход к форме регистрации
+2025-05-12 21:28:16.0126|INFO|RSFRecomendations.LoginForm|Переход к форме регистрации по ссылке 'У вас нет аккаунта?'
+2025-05-12 21:28:29.2744|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:28:29.2992|INFO|RSFRecomendations.RegisterForm|Успешная регистрация
+2025-05-12 21:28:40.9529|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:28:40.9769|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 21:28:41.8902|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-12 21:28:41.8971|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-12 21:28:42.1824|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-12 21:28:42.1824|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-12 21:28:50.0536|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Успешное изменение данных пользователя
+2025-05-12 21:28:50.7460|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:28:50.7740|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку выход из аккаунта
+2025-05-12 21:28:51.9950|INFO|RSFRecomendations.RegisterForm|Переход к форме регистрации
+2025-05-12 21:28:52.0246|INFO|RSFRecomendations.LoginForm|Переход к форме регистрации по ссылке 'У вас нет аккаунта?'
+2025-05-12 21:29:15.2596|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:29:15.2853|INFO|RSFRecomendations.RegisterForm|Успешная регистрация
+2025-05-12 21:29:21.0498|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:29:21.0825|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 21:29:21.7881|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:29:21.8021|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:35:07.2173|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:35:14.6377|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:35:14.6584|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 21:35:15.7519|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:35:15.7680|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:39:08.2775|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:39:15.7721|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:39:15.7928|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 21:39:16.7163|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:39:16.7320|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:42:10.3120|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:42:16.9000|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:42:16.9234|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 21:42:17.7136|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:42:17.7344|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:42:45.3958|WARN|RSFRecomendations.UserControles.MainAddLanguageControl|Попытка добавить существующий язык
+2025-05-12 21:44:01.7724|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:44:02.8378|INFO|RSFRecomendations.RegisterForm|Переход к форме регистрации
+2025-05-12 21:44:02.8620|INFO|RSFRecomendations.LoginForm|Переход к форме регистрации по ссылке 'У вас нет аккаунта?'
+2025-05-12 21:44:18.8152|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:44:18.8425|INFO|RSFRecomendations.RegisterForm|Успешная регистрация
+2025-05-12 21:44:26.6518|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:44:26.6764|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 21:44:27.5558|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:44:27.5713|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:44:54.7650|WARN|RSFRecomendations.UserControles.MainAddLanguageControl|Попытка создать язык без сложности
+2025-05-12 21:47:53.1576|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:47:53.9525|INFO|RSFRecomendations.RegisterForm|Переход к форме регистрации
+2025-05-12 21:47:53.9833|INFO|RSFRecomendations.LoginForm|Переход к форме регистрации по ссылке 'У вас нет аккаунта?'
+2025-05-12 21:48:15.0327|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:48:15.0593|INFO|RSFRecomendations.RegisterForm|Успешная регистрация
+2025-05-12 21:48:22.5228|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:48:22.5461|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 21:48:23.8546|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:48:23.8757|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:51:25.6648|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:51:32.9335|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:51:32.9537|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 21:51:33.6501|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:51:33.6658|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:51:58.5136|WARN|RSFRecomendations.UserControles.MainAddLanguageControl|Попытка добавить существующий язык
+2025-05-12 21:52:51.2799|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:52:52.0069|INFO|RSFRecomendations.RegisterForm|Переход к форме регистрации
+2025-05-12 21:52:52.0423|INFO|RSFRecomendations.LoginForm|Переход к форме регистрации по ссылке 'У вас нет аккаунта?'
+2025-05-12 21:53:10.1052|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-12 21:53:10.1288|INFO|RSFRecomendations.RegisterForm|Успешная регистрация
+2025-05-12 21:53:16.4985|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:53:16.5211|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-12 21:53:17.7109|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:53:17.7266|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:53:46.0046|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Успешное добавление языка
+2025-05-12 21:53:47.0321|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:53:47.0361|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню, до заполнения анкеты
+2025-05-12 21:53:47.6555|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:53:47.6658|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:54:51.1229|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Успешное добавление языка
+2025-05-12 21:54:51.8687|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:54:51.8687|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню, до заполнения анкеты
+2025-05-12 21:54:52.3985|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:54:52.3985|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:55:33.4573|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Успешное добавление языка
+2025-05-12 21:55:34.2267|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
+2025-05-12 21:55:34.2404|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
+2025-05-12 21:55:35.4195|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:55:35.4297|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:56:35.4600|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Успешное добавление языка
+2025-05-12 21:56:36.5804|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-12 21:56:36.5866|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-12 21:56:36.8798|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:56:36.8798|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:57:17.4719|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Успешное добавление языка
+2025-05-12 21:57:19.2791|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:57:19.2791|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню, до заполнения анкеты
+2025-05-12 21:57:19.8433|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:57:19.8588|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:59:32.5916|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Успешное добавление языка
+2025-05-12 21:59:34.0364|INFO|RSFRecomendations.UserControles.MainMenuFirstLogControl|Переход к форме главного меню, до заполнения анкеты
+2025-05-12 21:59:34.0364|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню, до заполнения анкеты
+2025-05-12 21:59:34.5150|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
+2025-05-12 21:59:34.5280|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
+2025-05-12 21:59:34.8581|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-12 21:59:34.8624|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-12 21:59:35.1936|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-12 21:59:35.1989|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-12 21:59:35.5606|INFO|RSFRecomendations.UserControles.MainAddLanguageControl|Переход к форме добавления языка
+2025-05-12 21:59:35.5705|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к добавлению языка
+2025-05-12 21:59:36.6376|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-12 21:59:36.6376|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-12 21:59:36.9780|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-12 21:59:36.9780|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-12 22:03:02.2185|INFO|RSFRecomendations.LoginForm|Переход к форме входа

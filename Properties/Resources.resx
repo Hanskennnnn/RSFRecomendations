@@ -304,4 +304,94 @@
   <data name="camera_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\camera_icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PythonDescription" xml:space="preserve">
+    <value>Python — это высокоуровневый интерпретируемый язык программирования, известный своей простотой, читаемым синтаксисом и широкой областью применения. Он идеально подходит для быстрого прототипирования, написания скриптов и автоматизации. Благодаря огромному количеству библиотек и активному сообществу, Python часто используется в научной среде, бизнесе и стартапах. Несмотря на универсальность, его скорость исполнения ниже, чем у компилируемых языков.</value>
+  </data>
+  <data name="CSharpDescription" xml:space="preserve">
+    <value>C# — объектно-ориентированный язык программирования, разработанный Microsoft. Он тесно связан с платформой .NET и предлагает мощные средства разработки для создания производительных и масштабируемых приложений. Язык отличается строгой типизацией, хорошей интеграцией с Windows-средой и отличной поддержкой инструментов разработки. Он особенно популярен в корпоративной среде и при разработке игр на Unity.</value>
+  </data>
+  <data name="JavaScriptDescription" xml:space="preserve">
+    <value>JavaScript — интерпретируемый язык программирования, выполняемый в основном в браузере. Он динамически типизируется, поддерживает как объектно-ориентированный, так и функциональный стиль программирования, и является неотъемлемой частью веб-разработки. Благодаря обширной экосистеме и низкому порогу входа, JavaScript широко используется, но его гибкость может привести к неустойчивому коду без соблюдения строгих стандартов.</value>
+  </data>
+  <data name="CPlusDescription" xml:space="preserve">
+    <value>C++ — компилируемый язык программирования, являющийся развитием языка C и включающий поддержку объектно-ориентированного программирования. Он предоставляет программисту детальный контроль над памятью и ресурсами, что делает его одним из самых быстрых и мощных языков. Однако сложный синтаксис и высокая вероятность ошибок делают его более требовательным к опыту разработчика.</value>
+  </data>
+  <data name="JavaDescription" xml:space="preserve">
+    <value>Java — строго типизированный объектно-ориентированный язык, работающий через виртуальную машину (JVM), что обеспечивает его кроссплатформенность. Он известен своей надёжностью, безопасностью и масштабируемостью, что делает его популярным выбором для разработки больших и долгоживущих программных систем. Несмотря на многословность синтаксиса, Java сохраняет стабильную популярность в корпоративной среде.</value>
+  </data>
+  <data name="SuccessfulRegistration" xml:space="preserve">
+    <value>Регистрация прошла успешна!</value>
+  </data>
+  <data name="SuccessfulEditProfile" xml:space="preserve">
+    <value>Изменения успешно сохранены!</value>
+  </data>
+  <data name="NameLanguageText" xml:space="preserve">
+    <value>Введите название языка</value>
+  </data>
+  <data name="DescriptionLanguageText" xml:space="preserve">
+    <value>Введите описание языка</value>
+  </data>
+  <data name="EmptyNameLang" xml:space="preserve">
+    <value>Вы не ввели название языка!</value>
+  </data>
+  <data name="EmptyNameLangLog" xml:space="preserve">
+    <value>Попытка создать язык без названия</value>
+  </data>
+  <data name="NoContainsSpaceNameLang" xml:space="preserve">
+    <value>Название языка не может содержать пробелы</value>
+  </data>
+  <data name="NoContainsSpaceNameLangLog" xml:space="preserve">
+    <value>Попытка создания языка с пробелами в названии</value>
+  </data>
+  <data name="EmptyDescriptionLang" xml:space="preserve">
+    <value>Ввдите описание языка!</value>
+  </data>
+  <data name="EmptyDescriptionLangLog" xml:space="preserve">
+    <value>Попытка создать язык с пустым описанием</value>
+  </data>
+  <data name="NoContainsSpaceDescriptionLang" xml:space="preserve">
+    <value>В описании языка не должны быть пробелы</value>
+  </data>
+  <data name="NoContainsSpaceDescriptionLangLog" xml:space="preserve">
+    <value>Попытка создать язык с пробелами в описании</value>
+  </data>
+  <data name="EmptyDifficultyLang" xml:space="preserve">
+    <value>Выберите сложность языка!</value>
+  </data>
+  <data name="EmptyDifficultyLangLog" xml:space="preserve">
+    <value>Попытка создать язык без сложности</value>
+  </data>
+  <data name="EmptyImageLang" xml:space="preserve">
+    <value>Выберите изображение для языка</value>
+  </data>
+  <data name="EmptyImageLangLog" xml:space="preserve">
+    <value>Попытка создать язык без изображения</value>
+  </data>
+  <data name="EmptyPurposeLang" xml:space="preserve">
+    <value>Выберите хотя бы одну цель языка!</value>
+  </data>
+  <data name="EmptyPurposeLangLog" xml:space="preserve">
+    <value>Попытка добавить язык без целей</value>
+  </data>
+  <data name="GoAddLanguageLog" xml:space="preserve">
+    <value>Пользователь нажал кнопку перехода к добавлению языка</value>
+  </data>
+  <data name="GoDescription" xml:space="preserve">
+    <value>Go - Статически типизированный, компилируемый язык программирования, разработанный в Google (2009 г.) для создания высокопроизводительных, надежных и масштабируемых приложений.</value>
+  </data>
+  <data name="EnterName" xml:space="preserve">
+    <value>Введите название</value>
+  </data>
+  <data name="EnterDescription" xml:space="preserve">
+    <value>Введите описание</value>
+  </data>
+  <data name="SuccessfullyAddedLanguage" xml:space="preserve">
+    <value>Язык успешно добавлен</value>
+  </data>
+  <data name="TheLanguageAlreadyExists" xml:space="preserve">
+    <value>Язык с таким названием уже существует</value>
+  </data>
+  <data name="TheLanguageAlreadyExistsLog" xml:space="preserve">
+    <value>Попытка добавить существующий язык</value>
+  </data>
 </root>

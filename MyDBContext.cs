@@ -17,9 +17,8 @@ namespace RSFRecomendations
 
         }
         public DbSet<UserModel> Users { get; set; }
-
         public DbSet<ProgrammingLanguageModel> ProgrammingLanguages { get; set; }
-
+        public DbSet<ProgrammingLanguagePurposeModel> ProgrammingLanguagePurpose { get; set; }
         public DbSet<UserProgrammingLanguageModel> UserProgrammingLanguages { get; set; }
         public DbSet<FormModel> FormModels { get; set; }
 
@@ -27,6 +26,7 @@ namespace RSFRecomendations
         {
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new ProgrammingLanguageConfiguration());
+            modelBuilder.ApplyConfiguration(new ProgrammingLanguagePurposeConfiguration());
             modelBuilder.ApplyConfiguration(new UserProgrammingLanguageConfiguration());
             modelBuilder.ApplyConfiguration(new FormModelConfiguration());
 

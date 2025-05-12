@@ -1,47 +1,81 @@
-﻿namespace RSFRecomendations.Models
+﻿
+namespace RSFRecomendations.Models
 {
+    /// <summary>
+    /// Перечисление умения программировать
+    /// </summary>
+    public enum ProgrammingSkill
+    {
+        /// <summary>
+        /// Новичок
+        /// </summary>
+        Nocturnal,
+
+        /// <summary>
+        /// Базовый
+        /// </summary>
+        Intermediate,
+
+        /// <summary>
+        /// Продвинутый
+        /// </summary>
+        Advanced
+    }
+
+    public enum ProgrammingLanguagePriority
+    {
+        /// <summary>
+        /// Простота и понятность
+        /// </summary>
+        Simplicity,
+
+        /// <summary>
+        /// Возможность найти работу
+        /// </summary>
+        JobOpportunities,
+
+        /// <summary>
+        /// Универсальность
+        /// </summary>
+        Versatility,
+
+        /// <summary>
+        /// Много учебных материалов
+        /// </summary>
+        LearningResources,
+
+        /// <summary>
+        /// Быстродействие
+        /// </summary>
+        Performance
+    }
+
+    /// <summary>
+    /// Время обучения в неделю
+    /// </summary>
+    public enum TimeToEducation
+    {
+        /// <summary>
+        /// Меньше 3 часов
+        /// </summary>
+        LessThanThreeHours,   
+
+        /// <summary>
+        /// От 3 до 5 часов
+        /// </summary>
+        ThreeToFiveHours, 
+
+        /// <summary>
+        /// От 6 до 10 часов и больше
+        /// </summary>
+        SixToTenPlusHours  
+    }
+
     /// <summary>
     /// Модель Анкеты
     /// </summary>
     public class FormModel
     {
-        /// <summary>
-        /// Перечисление сложности языка
-        /// </summary>
-        public enum Difficulty
-        {
-            /// <summary>
-            /// Легкий
-            /// </summary>
-            Easy,
-            /// <summary>
-            /// Средний
-            /// </summary>
-            Medium,
-            /// <summary>
-            /// Сложный
-            /// </summary>
-            Difficult
-        }
-
-        /// <summary>
-        /// Перечисление умения программировать
-        /// </summary>
-        public enum ProgrammingSkill
-        {
-            /// <summary>
-            /// Начинающий
-            /// </summary>
-            Nocturnal,
-            /// <summary>
-            /// Средний
-            /// </summary>
-            Intermediate,
-            /// <summary>
-            /// Продвинутый
-            /// </summary>
-            Advanced
-        }
         /// <summary>
         /// Уникальный ключ анкеты
         /// </summary>
@@ -50,7 +84,7 @@
         /// <summary>
         /// Область применения языка
         /// </summary>
-        public List<string> Purpose { get; set; }
+        public Purpose PurposeForm { get; set; }
 
         /// <summary>
         /// Сложность языка
@@ -61,6 +95,11 @@
         /// Уровень программирования пользователя
         /// </summary>
         public ProgrammingSkill ProgrammingSkillUser { get; set; }
+
+        /// <summary>
+        /// Время на обучение в неделю
+        /// </summary>
+        public TimeToEducation TimeEducationInWeek { get; set; }
 
         /// <summary>
         /// Объект User для связки 

@@ -21,22 +21,86 @@
     }
 
     /// <summary>
-    /// Перечисление умения программировать
+    /// Перечисление целей языка
     /// </summary>
-    public enum Level
+    public enum Purpose
     {
         /// <summary>
-        /// Начинающий
+        /// Веб-программирование
         /// </summary>
-        Nocturnal, 
+        WebDevelopment,
         /// <summary>
-        /// Средний
+        /// Игры
         /// </summary>
-        Intermediate,
+        GameDevelopment,
         /// <summary>
-        /// Продвинутый
+        /// Микросервисы
         /// </summary>
-        Advanced
+        Microservices,
+        /// <summary>
+        /// Приложения
+        /// </summary>
+        ApplicationDevelopment,
+        /// <summary>
+        /// Образование и быстрое прототипирование
+        /// </summary>
+        EducationAndRapidPrototyping,
+        /// <summary>
+        /// Серверная разработка
+        /// </summary>
+        ServerSideDevelopment,
+        /// <summary>
+        /// Разработка приложений под Windows (WPF, WinForms)
+        /// </summary>
+        WindowsApplicationDevelopment,
+        /// <summary>
+        /// Обработка данных и автоматизация на платформе .NET
+        /// </summary>
+        NETDataProcessingAndAutomation,
+        /// <summary>
+        /// Cистемное программирование (драйверы, ОС)
+        /// </summary>
+        SystemsProgramming,
+        /// <summary>
+        /// Встроенные системы (Embedded)
+        /// </summary>
+        EmbeddedSystems,
+        /// <summary>
+        /// Финансовое ПО и торговые системы
+        /// </summary>
+        FinancialAndTradingSoftware,
+        /// <summary>
+        /// Data Science и анализ данных
+        /// </summary>
+        DataScienceAndDataAnalysis,
+        /// <summary>
+        /// Машинное обучение / ИИ
+        /// </summary>
+        MachineLearningAndAI,
+        /// <summary>
+        /// Скрипты и автоматизация
+        /// </summary>
+        ScriptingAndAutomation,
+        /// <summary>
+        /// Разработка CLI-инструментов
+        /// </summary>
+        CLIToolDevelopment,
+        /// <summary>
+        /// Мобильная разработка (Android)
+        /// </summary>
+        MobileDevelopmentInAndroid,
+        /// <summary>
+        /// Разработка PWA и SPA
+        /// </summary>
+        PWAAndSPADevelopment,
+        /// <summary>
+        /// Интерактивность в браузере
+        /// </summary>
+        BrowserInteractivity,
+        /// <summary>
+        /// Полный стек (Full Stack) с MongoDB, Express и пр.
+        /// </summary>
+        FullStackDevelopment
     }
 
     /// <summary>
@@ -59,7 +123,7 @@
         /// <summary>
         /// Область применения языка
         /// </summary>
-        public List<string> Purpose { get; set; }
+        public ICollection<ProgrammingLanguagePurposeModel> Purposes { get; set; }
         /// <summary>
         /// Фото языка
         /// </summary>
@@ -67,11 +131,7 @@
         /// <summary>
         /// Сложность языка
         /// </summary>
-        public Difficulty DifficultyLanguage { get; set; }
-        /// <summary>
-        /// Уровень программирования
-        /// </summary>
-        public Level LevelLanguage { get; set; }
+        public Difficulty? DifficultyLanguage { get; set; }
         /// <summary>
         /// Список объектов UserProgrammingLanguage для связки
         /// </summary>

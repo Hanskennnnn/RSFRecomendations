@@ -3,12 +3,20 @@ using RSFRecomendations.Models;
 
 namespace RSFRecomendations.UserControles
 {
+    /// <summary>
+    /// Форма анкеты
+    /// </summary>
     public partial class MainFormAnketaControl : UserControl
     {
         private readonly MyDBContext db;
+        /// <summary>
+        /// Пользователь
+        /// </summary>
         public UserModel User { get; set; }
 
         private Logger Log;
+
+        private AdditionalMethodsClass additionalMethods;
 
         public FormModel model { get; set; }
         public MainFormAnketaControl(UserModel user)
@@ -17,29 +25,32 @@ namespace RSFRecomendations.UserControles
 
             db = new MyDBContext();
             model = new FormModel();
+            additionalMethods = new AdditionalMethodsClass();
 
             Log = LogManager.GetCurrentClassLogger();
 
             User = user;
 
-            clbPurposes.Items.Add("Веб-разработка");
-            clbPurposes.Items.Add("ML/AI");
-            clbPurposes.Items.Add("Windows-приложения");
-            clbPurposes.Items.Add("Игры");
-            clbPurposes.Items.Add("Базы данных");
-            clbPurposes.Items.Add("Мобильные и десктопные приложения");
-            clbPurposes.Items.Add("Системное ПО");
-            clbPurposes.Items.Add("Серверы");
-            clbPurposes.Items.Add("Веб-разработка");
-
-
             Log.Info("Переход к форме анкеты");
         }
 
-        private void btnChoose_Click(object sender, EventArgs e)
+        private void buttonAddForm_Click(object sender, EventArgs e)
         {
+            // if (checkBoxPerformance.Checked)
+            // {
+            //     var selectedPriority = (ProgrammingLanguagePriority)checkBoxPerformance.Tag;
+            // }
 
         }
 
+        private void buttonAddForm_Paint(object sender, PaintEventArgs e)
+        {
+            additionalMethods.ButtonPaint(sender, e);
+        }
+
+        private void panelMainAddLanguage_Paint(object sender, PaintEventArgs e)
+        {
+            additionalMethods.Panel_Paint(panelMainAddForm);
+        }
     }
 }

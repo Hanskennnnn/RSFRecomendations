@@ -3666,11 +3666,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\RSFRecomendations-master\\RSFRecomendations\\RSFRecomendations.csproj",
+      "projectUniqueName": "C:\\Users\\user\\source\\repos\\RSFRecomendations-master\\RSFRecomendations.csproj",
       "projectName": "RSFRecomendations",
-      "projectPath": "C:\\Users\\user\\source\\repos\\RSFRecomendations-master\\RSFRecomendations\\RSFRecomendations.csproj",
+      "projectPath": "C:\\Users\\user\\source\\repos\\RSFRecomendations-master\\RSFRecomendations.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\RSFRecomendations-master\\RSFRecomendations\\obj\\",
+      "outputPath": "C:\\Users\\user\\source\\repos\\RSFRecomendations-master\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

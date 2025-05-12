@@ -4,14 +4,23 @@ using RSFRecomendations.Models;
 
 namespace RSFRecomendations.UserControles
 {
+    /// <summary>
+    /// Форма главного меню до заполнения анкеты
+    /// </summary>
     public partial class MainMenuFirstLogControl : UserControl
     {
         private readonly MyDBContext db;
+        /// <summary>
+        /// Пользователь
+        /// </summary>
         public UserModel User { get; set; }
 
         private MainMenu mainMenuForm;
 
         private Logger Log;
+        /// <summary>
+        /// Кнопка для перехода в анкету
+        /// </summary>
         public Button BtnGoForm { get; set; }
         public MainMenuFirstLogControl(UserModel user)
         {
@@ -40,7 +49,7 @@ namespace RSFRecomendations.UserControles
         
         private void buttonMainControlGoAnketa_Paint(object sender, EventArgs e)
         {
-            int cornerRadius = 40; 
+            var cornerRadius = 40; 
             var button = (Button)sender;
 
             var path = new GraphicsPath();

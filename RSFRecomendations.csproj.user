@@ -26,6 +26,9 @@
     <Compile Update="RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UserControles\MainAddLanguageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx">

@@ -16,6 +16,10 @@ namespace RSFRecomendations.Configurations
             builder
                 .HasMany(p => p.UsersProgrammingLanguage)
                 .WithOne(up => up.ProgrammingLanguage);
+
+            builder
+                .HasMany(p => p.Purposes)
+                .WithOne(up => up.ProgrammingLanguage);
         }
     }
 }

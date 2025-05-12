@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSFRecomendations", "RSFRecomendations\RSFRecomendations.csproj", "{F2B60739-4EA8-4621-8149-2F09CF32C4AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSFRecomendations", "RSFRecomendations.csproj", "{F2B60739-4EA8-4621-8149-2F09CF32C4AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

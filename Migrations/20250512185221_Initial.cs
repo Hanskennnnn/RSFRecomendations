@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -19,10 +18,8 @@ namespace RSFRecomendations.Migrations
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: false),
-                    Purpose = table.Column<List<string>>(type: "text[]", nullable: false),
                     Image = table.Column<byte[]>(type: "bytea", nullable: true),
-                    DifficultyLanguage = table.Column<int>(type: "integer", nullable: false),
-                    LevelLanguage = table.Column<int>(type: "integer", nullable: false)
+                    DifficultyLanguage = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -46,13 +43,32 @@ namespace RSFRecomendations.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "ProgrammingLanguagePurpose",
+                columns: table => new
+                {
+                    ProgrammingLanguageId = table.Column<Guid>(type: "uuid", nullable: false),
+                    Purpose = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProgrammingLanguagePurpose", x => new { x.ProgrammingLanguageId, x.Purpose });
+                    table.ForeignKey(
+                        name: "FK_ProgrammingLanguagePurpose_ProgrammingLanguages_Programming~",
+                        column: x => x.ProgrammingLanguageId,
+                        principalTable: "ProgrammingLanguages",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "FormModels",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Purpose = table.Column<List<string>>(type: "text[]", nullable: false),
+                    PurposeForm = table.Column<int>(type: "integer", nullable: false),
                     DifficultyForm = table.Column<int>(type: "integer", nullable: false),
                     ProgrammingSkillUser = table.Column<int>(type: "integer", nullable: false),
+                    TimeEducationInWeek = table.Column<int>(type: "integer", nullable: false),
                     UserId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
@@ -108,6 +124,9 @@ namespace RSFRecomendations.Migrations
         {
             migrationBuilder.DropTable(
                 name: "FormModels");
+
+            migrationBuilder.DropTable(
+                name: "ProgrammingLanguagePurpose");
 
             migrationBuilder.DropTable(
                 name: "UserProgrammingLanguages");

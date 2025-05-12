@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             splitContainer1 = new SplitContainer();
+            buttonAddLanguage = new Button();
             panelRSFLogo = new Panel();
             labelLogo = new Label();
             btnGoMainMenu = new Button();
@@ -53,6 +54,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            splitContainer1.Panel1.Controls.Add(buttonAddLanguage);
             splitContainer1.Panel1.Controls.Add(panelRSFLogo);
             splitContainer1.Panel1.Controls.Add(btnGoMainMenu);
             splitContainer1.Panel1.Controls.Add(btnGoForm);
@@ -66,6 +68,26 @@
             splitContainer1.Size = new Size(1182, 628);
             splitContainer1.SplitterDistance = 303;
             splitContainer1.TabIndex = 0;
+            // 
+            // buttonAddLanguage
+            // 
+            buttonAddLanguage.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonAddLanguage.BackColor = Color.White;
+            buttonAddLanguage.FlatAppearance.BorderColor = Color.LightGray;
+            buttonAddLanguage.FlatAppearance.BorderSize = 0;
+            buttonAddLanguage.FlatStyle = FlatStyle.Flat;
+            buttonAddLanguage.Font = new Font("Segoe UI", 9F);
+            buttonAddLanguage.ForeColor = Color.Black;
+            buttonAddLanguage.Location = new Point(0, 340);
+            buttonAddLanguage.Name = "buttonAddLanguage";
+            buttonAddLanguage.Size = new Size(303, 69);
+            buttonAddLanguage.TabIndex = 4;
+            buttonAddLanguage.Text = "Добавление языка";
+            buttonAddLanguage.UseVisualStyleBackColor = false;
+            buttonAddLanguage.Click += buttonAddLanguage_Click;
+            buttonAddLanguage.Paint += buttonAddLanguage_Paint;
+            buttonAddLanguage.MouseEnter += buttonAddLanguage_MouseEnter;
+            buttonAddLanguage.MouseLeave += buttonAddLanguage_MouseLeave;
             // 
             // panelRSFLogo
             // 
@@ -173,8 +195,8 @@
             btnLogoutMainMenu.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnLogoutMainMenu.BackColor = Color.White;
             btnLogoutMainMenu.FlatAppearance.BorderColor = Color.LightGray;
-            btnLogoutMainMenu.FlatStyle = FlatStyle.Flat;
             btnLogoutMainMenu.FlatAppearance.BorderSize = 0;
+            btnLogoutMainMenu.FlatStyle = FlatStyle.Flat;
             btnLogoutMainMenu.Font = new Font("Segoe UI", 9F);
             btnLogoutMainMenu.ForeColor = Color.Black;
             btnLogoutMainMenu.Location = new Point(3, 548);
@@ -184,17 +206,17 @@
             btnLogoutMainMenu.Text = "Выйти из аккаунта";
             btnLogoutMainMenu.UseVisualStyleBackColor = false;
             btnLogoutMainMenu.Click += btnLogoutMainMenu_Click;
+            btnLogoutMainMenu.Paint += Btn_PaintTop;
             btnLogoutMainMenu.MouseEnter += btnLogoutMainMenu_MouseEnter;
             btnLogoutMainMenu.MouseLeave += btnLogoutMainMenu_MouseLeave;
-            btnLogoutMainMenu.Paint += Btn_PaintTop;
             // 
             // panelMainMenu
             // 
+            panelMainMenu.BackColor = Color.FromArgb(240, 241, 246);
             panelMainMenu.Location = new Point(2, 1);
             panelMainMenu.Name = "panelMainMenu";
             panelMainMenu.Size = new Size(873, 627);
             panelMainMenu.TabIndex = 0;
-            panelMainMenu.BackColor = Color.FromArgb(240, 241, 246);
             // 
             // MainMenu
             // 
@@ -225,5 +247,6 @@
         private Panel panelMainMenu;
         private Panel panelRSFLogo;
         private Label labelLogo;
+        private Button buttonAddLanguage;
     }
 }

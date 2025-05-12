@@ -5,11 +5,14 @@ using RSFRecomendations.Models;
 
 namespace RSFRecomendations.UserControles
 {
+    /// <summary>
+    /// Форма профиля
+    /// </summary>
     public partial class MainFormProfileControl : UserControl
     {
         private readonly MyDBContext db;
 
-        private AdditionalMethodsClass am;
+        private AdditionalMethodsClass additionalMethods;
 
         private Logger Log;
         UserModel User { get; set; }
@@ -18,22 +21,17 @@ namespace RSFRecomendations.UserControles
             InitializeComponent();
 
             db = new MyDBContext();
-            am = new AdditionalMethodsClass();
+            additionalMethods = new AdditionalMethodsClass();
 
             User = user;
             Log = LogManager.GetCurrentClassLogger();
 
             tbUserLoginProfile.Text = User.Login;
             tbUserEmailProfile.Text = User.Email;
-            pbImageUser.Image = am.ByteToImage(User.Image);
+            pbImageUser.Image = additionalMethods.ByteToImage(User.Image);
 
 
             Log.Info("Переход к форме профиля");
-        }
-
-        private void btAddPictureProfile_Click(object sender, EventArgs e)
-        {
-
         }
 
         private async void btnEditProfile_Click(object sender, EventArgs e)
@@ -57,15 +55,16 @@ namespace RSFRecomendations.UserControles
                 Log.Warn(Properties.Resources.ChangeEmptyEmailLog);
                 return;
             }
-            if (!am.IsValidEmail(tbUserEmailProfile.Text))
+            if (!additionalMethods.IsValidEmail(tbUserEmailProfile.Text))
             {
                 MessageBox.Show(Properties.Resources.IncorrectMail);
                 Log.Warn(Properties.Resources.ChangeIncorrectMailLog);
                 return;
             }
 
-            byte[] imageByte = am.ImageToBytes(pbImageUser.Image);
-            if (User.Login == tbUserLoginProfile.Text && User.Email == tbUserEmailProfile.Text && am.GetImageHash(pbImageUser.Image) == am.GetImageHash(am.ByteToImage(User.Image)))
+            byte[] imageByte = additionalMethods.ImageToBytes(pbImageUser.Image);
+            if (User.Login == tbUserLoginProfile.Text && User.Email == tbUserEmailProfile.Text 
+                && additionalMethods.GetImageHash(pbImageUser.Image) == additionalMethods.GetImageHash(additionalMethods.ByteToImage(User.Image)))
             {
                 MessageBox.Show(Properties.Resources.NoEditAnything);
                 Log.Warn(Properties.Resources.ChangeNoEditAnythingLog);
@@ -100,47 +99,39 @@ namespace RSFRecomendations.UserControles
                 .ExecuteUpdateAsync(s =>
                 s.SetProperty(c => c.Login, tbUserLoginProfile.Text)
                 .SetProperty(c => c.Email, tbUserEmailProfile.Text)
-                .SetProperty(c => c.Image, am.ImageToBytes(pbImageUser.Image)));
+                .SetProperty(c => c.Image, additionalMethods.ImageToBytes(pbImageUser.Image)));
 
             User.Login = tbUserLoginProfile.Text;
             User.Email = tbUserEmailProfile.Text;
-            User.Image = am.ImageToBytes(pbImageUser.Image);
+            User.Image = additionalMethods.ImageToBytes(pbImageUser.Image);
 
             MainMenu.User = User;
 
             await db.SaveChangesAsync();
 
-            MessageBox.Show("Изменения успешно сохранены!");
+            MessageBox.Show(Properties.Resources.SuccessfulEditProfile);
 
             Log.Info("Успешное изменение данных пользователя");
         }
 
         private void btnEditProfile_Paint(object sender, PaintEventArgs e)
         {
-            am.ButtonPaint(sender, e);
+            additionalMethods.ButtonPaint(sender, e);
         }
 
         private void panelToUserInfo_Paint(object sender, PaintEventArgs e)
         {
-            am.Panel_Paint(panelToUserInfo);
+            additionalMethods.Panel_Paint(panelToUserInfo);
         }
 
         private void buttonAddImage_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog ofd = new OpenFileDialog())
-            {
-                ofd.Filter = "Изображения|*.jpg;*.png";
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    pbImageUser.Image = Image.FromFile(ofd.FileName);
-                    pbImageUser.Tag = ofd.FileName;
-                }
-            }
+            additionalMethods.AddOrEditImage(pbImageUser);
         }
 
         private void buttonAddImage_Paint(object sender, PaintEventArgs e)
         {
-            am.ButtonPaint(sender, e);
+            additionalMethods.ButtonPaint(sender, e);
         }
     }
 }

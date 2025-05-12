@@ -4,26 +4,46 @@ using RSFRecomendations.UserControles;
 
 namespace RSFRecomendations
 {
+    /// <summary>
+    /// Форма главного меню
+    /// </summary>
     public partial class MainMenu : Form
     {
+        /// <summary>
+        /// Пользователь 
+        /// </summary>
         public static UserModel User { get; set; }
-        private AdditionalMethodsClass am;
 
-        private Logger Log; 
+        private AdditionalMethodsClass additionalMethods;
+
+        private Logger Log;
 
         public MainMenu(UserModel user)
         {
             InitializeComponent();
 
             User = user;
-            am = new AdditionalMethodsClass();
+            additionalMethods = new AdditionalMethodsClass();
 
             Log = LogManager.GetCurrentClassLogger();
 
             ShowControl(new MainMenuFirstLogControl(User));
+
+
+            if (User.Login == "Admin")
+            {
+                buttonAddLanguage.Visible = true;
+                buttonAddLanguage.Enabled = true;
+            }
+            else
+            {
+                buttonAddLanguage.Visible = false;
+                buttonAddLanguage.Enabled = false;
+            }
+
         }
 
-        public void btnGoForm_Click(object sender, EventArgs e)
+        private void btnGoForm_Click(object sender, EventArgs e)
         {
             ShowControl(new MainFormAnketaControl(User));
             Log.Info(Properties.Resources.GoAnketaLog);
@@ -39,6 +59,12 @@ namespace RSFRecomendations
         {
             ShowControl(new MainFormProfileControl(User));
             Log.Info(Properties.Resources.GoProfileLog);
+        }
+
+        private void buttonAddLanguage_Click(object sender, EventArgs e)
+        {
+            ShowControl(new MainAddLanguageControl(User));
+            Log.Info(Properties.Resources.GoAddLanguageLog);
         }
 
         private void btnLogoutMainMenu_Click(object sender, EventArgs e)
@@ -74,62 +100,62 @@ namespace RSFRecomendations
 
         private void btnGoMainMenu_MouseEnter(object sender, EventArgs e)
         {
-            am.BtnMouseEnter(btnGoMainMenu);
+            additionalMethods.BtnMouseEnter(btnGoMainMenu);
         }
 
         private void btnGoMainMenu_MouseLeave(object sender, EventArgs e)
         {
-            am.BtnMouseLeave(btnGoMainMenu);
+            additionalMethods.BtnMouseLeave(btnGoMainMenu);
         }
 
         private void btnGoForm_MouseEnter(object sender, EventArgs e)
         {
-            am.BtnMouseEnter(btnGoForm);
+            additionalMethods.BtnMouseEnter(btnGoForm);
         }
 
         private void btnGoForm_MouseLeave(object sender, EventArgs e)
         {
-            am.BtnMouseLeave(btnGoForm);
+            additionalMethods.BtnMouseLeave(btnGoForm);
         }
 
         private void btnGoProgLang_MouseEnter(object sender, EventArgs e)
         {
-            am.BtnMouseEnter(btnGoProgLang);
+            additionalMethods.BtnMouseEnter(btnGoProgLang);
         }
 
         private void btnGoProgLang_MouseLeave(object sender, EventArgs e)
         {
-            am.BtnMouseLeave(btnGoProgLang);
+            additionalMethods.BtnMouseLeave(btnGoProgLang);
         }
 
         private void btnGoProfile_MouseEnter(object sender, EventArgs e)
         {
-            am.BtnMouseEnter(btnGoProfile);
+            additionalMethods.BtnMouseEnter(btnGoProfile);
         }
 
         private void btnGoProfile_MouseLeave(object sender, EventArgs e)
         {
-            am.BtnMouseLeave(btnGoProfile);
+            additionalMethods.BtnMouseLeave(btnGoProfile);
         }
 
         private void btnLogoutMainMenu_MouseEnter(object sender, EventArgs e)
         {
-            am.BtnMouseEnter(btnLogoutMainMenu);
+            additionalMethods.BtnMouseEnter(btnLogoutMainMenu);
         }
 
         private void btnLogoutMainMenu_MouseLeave(object sender, EventArgs e)
         {
-            am.BtnMouseLeave(btnLogoutMainMenu);
+            additionalMethods.BtnMouseLeave(btnLogoutMainMenu);
         }
 
-        // Прорисвка углов
+        // Прорисoвка углов
         private void Btn_PaintBotton(object sender, PaintEventArgs e)
         {
             if (sender is Button btn)
             {
-                Color borderColor = Color.LightGray;
+                var borderColor = Color.LightGray;
 
-                using (Pen pen = new Pen(borderColor, 1))
+                using (var pen = new Pen(borderColor, 1))
                 {
                     e.Graphics.DrawLine(pen, 0, btn.Height - 1, btn.Width, btn.Height - 1);
                 }
@@ -140,14 +166,28 @@ namespace RSFRecomendations
         {
             if (sender is Button btn)
             {
-                Color borderColor = Color.LightGray;
+                var borderColor = Color.LightGray;
 
-                using (Pen pen = new Pen(borderColor, 1))
+                using (var pen = new Pen(borderColor, 1))
                 {
                     e.Graphics.DrawLine(pen, 0, 0, btn.Width, 0);
                 }
             }
         }
 
+        private void buttonAddLanguage_Paint(object sender, PaintEventArgs e)
+        {
+            Btn_PaintBotton(sender, e);
+        }
+
+        private void buttonAddLanguage_MouseEnter(object sender, EventArgs e)
+        {
+            additionalMethods.BtnMouseEnter(buttonAddLanguage);
+        }
+
+        private void buttonAddLanguage_MouseLeave(object sender, EventArgs e)
+        {
+            additionalMethods.BtnMouseLeave(buttonAddLanguage);
+        }
     }
 }

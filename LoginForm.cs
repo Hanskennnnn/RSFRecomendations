@@ -3,13 +3,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace RSFRecomendations
 {
-
-
+    /// <summary>
+    /// Форма входа
+    /// </summary>
     public partial class LoginForm : Form
     {
         private readonly MyDBContext db;
 
-        private AdditionalMethodsClass am;
+        private AdditionalMethodsClass additionalMethods;
 
         private Logger Log;
 
@@ -26,7 +27,7 @@ namespace RSFRecomendations
             Log = LogManager.GetCurrentClassLogger();
 
             db = new MyDBContext();
-            am = new AdditionalMethodsClass();
+            additionalMethods = new AdditionalMethodsClass();
 
             Log.Info("Переход к форме входа");
 
@@ -79,7 +80,7 @@ namespace RSFRecomendations
             }
 
             // Проверка пароля
-            var checkPassword = am.HashPassword(textBoxLogPassword.Text, us.Salt);
+            var checkPassword = additionalMethods.HashPassword(textBoxLogPassword.Text, us.Salt);
 
             if (!checkPassword.SequenceEqual(us.Password))
             {
@@ -97,27 +98,27 @@ namespace RSFRecomendations
 
         private void textBoxLogLogin_Enter(object sender, EventArgs e)
         {
-            am.EnterText(textBoxLogLogin, Properties.Resources.EnterLogin);
+            additionalMethods.EnterText(textBoxLogLogin, Properties.Resources.EnterLogin);
         }
 
         private void textBoxLogLogin_Leave(object sender, EventArgs e)
         {
-            am.LeaveText(textBoxLogLogin, Properties.Resources.EnterLogin);
+            additionalMethods.LeaveText(textBoxLogLogin, Properties.Resources.EnterLogin);
         }
 
         private void textBoxLogPassword_Enter(object sender, EventArgs e)
         {
-            am.EnterText(textBoxLogPassword, Properties.Resources.EnterPassword, true);
+            additionalMethods.EnterText(textBoxLogPassword, Properties.Resources.EnterPassword, true);
         }
 
         private void textBoxLogPassword_Leave(object sender, EventArgs e)
         {
-            am.LeaveText(textBoxLogPassword, Properties.Resources.EnterPassword);
+            additionalMethods.LeaveText(textBoxLogPassword, Properties.Resources.EnterPassword);
         }
 
         private void buttonLogin_Paint(object sender, PaintEventArgs e)
         {
-            am.ButtonPaint(sender, e);
+            additionalMethods.ButtonPaint(sender, e);
         }
     }
 }

@@ -125,12 +125,75 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на C++ — компилируемый язык программирования, являющийся развитием языка C и включающий поддержку объектно-ориентированного программирования. Он предоставляет программисту детальный контроль над памятью и ресурсами, что делает его одним из самых быстрых и мощных языков. Однако сложный синтаксис и высокая вероятность ошибок делают его более требовательным к опыту разработчика..
+        /// </summary>
+        internal static string CPlusDescription {
+            get {
+                return ResourceManager.GetString("CPlusDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на C# — объектно-ориентированный язык программирования, разработанный Microsoft. Он тесно связан с платформой .NET и предлагает мощные средства разработки для создания производительных и масштабируемых приложений. Язык отличается строгой типизацией, хорошей интеграцией с Windows-средой и отличной поддержкой инструментов разработки. Он особенно популярен в корпоративной среде и при разработке игр на Unity..
+        /// </summary>
+        internal static string CSharpDescription {
+            get {
+                return ResourceManager.GetString("CSharpDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Введите описание языка.
+        /// </summary>
+        internal static string DescriptionLanguageText {
+            get {
+                return ResourceManager.GetString("DescriptionLanguageText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Dislike {
             get {
                 object obj = ResourceManager.GetObject("Dislike", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ввдите описание языка!.
+        /// </summary>
+        internal static string EmptyDescriptionLang {
+            get {
+                return ResourceManager.GetString("EmptyDescriptionLang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка создать язык с пустым описанием.
+        /// </summary>
+        internal static string EmptyDescriptionLangLog {
+            get {
+                return ResourceManager.GetString("EmptyDescriptionLangLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Выберите сложность языка!.
+        /// </summary>
+        internal static string EmptyDifficultyLang {
+            get {
+                return ResourceManager.GetString("EmptyDifficultyLang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка создать язык без сложности.
+        /// </summary>
+        internal static string EmptyDifficultyLangLog {
+            get {
+                return ResourceManager.GetString("EmptyDifficultyLangLog", resourceCulture);
             }
         }
         
@@ -149,6 +212,24 @@ namespace RSFRecomendations.Properties {
         internal static string EmptyEmailRegLog {
             get {
                 return ResourceManager.GetString("EmptyEmailRegLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Выберите изображение для языка.
+        /// </summary>
+        internal static string EmptyImageLang {
+            get {
+                return ResourceManager.GetString("EmptyImageLang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка создать язык без изображения.
+        /// </summary>
+        internal static string EmptyImageLangLog {
+            get {
+                return ResourceManager.GetString("EmptyImageLangLog", resourceCulture);
             }
         }
         
@@ -180,6 +261,24 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Вы не ввели название языка!.
+        /// </summary>
+        internal static string EmptyNameLang {
+            get {
+                return ResourceManager.GetString("EmptyNameLang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка создать язык без названия.
+        /// </summary>
+        internal static string EmptyNameLangLog {
+            get {
+                return ResourceManager.GetString("EmptyNameLangLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Вы не ввели пароль или ввели только пробелы!.
         /// </summary>
         internal static string EmptyPassword {
@@ -207,6 +306,24 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Выберите хотя бы одну цель языка!.
+        /// </summary>
+        internal static string EmptyPurposeLang {
+            get {
+                return ResourceManager.GetString("EmptyPurposeLang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка добавить язык без целей.
+        /// </summary>
+        internal static string EmptyPurposeLangLog {
+            get {
+                return ResourceManager.GetString("EmptyPurposeLangLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Вы не ввели повторный пароль или ввели только пробелы!.
         /// </summary>
         internal static string EmptyRepeatPassword {
@@ -221,6 +338,15 @@ namespace RSFRecomendations.Properties {
         internal static string EmptyRepeatPasswordRegLog {
             get {
                 return ResourceManager.GetString("EmptyRepeatPasswordRegLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Введите описание.
+        /// </summary>
+        internal static string EnterDescription {
+            get {
+                return ResourceManager.GetString("EnterDescription", resourceCulture);
             }
         }
         
@@ -243,6 +369,15 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Введите название.
+        /// </summary>
+        internal static string EnterName {
+            get {
+                return ResourceManager.GetString("EnterName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Введите пароль.
         /// </summary>
         internal static string EnterPassword {
@@ -261,11 +396,29 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Пользователь нажал кнопку перехода к добавлению языка.
+        /// </summary>
+        internal static string GoAddLanguageLog {
+            get {
+                return ResourceManager.GetString("GoAddLanguageLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Пользователь нажал кнопку перехода к анкете.
         /// </summary>
         internal static string GoAnketaLog {
             get {
                 return ResourceManager.GetString("GoAnketaLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Go - Статически типизированный, компилируемый язык программирования, разработанный в Google (2009 г.) для создания высокопроизводительных, надежных и масштабируемых приложений..
+        /// </summary>
+        internal static string GoDescription {
+            get {
+                return ResourceManager.GetString("GoDescription", resourceCulture);
             }
         }
         
@@ -324,6 +477,24 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Java — строго типизированный объектно-ориентированный язык, работающий через виртуальную машину (JVM), что обеспечивает его кроссплатформенность. Он известен своей надёжностью, безопасностью и масштабируемостью, что делает его популярным выбором для разработки больших и долгоживущих программных систем. Несмотря на многословность синтаксиса, Java сохраняет стабильную популярность в корпоративной среде..
+        /// </summary>
+        internal static string JavaDescription {
+            get {
+                return ResourceManager.GetString("JavaDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на JavaScript — интерпретируемый язык программирования, выполняемый в основном в браузере. Он динамически типизируется, поддерживает как объектно-ориентированный, так и функциональный стиль программирования, и является неотъемлемой частью веб-разработки. Благодаря обширной экосистеме и низкому порогу входа, JavaScript широко используется, но его гибкость может привести к неустойчивому коду без соблюдения строгих стандартов..
+        /// </summary>
+        internal static string JavaScriptDescription {
+            get {
+                return ResourceManager.GetString("JavaScriptDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на В пароле должно быть минимум 8 символов!.
         /// </summary>
         internal static string LengthPassword {
@@ -372,6 +543,33 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Введите название языка.
+        /// </summary>
+        internal static string NameLanguageText {
+            get {
+                return ResourceManager.GetString("NameLanguageText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на В описании языка не должны быть пробелы.
+        /// </summary>
+        internal static string NoContainsSpaceDescriptionLang {
+            get {
+                return ResourceManager.GetString("NoContainsSpaceDescriptionLang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка создать язык с пробелами в описании.
+        /// </summary>
+        internal static string NoContainsSpaceDescriptionLangLog {
+            get {
+                return ResourceManager.GetString("NoContainsSpaceDescriptionLangLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Почта не может содержать пробелы!.
         /// </summary>
         internal static string NoContainsSpaceEmail {
@@ -404,6 +602,24 @@ namespace RSFRecomendations.Properties {
         internal static string NoContainsSpaceLoginRegLog {
             get {
                 return ResourceManager.GetString("NoContainsSpaceLoginRegLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Название языка не может содержать пробелы.
+        /// </summary>
+        internal static string NoContainsSpaceNameLang {
+            get {
+                return ResourceManager.GetString("NoContainsSpaceNameLang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка создания языка с пробелами в названии.
+        /// </summary>
+        internal static string NoContainsSpaceNameLangLog {
+            get {
+                return ResourceManager.GetString("NoContainsSpaceNameLangLog", resourceCulture);
             }
         }
         
@@ -507,6 +723,15 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Python — это высокоуровневый интерпретируемый язык программирования, известный своей простотой, читаемым синтаксисом и широкой областью применения. Он идеально подходит для быстрого прототипирования, написания скриптов и автоматизации. Благодаря огромному количеству библиотек и активному сообществу, Python часто используется в научной среде, бизнесе и стартапах. Несмотря на универсальность, его скорость исполнения ниже, чем у компилируемых языков..
+        /// </summary>
+        internal static string PythonDescription {
+            get {
+                return ResourceManager.GetString("PythonDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Register {
@@ -517,12 +742,57 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Изменения успешно сохранены!.
+        /// </summary>
+        internal static string SuccessfulEditProfile {
+            get {
+                return ResourceManager.GetString("SuccessfulEditProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Язык успешно добавлен.
+        /// </summary>
+        internal static string SuccessfullyAddedLanguage {
+            get {
+                return ResourceManager.GetString("SuccessfullyAddedLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Регистрация прошла успешна!.
+        /// </summary>
+        internal static string SuccessfulRegistration {
+            get {
+                return ResourceManager.GetString("SuccessfulRegistration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap TeamRSF {
             get {
                 object obj = ResourceManager.GetObject("TeamRSF", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Язык с таким названием уже существует.
+        /// </summary>
+        internal static string TheLanguageAlreadyExists {
+            get {
+                return ResourceManager.GetString("TheLanguageAlreadyExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка добавить существующий язык.
+        /// </summary>
+        internal static string TheLanguageAlreadyExistsLog {
+            get {
+                return ResourceManager.GetString("TheLanguageAlreadyExistsLog", resourceCulture);
             }
         }
         

@@ -5,11 +5,14 @@ using RSFRecomendations.Models;
 
 namespace RSFRecomendations
 {
+    /// <summary>
+    /// Форма регистрации
+    /// </summary>
     public partial class RegisterForm : Form
     {
         private readonly MyDBContext db;
 
-        private AdditionalMethodsClass am;
+        private AdditionalMethodsClass additionalMethods;
 
         private Logger Log;
         public RegisterForm()
@@ -17,7 +20,7 @@ namespace RSFRecomendations
             InitializeComponent();
 
             db = new MyDBContext();
-            am = new AdditionalMethodsClass();
+            additionalMethods = new AdditionalMethodsClass();
 
             Log = LogManager.GetCurrentClassLogger();
 
@@ -73,7 +76,7 @@ namespace RSFRecomendations
                 Log.Warn(Properties.Resources.EmptyEmailRegLog);
                 return;
             }
-            if (!am.IsValidEmail(textBoxRegEmail.Text))
+            if (!additionalMethods.IsValidEmail(textBoxRegEmail.Text))
             {
                 MessageBox.Show(Properties.Resources.IncorrectMail);
                 Log.Warn(Properties.Resources.IncorrectMailLog);
@@ -139,7 +142,7 @@ namespace RSFRecomendations
             RandomNumberGenerator.Fill(salt);
 
             // хэш пароля
-            var saltedPassword = am.HashPassword(textBoxRegPassword.Text, salt);
+            var saltedPassword = additionalMethods.HashPassword(textBoxRegPassword.Text, salt);
 
             // Созд и сохр пользователя
             var user = new UserModel
@@ -147,7 +150,7 @@ namespace RSFRecomendations
                 Id = Guid.NewGuid(),
                 Login = textBoxRegLogin.Text,
                 Email = textBoxRegEmail.Text,
-                Image = am.ImageToBytes(Properties.Resources.Аватарка),
+                Image = additionalMethods.ImageToBytes(Properties.Resources.Аватарка),
                 Password = saltedPassword,
                 Salt = salt
             };
@@ -155,7 +158,7 @@ namespace RSFRecomendations
             await db.AddAsync(user);
             await db.SaveChangesAsync();
 
-            MessageBox.Show("Регистрация прошла успешно!");
+            MessageBox.Show(Properties.Resources.SuccessfulRegistration);
 
 
             this.Hide();
@@ -167,67 +170,67 @@ namespace RSFRecomendations
 
         private void textBoxRegName_Enter(object sender, EventArgs e)
         {
-            am.EnterText(textBoxRegLogin, Properties.Resources.EnterLogin);
+            additionalMethods.EnterText(textBoxRegLogin, Properties.Resources.EnterLogin);
         }
 
         private void textBoxRegName_Leave(object sender, EventArgs e)
         {
-            am.LeaveText(textBoxRegLogin, Properties.Resources.EnterLogin);
+            additionalMethods.LeaveText(textBoxRegLogin, Properties.Resources.EnterLogin);
         }
 
         private void textBoxRegEmail_Enter(object sender, EventArgs e)
         {
-            am.EnterText(textBoxRegEmail, Properties.Resources.EnterEmail);
+            additionalMethods.EnterText(textBoxRegEmail, Properties.Resources.EnterEmail);
         }
 
         private void textBoxRegEmail_Leave(object sender, EventArgs e)
         {
-            am.LeaveText(textBoxRegEmail, Properties.Resources.EnterEmail);
+            additionalMethods.LeaveText(textBoxRegEmail, Properties.Resources.EnterEmail);
         }
 
         private void textBoxRegPassword_Enter(object sender, EventArgs e)
         {
-            am.EnterText(textBoxRegPassword, Properties.Resources.EnterPassword, true);
+            additionalMethods.EnterText(textBoxRegPassword, Properties.Resources.EnterPassword, true);
         }
 
         private void textBoxRegPassword_Leave(object sender, EventArgs e)
         {
-            am.LeaveText(textBoxRegPassword, Properties.Resources.EnterPassword);
+            additionalMethods.LeaveText(textBoxRegPassword, Properties.Resources.EnterPassword);
         }
 
         private void textBoxRegPassword2_Enter(object sender, EventArgs e)
         {
-            am.EnterText(textBoxRegPassword2, Properties.Resources.EnterRepeatPassword, true);
+            additionalMethods.EnterText(textBoxRegPassword2, Properties.Resources.EnterRepeatPassword, true);
         }
 
         private void textBoxRegPassword2_Leave(object sender, EventArgs e)
         {
-            am.LeaveText(textBoxRegPassword2, Properties.Resources.EnterRepeatPassword);
+            additionalMethods.LeaveText(textBoxRegPassword2, Properties.Resources.EnterRepeatPassword);
         }
 
         private void labelVisitPassword_Click(object sender, EventArgs e)
         {
-            am.VisitPassword(labelVisitPassword,textBoxRegPassword);
+            additionalMethods.VisitPassword(labelVisitPassword,textBoxRegPassword);
         }
 
         private void labelHidePassword_Click(object sender, EventArgs e)
         {
-            am.HidePassword(labelVisitPassword, textBoxRegPassword);
+            additionalMethods.HidePassword(labelVisitPassword, textBoxRegPassword);
         }
 
         private void labelVisitPassword2_Click(object sender, EventArgs e)
         {
-            am.VisitPassword(labelVisitPassword2, textBoxRegPassword2);
+            additionalMethods.VisitPassword(labelVisitPassword2, textBoxRegPassword2);
         }
 
         private void labelHidePassword2_Click(object sender, EventArgs e)
         {
-            am.HidePassword(labelVisitPassword2, textBoxRegPassword2);
+            additionalMethods.HidePassword(labelVisitPassword2, textBoxRegPassword2);
         }
 
         private void buttonRegister_Paint(object sender, PaintEventArgs e)
         {
-            am.ButtonPaint(sender, e);
+            additionalMethods.ButtonPaint(sender, e);
         }
     }
 }
