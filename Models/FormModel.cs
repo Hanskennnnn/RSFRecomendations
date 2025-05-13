@@ -82,9 +82,14 @@ namespace RSFRecomendations.Models
         public Guid Id { get; set; }
 
         /// <summary>
+        /// Ключ связки с целью
+        /// </summary>
+        public Guid PurposeId { get; set; }
+
+        /// <summary>
         /// Область применения языка
         /// </summary>
-        public Purpose PurposeForm { get; set; }
+        public ProgrammingLanguagePurposeModel PurposeForm { get; set; }
 
         /// <summary>
         /// Сложность языка

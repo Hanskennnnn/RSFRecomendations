@@ -19,7 +19,7 @@ namespace RSFRecomendations.Configurations
 
             builder
                 .HasMany(p => p.Purposes)
-                .WithOne(up => up.ProgrammingLanguage);
+                .WithMany(p => p.ProgrammingLanguages);
         }
     }
 }

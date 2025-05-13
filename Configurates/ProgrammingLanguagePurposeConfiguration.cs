@@ -12,11 +12,12 @@ namespace RSFRecomendations.Configurates
     {
         public void Configure(EntityTypeBuilder<ProgrammingLanguagePurposeModel> builder)
         {
-            builder.HasKey(p => new { p.ProgrammingLanguageId, p.Purpose });
+            builder.HasKey(p => p.Id);
 
             builder
-                .HasOne(f => f.ProgrammingLanguage)
-                .WithMany(u => u.Purposes);
+                .HasMany(p => p.Forms)
+                .WithOne(f => f.PurposeForm)
+                .HasForeignKey(f => f.PurposeId);
         }
     }
 }

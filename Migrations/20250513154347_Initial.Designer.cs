@@ -12,7 +12,7 @@ using RSFRecomendations;
 namespace RSFRecomendations.Migrations
 {
     [DbContext(typeof(MyDBContext))]
-    [Migration("20250512185221_Initial")]
+    [Migration("20250513154347_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -25,15 +25,37 @@ namespace RSFRecomendations.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("ProgrammingLanguageModelProgrammingLanguagePurposeModel", b =>
+                {
+                    b.Property<Guid>("ProgrammingLanguagesId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("PurposesId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("ProgrammingLanguagesId", "PurposesId");
+
+                    b.HasIndex("PurposesId");
+
+                    b.ToTable("ProgrammingLanguageModelProgrammingLanguagePurposeModel");
+                });
+
             modelBuilder.Entity("ProgrammingLanguagePurposeModel", b =>
                 {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("FormId")
+                        .HasColumnType("uuid");
+
                     b.Property<Guid>("ProgrammingLanguageId")
                         .HasColumnType("uuid");
 
-                    b.Property<int>("Purpose")
+                    b.Property<int>("SelectedPurpose")
                         .HasColumnType("integer");
 
-                    b.HasKey("ProgrammingLanguageId", "Purpose");
+                    b.HasKey("Id");
 
                     b.ToTable("ProgrammingLanguagePurpose");
                 });
@@ -50,8 +72,8 @@ namespace RSFRecomendations.Migrations
                     b.Property<int>("ProgrammingSkillUser")
                         .HasColumnType("integer");
 
-                    b.Property<int>("PurposeForm")
-                        .HasColumnType("integer");
+                    b.Property<Guid>("PurposeId")
+                        .HasColumnType("uuid");
 
                     b.Property<int>("TimeEducationInWeek")
                         .HasColumnType("integer");
@@ -60,6 +82,8 @@ namespace RSFRecomendations.Migrations
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("PurposeId");
 
                     b.HasIndex("UserId")
                         .IsUnique();
@@ -140,24 +164,37 @@ namespace RSFRecomendations.Migrations
                     b.ToTable("UserProgrammingLanguages");
                 });
 
-            modelBuilder.Entity("ProgrammingLanguagePurposeModel", b =>
+            modelBuilder.Entity("ProgrammingLanguageModelProgrammingLanguagePurposeModel", b =>
                 {
-                    b.HasOne("RSFRecomendations.Models.ProgrammingLanguageModel", "ProgrammingLanguage")
-                        .WithMany("Purposes")
-                        .HasForeignKey("ProgrammingLanguageId")
+                    b.HasOne("RSFRecomendations.Models.ProgrammingLanguageModel", null)
+                        .WithMany()
+                        .HasForeignKey("ProgrammingLanguagesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("ProgrammingLanguage");
+                    b.HasOne("ProgrammingLanguagePurposeModel", null)
+                        .WithMany()
+                        .HasForeignKey("PurposesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_ProgrammingLanguageModelProgrammingLanguagePurposeModel_Pr~1");
                 });
 
             modelBuilder.Entity("RSFRecomendations.Models.FormModel", b =>
                 {
+                    b.HasOne("ProgrammingLanguagePurposeModel", "PurposeForm")
+                        .WithMany("Forms")
+                        .HasForeignKey("PurposeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("RSFRecomendations.Models.UserModel", "User")
                         .WithOne("FormModel")
                         .HasForeignKey("RSFRecomendations.Models.FormModel", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("PurposeForm");
 
                     b.Navigation("User");
                 });
@@ -181,10 +218,13 @@ namespace RSFRecomendations.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("ProgrammingLanguagePurposeModel", b =>
+                {
+                    b.Navigation("Forms");
+                });
+
             modelBuilder.Entity("RSFRecomendations.Models.ProgrammingLanguageModel", b =>
                 {
-                    b.Navigation("Purposes");
-
                     b.Navigation("UsersProgrammingLanguage");
                 });
 

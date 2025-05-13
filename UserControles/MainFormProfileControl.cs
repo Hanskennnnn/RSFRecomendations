@@ -43,6 +43,12 @@ namespace RSFRecomendations.UserControles
                 Log.Warn(Properties.Resources.ChangeEmptyLoginLog);
                 return;
             }
+            if (!additionalMethods.IsValidLogin(tbUserLoginProfile.Text))
+            {
+                MessageBox.Show(Properties.Resources.IncorrectLogin);
+                Log.Warn(Properties.Resources.IncorrectEditLoginLog);
+                return;
+            }
             if (tbUserLoginProfile.Text.Contains(" "))
             {
                 MessageBox.Show(Properties.Resources.NoContainsSpaceLogin);

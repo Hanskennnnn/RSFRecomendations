@@ -17,6 +17,11 @@ namespace RSFRecomendations.Configurates
                 .HasOne(f => f.User)
                 .WithOne(u => u.FormModel)
                 .HasForeignKey<FormModel>(f => f.UserId);
+
+            builder
+                .HasOne(f => f.PurposeForm)
+                .WithMany(p => p.Forms)
+                .HasForeignKey(f => f.PurposeId);
         }
     }
 }

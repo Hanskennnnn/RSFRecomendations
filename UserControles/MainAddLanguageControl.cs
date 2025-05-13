@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic.ApplicationServices;
 using NLog;
 using RSFRecomendations.Models;
 
@@ -78,7 +77,8 @@ namespace RSFRecomendations.UserControles
 
         private async void buttonAddLanguage_Click(object sender, EventArgs e)
         {
-            var difficultyLanguage = GetDifficulty();
+            var valuesDifficultyLanguage = new List<RadioButton> { radioButtonEasy, radioButtonMid, radioButtonHard };
+            var difficultyLanguage = additionalMethods.GetDifficulty(valuesDifficultyLanguage);
 
             if (string.IsNullOrWhiteSpace(textBoxNameLanguage.Text))
             {
@@ -114,7 +114,7 @@ namespace RSFRecomendations.UserControles
             {
                 MessageBox.Show(Properties.Resources.EmptyPurposeLang);
                 Log.Warn(Properties.Resources.EmptyPurposeLangLog);
-                return; 
+                return;
             }
 
             var usLogin = await db.ProgrammingLanguages.FirstOrDefaultAsync(c => c.Name == textBoxNameLanguage.Text);
@@ -130,18 +130,13 @@ namespace RSFRecomendations.UserControles
                 Id = Guid.NewGuid(),
                 Name = textBoxNameLanguage.Text,
                 Description = textBoxDescriptionLanguage.Text,
-                Purposes = new List<ProgrammingLanguagePurposeModel>(),
+                Purposes = additionalMethods.GetPurposes(clbPurposesLanguage),
                 DifficultyLanguage = difficultyLanguage,
                 Image = additionalMethods.ImageToBytes(pictureBoxImageLanguage.Image),
                 UsersProgrammingLanguage = new List<UserProgrammingLanguageModel>()
             };
 
             await db.ProgrammingLanguages.AddAsync(language);
-            await db.SaveChangesAsync();
-
-            var purposeList = additionalMethods.GetPurposes(clbPurposesLanguage, language.Id, language.Purposes);
-
-            await db.ProgrammingLanguagePurpose.AddRangeAsync(purposeList);
             await db.SaveChangesAsync();
 
             MessageBox.Show(Properties.Resources.SuccessfullyAddedLanguage);
@@ -151,20 +146,14 @@ namespace RSFRecomendations.UserControles
             textBoxNameLanguage.Text = string.Empty;
             textBoxDescriptionLanguage.Text = string.Empty;
             pictureBoxImageLanguage.Image = null;
-            clbPurposesLanguage.ClearSelected();
-        }
 
-        private Difficulty? GetDifficulty()
-        {
             var radioButtons = new List<RadioButton> { radioButtonEasy, radioButtonMid, radioButtonHard };
-            foreach (var radio in radioButtons)
+            additionalMethods.ClearRadioButtons(radioButtons);
+
+            for (var i = 0; i < clbPurposesLanguage.Items.Count; i++)
             {
-                if (radio.Checked)
-                {
-                    return (Difficulty)radio.Tag;
-                }
+                clbPurposesLanguage.SetItemChecked(i, false);
             }
-            return null;
         }
 
         private void buttonAddImageLanguage_Click(object sender, EventArgs e)
@@ -195,6 +184,16 @@ namespace RSFRecomendations.UserControles
         private void panelMainAddLanguage_Paint(object sender, PaintEventArgs e)
         {
             additionalMethods.Panel_Paint(panelMainAddLanguage);
+        }
+
+        private void buttonAddImageLanguage_Paint(object sender, PaintEventArgs e)
+        {
+            additionalMethods.ButtonPaint(sender, e, 40);
+        }
+
+        private void buttonAddLanguage_Paint(object sender, PaintEventArgs e)
+        {
+            additionalMethods.ButtonPaint(sender, e, 40);
         }
     }
 }

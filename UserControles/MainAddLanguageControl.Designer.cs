@@ -32,6 +32,9 @@ namespace RSFRecomendations.UserControles
         {
             labelMainProfile = new Label();
             panelMainAddLanguage = new Panel();
+            radioButtonHard = new RadioButton();
+            radioButtonMid = new RadioButton();
+            radioButtonEasy = new RadioButton();
             clbPurposesLanguage = new CheckedListBox();
             buttonAddLanguage = new Button();
             labelLanguageDifficultyLanguage = new Label();
@@ -39,9 +42,6 @@ namespace RSFRecomendations.UserControles
             textBoxNameLanguage = new TextBox();
             buttonAddImageLanguage = new Button();
             pictureBoxImageLanguage = new PictureBox();
-            radioButtonEasy = new RadioButton();
-            radioButtonMid = new RadioButton();
-            radioButtonHard = new RadioButton();
             panelMainAddLanguage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxImageLanguage).BeginInit();
             SuspendLayout();
@@ -74,6 +74,42 @@ namespace RSFRecomendations.UserControles
             panelMainAddLanguage.TabIndex = 7;
             panelMainAddLanguage.Paint += panelMainAddLanguage_Paint;
             // 
+            // radioButtonHard
+            // 
+            radioButtonHard.AutoSize = true;
+            radioButtonHard.Location = new Point(562, 287);
+            radioButtonHard.Name = "radioButtonHard";
+            radioButtonHard.Size = new Size(96, 24);
+            radioButtonHard.TabIndex = 33;
+            radioButtonHard.TabStop = true;
+            radioButtonHard.Tag = Difficulty.Difficult;
+            radioButtonHard.Text = "Сложный";
+            radioButtonHard.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMid
+            // 
+            radioButtonMid.AutoSize = true;
+            radioButtonMid.Location = new Point(446, 287);
+            radioButtonMid.Name = "radioButtonMid";
+            radioButtonMid.Size = new Size(91, 24);
+            radioButtonMid.TabIndex = 32;
+            radioButtonMid.TabStop = true;
+            radioButtonMid.Tag = Difficulty.Medium;
+            radioButtonMid.Text = "Средний";
+            radioButtonMid.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonEasy
+            // 
+            radioButtonEasy.AutoSize = true;
+            radioButtonEasy.Location = new Point(346, 287);
+            radioButtonEasy.Name = "radioButtonEasy";
+            radioButtonEasy.Size = new Size(79, 24);
+            radioButtonEasy.TabIndex = 31;
+            radioButtonEasy.TabStop = true;
+            radioButtonEasy.Tag = Difficulty.Easy;
+            radioButtonEasy.Text = "Легкий";
+            radioButtonEasy.UseVisualStyleBackColor = true;
+            // 
             // clbPurposesLanguage
             // 
             clbPurposesLanguage.FormattingEnabled = true;
@@ -89,8 +125,13 @@ namespace RSFRecomendations.UserControles
             buttonAddLanguage.Size = new Size(202, 44);
             buttonAddLanguage.TabIndex = 29;
             buttonAddLanguage.Text = "Добавить язык";
-            buttonAddLanguage.UseVisualStyleBackColor = true;
             buttonAddLanguage.Click += buttonAddLanguage_Click;
+            buttonAddLanguage.Paint += buttonAddLanguage_Paint;
+            buttonAddLanguage.BackColor = Color.FromArgb(125, 115, 235);
+            buttonAddLanguage.FlatAppearance.BorderSize = 0;
+            buttonAddLanguage.FlatStyle = FlatStyle.Flat;
+            buttonAddLanguage.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            buttonAddLanguage.ForeColor = Color.White;
             // 
             // labelLanguageDifficultyLanguage
             // 
@@ -131,8 +172,13 @@ namespace RSFRecomendations.UserControles
             buttonAddImageLanguage.Size = new Size(168, 45);
             buttonAddImageLanguage.TabIndex = 1;
             buttonAddImageLanguage.Text = "Добавить картинку";
-            buttonAddImageLanguage.UseVisualStyleBackColor = true;
             buttonAddImageLanguage.Click += buttonAddImageLanguage_Click;
+            buttonAddImageLanguage.Paint += buttonAddImageLanguage_Paint;
+            buttonAddImageLanguage.BackColor = Color.FromArgb(125, 115, 235);
+            buttonAddImageLanguage.FlatAppearance.BorderSize = 0;
+            buttonAddImageLanguage.FlatStyle = FlatStyle.Flat;
+            buttonAddImageLanguage.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            buttonAddImageLanguage.ForeColor = Color.White;
             // 
             // pictureBoxImageLanguage
             // 
@@ -143,42 +189,6 @@ namespace RSFRecomendations.UserControles
             pictureBoxImageLanguage.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxImageLanguage.TabIndex = 0;
             pictureBoxImageLanguage.TabStop = false;
-            // 
-            // radioButtonEasy
-            // 
-            radioButtonEasy.AutoSize = true;
-            radioButtonEasy.Location = new Point(346, 287);
-            radioButtonEasy.Name = "radioButtonEasy";
-            radioButtonEasy.Size = new Size(79, 24);
-            radioButtonEasy.TabIndex = 31;
-            radioButtonEasy.TabStop = true;
-            radioButtonEasy.Tag = Difficulty.Easy;
-            radioButtonEasy.Text = "Легкий";
-            radioButtonEasy.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonMid
-            // 
-            radioButtonMid.AutoSize = true;
-            radioButtonMid.Location = new Point(446, 287);
-            radioButtonMid.Name = "radioButtonMid";
-            radioButtonMid.Size = new Size(91, 24);
-            radioButtonMid.TabIndex = 32;
-            radioButtonMid.TabStop = true;
-            radioButtonMid.Tag = Difficulty.Medium;
-            radioButtonMid.Text = "Средний";
-            radioButtonMid.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonHard
-            // 
-            radioButtonHard.AutoSize = true;
-            radioButtonHard.Location = new Point(562, 287);
-            radioButtonHard.Name = "radioButtonHard";
-            radioButtonHard.Size = new Size(96, 24);
-            radioButtonHard.TabIndex = 33;
-            radioButtonHard.TabStop = true;
-            radioButtonHard.Tag = Difficulty.Difficult;
-            radioButtonHard.Text = "Сложный";
-            radioButtonHard.UseVisualStyleBackColor = true;
             // 
             // MainAddLanguageControl
             // 

@@ -12,6 +12,20 @@ namespace RSFRecomendations.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "ProgrammingLanguagePurpose",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    ProgrammingLanguageId = table.Column<Guid>(type: "uuid", nullable: false),
+                    FormId = table.Column<Guid>(type: "uuid", nullable: false),
+                    SelectedPurpose = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProgrammingLanguagePurpose", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ProgrammingLanguages",
                 columns: table => new
                 {
@@ -43,19 +57,25 @@ namespace RSFRecomendations.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProgrammingLanguagePurpose",
+                name: "ProgrammingLanguageModelProgrammingLanguagePurposeModel",
                 columns: table => new
                 {
-                    ProgrammingLanguageId = table.Column<Guid>(type: "uuid", nullable: false),
-                    Purpose = table.Column<int>(type: "integer", nullable: false)
+                    ProgrammingLanguagesId = table.Column<Guid>(type: "uuid", nullable: false),
+                    PurposesId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProgrammingLanguagePurpose", x => new { x.ProgrammingLanguageId, x.Purpose });
+                    table.PrimaryKey("PK_ProgrammingLanguageModelProgrammingLanguagePurposeModel", x => new { x.ProgrammingLanguagesId, x.PurposesId });
                     table.ForeignKey(
-                        name: "FK_ProgrammingLanguagePurpose_ProgrammingLanguages_Programming~",
-                        column: x => x.ProgrammingLanguageId,
+                        name: "FK_ProgrammingLanguageModelProgrammingLanguagePurposeModel_Pro~",
+                        column: x => x.ProgrammingLanguagesId,
                         principalTable: "ProgrammingLanguages",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ProgrammingLanguageModelProgrammingLanguagePurposeModel_Pr~1",
+                        column: x => x.PurposesId,
+                        principalTable: "ProgrammingLanguagePurpose",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -65,7 +85,7 @@ namespace RSFRecomendations.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    PurposeForm = table.Column<int>(type: "integer", nullable: false),
+                    PurposeId = table.Column<Guid>(type: "uuid", nullable: false),
                     DifficultyForm = table.Column<int>(type: "integer", nullable: false),
                     ProgrammingSkillUser = table.Column<int>(type: "integer", nullable: false),
                     TimeEducationInWeek = table.Column<int>(type: "integer", nullable: false),
@@ -74,6 +94,12 @@ namespace RSFRecomendations.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_FormModels", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_FormModels_ProgrammingLanguagePurpose_PurposeId",
+                        column: x => x.PurposeId,
+                        principalTable: "ProgrammingLanguagePurpose",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_FormModels_Users_UserId",
                         column: x => x.UserId,
@@ -108,10 +134,20 @@ namespace RSFRecomendations.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_FormModels_PurposeId",
+                table: "FormModels",
+                column: "PurposeId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_FormModels_UserId",
                 table: "FormModels",
                 column: "UserId",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProgrammingLanguageModelProgrammingLanguagePurposeModel_Pur~",
+                table: "ProgrammingLanguageModelProgrammingLanguagePurposeModel",
+                column: "PurposesId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserProgrammingLanguages_ProgrammingLanguageId",
@@ -126,10 +162,13 @@ namespace RSFRecomendations.Migrations
                 name: "FormModels");
 
             migrationBuilder.DropTable(
-                name: "ProgrammingLanguagePurpose");
+                name: "ProgrammingLanguageModelProgrammingLanguagePurposeModel");
 
             migrationBuilder.DropTable(
                 name: "UserProgrammingLanguages");
+
+            migrationBuilder.DropTable(
+                name: "ProgrammingLanguagePurpose");
 
             migrationBuilder.DropTable(
                 name: "ProgrammingLanguages");

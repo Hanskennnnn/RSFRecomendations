@@ -4,6 +4,7 @@ using System.Text.RegularExpressions;
 using System.Security.Cryptography;
 using NLog;
 using RSFRecomendations.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace RSFRecomendations
 {
@@ -12,96 +13,77 @@ namespace RSFRecomendations
     /// </summary>
     public class AdditionalMethodsClass
     {
+        private readonly MyDBContext db;
+
         private Logger Log;
         public AdditionalMethodsClass()
         {
             Log = LogManager.GetCurrentClassLogger();
+            db = new MyDBContext();
         }
 
+        /// <summary>
+        /// Метод для очистки выбора кнопок
+        /// </summary>
+        /// <param name="radioButtons"></param>
+        public void ClearRadioButtons(ICollection<RadioButton> radioButtons)
+        {
+            foreach (var radio in radioButtons)
+            {
+                radio.Checked = false;
+            }
+        }
 
         /// <summary>
         /// Метод для добавления целей языка из лист бокса
         /// </summary>
         /// <param name="clbPurposesLanguage"></param>
         /// <param name="languageId"></param>
-        public ICollection<ProgrammingLanguagePurposeModel> GetPurposes(CheckedListBox clbPurposesLanguage,
-            Guid languageId, ICollection<ProgrammingLanguagePurposeModel> purposeList)
+        public ICollection<ProgrammingLanguagePurposeModel> GetPurposes(CheckedListBox clbPurposesLanguage)
         {
+            var purposeList = new List<ProgrammingLanguagePurposeModel>();
+
             foreach (var item in clbPurposesLanguage.CheckedItems)
             {
-                Purpose parsedPurpose;
-
-                switch (item.ToString())
-                {
-                    case "Веб-программирование":
-                        parsedPurpose = Purpose.WebDevelopment;
-                        break;
-                    case "Игры":
-                        parsedPurpose = Purpose.GameDevelopment;
-                        break;
-                    case "Микросервисы":
-                        parsedPurpose = Purpose.Microservices;
-                        break;
-                    case "Приложения":
-                        parsedPurpose = Purpose.ApplicationDevelopment;
-                        break;
-                    case "Образование и быстрое прототипирование":
-                        parsedPurpose = Purpose.EducationAndRapidPrototyping;
-                        break;
-                    case "Серверная разработка":
-                        parsedPurpose = Purpose.ServerSideDevelopment;
-                        break;
-                    case "Разработка приложений под Windows (WPF, WinForms)":
-                        parsedPurpose = Purpose.WindowsApplicationDevelopment;
-                        break;
-                    case "Обработка данных и автоматизация на платформе .NET":
-                        parsedPurpose = Purpose.NETDataProcessingAndAutomation;
-                        break;
-                    case "Системное программирование (драйверы, ОС)":
-                        parsedPurpose = Purpose.SystemsProgramming;
-                        break;
-                    case "Встроенные системы (Embedded)":
-                        parsedPurpose = Purpose.EmbeddedSystems;
-                        break;
-                    case "Финансовое ПО и торговые системы":
-                        parsedPurpose = Purpose.FinancialAndTradingSoftware;
-                        break;
-                    case "Data Science и анализ данных":
-                        parsedPurpose = Purpose.DataScienceAndDataAnalysis;
-                        break;
-                    case "Машинное обучение / ИИ":
-                        parsedPurpose = Purpose.MachineLearningAndAI;
-                        break;
-                    case "Скрипты и автоматизация":
-                        parsedPurpose = Purpose.ScriptingAndAutomation;
-                        break;
-                    case "Разработка CLI-инструментов":
-                        parsedPurpose = Purpose.CLIToolDevelopment;
-                        break;
-                    case "Мобильная разработка (Android)":
-                        parsedPurpose = Purpose.MobileDevelopmentInAndroid;
-                        break;
-                    case "Разработка PWA и SPA":
-                        parsedPurpose = Purpose.PWAAndSPADevelopment;
-                        break;
-                    case "Интерактивность в браузере":
-                        parsedPurpose = Purpose.BrowserInteractivity;
-                        break;
-                    case "Полный стек (Full Stack) с MongoDB, Express и пр.":
-                        parsedPurpose = Purpose.FullStackDevelopment;
-                        break;
-                    default:
-                        continue; 
-                }
+                if (!Enum.TryParse<Purpose>(item.ToString(), out var parsedPurpose))
+                    continue;
 
                 purposeList.Add(new ProgrammingLanguagePurposeModel
                 {
-                    ProgrammingLanguageId = languageId,
-                    Purpose = parsedPurpose
+                    Id = Guid.NewGuid(),
+                    SelectedPurpose = parsedPurpose
                 });
             }
 
             return purposeList;
+        }
+
+        /// <summary>
+        /// Метод для вытаскивания всех языков из базы данных 
+        /// </summary>
+        /// <returns></returns>
+        public async Task<List<ProgrammingLanguageModel>> GetLanguages()
+        {
+            var languages = await db.ProgrammingLanguages.ToListAsync();
+            return languages;
+        }
+
+        /// <summary>
+        /// Метод для получения сложности языка
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public Difficulty? GetDifficulty(ICollection<RadioButton> values)
+        {
+            var radioButtons = values;
+            foreach (var radio in radioButtons)
+            {
+                if (radio.Checked)
+                {
+                    return (Difficulty)radio.Tag;
+                }
+            }
+            return null;
         }
 
         /// <summary>
@@ -202,9 +184,8 @@ namespace RSFRecomendations
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void ButtonPaint(object sender, PaintEventArgs e)
+        public void ButtonPaint(object sender, PaintEventArgs e, int cornerRadius = 50)
         {
-            var cornerRadius = 50;
             var button = (Button)sender;
 
             var path = new GraphicsPath();
@@ -280,8 +261,19 @@ namespace RSFRecomendations
         /// <returns></returns>
         public bool IsValidEmail(string email)
         {
-            string pattern = @"^[^@\s]+@[a-zA-Z]+\.[a-zA-Z]+$";
+            string pattern = @"^[a-zA-Z0-9]{4,}@[a-zA-Z]{3,}\.[a-zA-Z]{2,}$";
             return Regex.IsMatch(email, pattern);
+        }
+
+        /// <summary>
+        /// Маска для логина
+        /// </summary>
+        /// <param name="login"></param>
+        /// <returns></returns>
+        public bool IsValidLogin(string login)
+        {
+            string pattern = @"^[a-zA-Z0-9]{3,}$";
+            return Regex.IsMatch(login, pattern);
         }
 
         /// <summary>

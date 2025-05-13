@@ -394,4 +394,22 @@
   <data name="TheLanguageAlreadyExistsLog" xml:space="preserve">
     <value>Попытка добавить существующий язык</value>
   </data>
+  <data name="IncorrectLogin" xml:space="preserve">
+    <value>Логин может содержать только латиницу и цифры и должен состоять минимум из 3 символов</value>
+  </data>
+  <data name="IncorrectEditLoginLog" xml:space="preserve">
+    <value>Попытка изменить логин на некорректный</value>
+  </data>
+  <data name="IncorrectLoginLog" xml:space="preserve">
+    <value>Попытка создать аккаунт с некорректным логином</value>
+  </data>
+  <data name="LanguageDescriptionInfo" xml:space="preserve">
+    <value>Описание языка</value>
+  </data>
+  <data name="LanguageDifficultyInfo" xml:space="preserve">
+    <value>Сложность языка</value>
+  </data>
+  <data name="LanguagePurposeInfo" xml:space="preserve">
+    <value>Цели языка</value>
+  </data>
 </root>

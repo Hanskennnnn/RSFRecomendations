@@ -64,6 +64,12 @@ namespace RSFRecomendations
                 Log.Warn(Properties.Resources.EmptyLoginRegLog);
                 return;
             }
+            if (!additionalMethods.IsValidLogin(textBoxRegLogin.Text))
+            {
+                MessageBox.Show(Properties.Resources.IncorrectLogin);
+                Log.Warn(Properties.Resources.IncorrectLoginLog);
+                return;
+            }
             if (textBoxRegLogin.Text.Contains(" "))
             {
                 MessageBox.Show(Properties.Resources.NoContainsSpaceLogin);

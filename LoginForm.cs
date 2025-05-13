@@ -71,7 +71,6 @@ namespace RSFRecomendations
 
             // Проверка на сущ логина
             var us = await db.Users.FirstOrDefaultAsync(c => c.Login == textBoxLogLogin.Text);
-
             if (us == null)
             {
                 MessageBox.Show(Properties.Resources.NoUser);

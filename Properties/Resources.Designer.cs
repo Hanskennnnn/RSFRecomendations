@@ -459,6 +459,33 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка изменить логин на некорректный.
+        /// </summary>
+        internal static string IncorrectEditLoginLog {
+            get {
+                return ResourceManager.GetString("IncorrectEditLoginLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Логин может содержать только латиницу и цифры и должен состоять минимум из 3 символов.
+        /// </summary>
+        internal static string IncorrectLogin {
+            get {
+                return ResourceManager.GetString("IncorrectLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка создать аккаунт с некорректным логином.
+        /// </summary>
+        internal static string IncorrectLoginLog {
+            get {
+                return ResourceManager.GetString("IncorrectLoginLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Почта должна быть вида &quot;____@__.__&quot;!.
         /// </summary>
         internal static string IncorrectMail {
@@ -491,6 +518,33 @@ namespace RSFRecomendations.Properties {
         internal static string JavaScriptDescription {
             get {
                 return ResourceManager.GetString("JavaScriptDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Описание языка.
+        /// </summary>
+        internal static string LanguageDescriptionInfo {
+            get {
+                return ResourceManager.GetString("LanguageDescriptionInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Сложность языка.
+        /// </summary>
+        internal static string LanguageDifficultyInfo {
+            get {
+                return ResourceManager.GetString("LanguageDifficultyInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Цели языка.
+        /// </summary>
+        internal static string LanguagePurposeInfo {
+            get {
+                return ResourceManager.GetString("LanguagePurposeInfo", resourceCulture);
             }
         }
         

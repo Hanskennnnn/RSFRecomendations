@@ -28,66 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lbLanguageInfo = new Label();
-            tbDescriptionLanguage = new TextBox();
-            lbFilteredLanguages = new Label();
-            listBoxFilteredLanguages = new ListBox();
+            listBoxFilteredLanguagesInfo = new ListBox();
+            labelMainProfile = new Label();
+            panelMainAddLanguage = new Panel();
+            textBoxDescriptionLanguageInfo = new TextBox();
+            pictureBoxImageLanguageInfo = new PictureBox();
+            panelMainAddLanguage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxImageLanguageInfo).BeginInit();
             SuspendLayout();
             // 
-            // lbLanguageInfo
+            // listBoxFilteredLanguagesInfo
             // 
-            lbLanguageInfo.AutoSize = true;
-            lbLanguageInfo.Location = new Point(372, 285);
-            lbLanguageInfo.Name = "lbLanguageInfo";
-            lbLanguageInfo.Size = new Size(124, 20);
-            lbLanguageInfo.TabIndex = 13;
-            lbLanguageInfo.Text = "Описание языка";
+            listBoxFilteredLanguagesInfo.FormattingEnabled = true;
+            listBoxFilteredLanguagesInfo.Location = new Point(207, 20);
+            listBoxFilteredLanguagesInfo.Name = "listBoxFilteredLanguagesInfo";
+            listBoxFilteredLanguagesInfo.Size = new Size(571, 164);
+            listBoxFilteredLanguagesInfo.TabIndex = 10;
+            listBoxFilteredLanguagesInfo.SelectedIndexChanged += listBoxFilteredLanguages_SelectedIndexChanged;
             // 
-            // tbDescriptionLanguage
+            // labelMainProfile
             // 
-            tbDescriptionLanguage.Location = new Point(52, 321);
-            tbDescriptionLanguage.Multiline = true;
-            tbDescriptionLanguage.Name = "tbDescriptionLanguage";
-            tbDescriptionLanguage.Size = new Size(769, 290);
-            tbDescriptionLanguage.TabIndex = 12;
+            labelMainProfile.Font = new Font("Microsoft Sans Serif", 13F, FontStyle.Bold);
+            labelMainProfile.Location = new Point(3, 12);
+            labelMainProfile.Name = "labelMainProfile";
+            labelMainProfile.Size = new Size(556, 38);
+            labelMainProfile.TabIndex = 14;
+            labelMainProfile.Text = "ИНФОРМАЦИЯ О ЯЗЫКАХ ПРОГРАММИРОВАНИЯ";
             // 
-            // lbFilteredLanguages
+            // panelMainAddLanguage
             // 
-            lbFilteredLanguages.AutoSize = true;
-            lbFilteredLanguages.Location = new Point(333, 15);
-            lbFilteredLanguages.Name = "lbFilteredLanguages";
-            lbFilteredLanguages.Size = new Size(197, 20);
-            lbFilteredLanguages.TabIndex = 11;
-            lbFilteredLanguages.Text = "Языки программирования";
+            panelMainAddLanguage.BackColor = Color.White;
+            panelMainAddLanguage.Controls.Add(listBoxFilteredLanguagesInfo);
+            panelMainAddLanguage.Controls.Add(textBoxDescriptionLanguageInfo);
+            panelMainAddLanguage.Controls.Add(pictureBoxImageLanguageInfo);
+            panelMainAddLanguage.Location = new Point(34, 46);
+            panelMainAddLanguage.Name = "panelMainAddLanguage";
+            panelMainAddLanguage.Size = new Size(804, 534);
+            panelMainAddLanguage.TabIndex = 16;
+            panelMainAddLanguage.Paint += panelMainAddLanguage_Paint;
             // 
-            // listBoxFilteredLanguages
+            // textBoxDescriptionLanguageInfo
             // 
-            listBoxFilteredLanguages.FormattingEnabled = true;
-            listBoxFilteredLanguages.Location = new Point(90, 38);
-            listBoxFilteredLanguages.Name = "listBoxFilteredLanguages";
-            listBoxFilteredLanguages.Size = new Size(678, 224);
-            listBoxFilteredLanguages.TabIndex = 10;
-            listBoxFilteredLanguages.SelectedIndexChanged += listBoxFilteredLanguages_SelectedIndexChanged;
+            textBoxDescriptionLanguageInfo.BackColor = SystemColors.Window;
+            textBoxDescriptionLanguageInfo.BorderStyle = BorderStyle.FixedSingle;
+            textBoxDescriptionLanguageInfo.Location = new Point(21, 209);
+            textBoxDescriptionLanguageInfo.Multiline = true;
+            textBoxDescriptionLanguageInfo.Name = "textBoxDescriptionLanguageInfo";
+            textBoxDescriptionLanguageInfo.Size = new Size(757, 304);
+            textBoxDescriptionLanguageInfo.TabIndex = 3;
+            // 
+            // pictureBoxImageLanguageInfo
+            // 
+            pictureBoxImageLanguageInfo.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxImageLanguageInfo.Location = new Point(21, 20);
+            pictureBoxImageLanguageInfo.Name = "pictureBoxImageLanguageInfo";
+            pictureBoxImageLanguageInfo.Size = new Size(168, 165);
+            pictureBoxImageLanguageInfo.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxImageLanguageInfo.TabIndex = 0;
+            pictureBoxImageLanguageInfo.TabStop = false;
             // 
             // MainFormProgLangControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(lbLanguageInfo);
-            Controls.Add(tbDescriptionLanguage);
-            Controls.Add(lbFilteredLanguages);
-            Controls.Add(listBoxFilteredLanguages);
+            Controls.Add(panelMainAddLanguage);
+            Controls.Add(labelMainProfile);
             Name = "MainFormProgLangControl";
             Size = new Size(873, 627);
+            panelMainAddLanguage.ResumeLayout(false);
+            panelMainAddLanguage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxImageLanguageInfo).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Label lbLanguageInfo;
-        private TextBox tbDescriptionLanguage;
         private Label lbFilteredLanguages;
-        private ListBox listBoxFilteredLanguages;
+        private ListBox listBoxFilteredLanguagesInfo;
+        private Label labelMainProfile;
+        private Panel panelMainAddLanguage;
+        private TextBox textBoxDescriptionLanguageInfo;
+        private PictureBox pictureBoxImageLanguageInfo;
     }
 }
