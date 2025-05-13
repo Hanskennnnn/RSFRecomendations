@@ -152,7 +152,7 @@
     <value>Пользователь нажал на кнопку перехода к главному меню, до заполнения анкеты</value>
   </data>
   <data name="IncorrectMail" xml:space="preserve">
-    <value>Почта должна быть вида "____@__.__"!</value>
+    <value>Почта должна быть вида "____@__.__" и до @ должно быть минимум 4 символа, после @ и до . минимум 3 символа, после . минимум 2 символа</value>
   </data>
   <data name="ChangeEmptyLoginLog" xml:space="preserve">
     <value>Попытка изменить данные пользователя с пустым логином</value>
@@ -411,5 +411,35 @@
   </data>
   <data name="LanguagePurposeInfo" xml:space="preserve">
     <value>Цели языка</value>
+  </data>
+  <data name="SuccessfulForm" xml:space="preserve">
+    <value>Анкета успешно заполнена</value>
+  </data>
+  <data name="EmptyPurposeForm" xml:space="preserve">
+    <value>Выберите цель языка для анкеты</value>
+  </data>
+  <data name="EmptyPurposeFormLog" xml:space="preserve">
+    <value>Попытка подобрать анкету без цели</value>
+  </data>
+  <data name="EmptyProgSkillForm" xml:space="preserve">
+    <value>Выберите уровень программирвания</value>
+  </data>
+  <data name="EmptyProgSkillFormLog" xml:space="preserve">
+    <value>Попытка подобрать анкету без уровня программирования</value>
+  </data>
+  <data name="EmptyPriorityForm" xml:space="preserve">
+    <value>Выберите приоритет для языка</value>
+  </data>
+  <data name="EmptyPriorityFormLog" xml:space="preserve">
+    <value>Попытка подобрать анкеты без приоритета языка</value>
+  </data>
+  <data name="EmptyTimeForm" xml:space="preserve">
+    <value>Выберите время которое хотите уделять языку</value>
+  </data>
+  <data name="EmptyTimeFormLog" xml:space="preserve">
+    <value>Попытка подобрать анкету без времени, которое уделяется языку</value>
+  </data>
+  <data name="SuccessfulEditForm" xml:space="preserve">
+    <value>Повторная анкета успешна заполнена</value>
   </data>
 </root>

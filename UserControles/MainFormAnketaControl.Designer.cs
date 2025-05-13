@@ -97,7 +97,7 @@ namespace RSFRecomendations.UserControles
             radioButtonQuestion4Answer3.Size = new Size(116, 24);
             radioButtonQuestion4Answer3.TabIndex = 27;
             radioButtonQuestion4Answer3.TabStop = true;
-            radioButtonQuestion4Answer1.Tag = TimeToEducation.SixToTenPlusHours;
+            radioButtonQuestion4Answer3.Tag = TimeToEducation.SixToTenPlusHours;
             radioButtonQuestion4Answer3.Text = "6–10+ часов";
             radioButtonQuestion4Answer3.UseVisualStyleBackColor = true;
             // 
@@ -110,7 +110,7 @@ namespace RSFRecomendations.UserControles
             radioButtonQuestion4Answer2.Size = new Size(98, 24);
             radioButtonQuestion4Answer2.TabIndex = 26;
             radioButtonQuestion4Answer2.TabStop = true;
-            radioButtonQuestion4Answer1.Tag = TimeToEducation.ThreeToFiveHours;
+            radioButtonQuestion4Answer2.Tag = TimeToEducation.ThreeToFiveHours;
             radioButtonQuestion4Answer2.Text = "3–5 часов";
             radioButtonQuestion4Answer2.UseVisualStyleBackColor = true;
             // 
@@ -151,6 +151,7 @@ namespace RSFRecomendations.UserControles
             radioButtonQuestion3Answer5.Size = new Size(227, 24);
             radioButtonQuestion3Answer5.TabIndex = 29;
             radioButtonQuestion3Answer5.TabStop = true;
+            radioButtonQuestion3Answer5.Tag = ProgrammingLanguagePriority.LearningResources;
             radioButtonQuestion3Answer5.Text = "Много учебных материалов";
             radioButtonQuestion3Answer5.UseVisualStyleBackColor = true;
             // 
@@ -163,6 +164,7 @@ namespace RSFRecomendations.UserControles
             radioButtonQuestion3Answer4.Size = new Size(222, 24);
             radioButtonQuestion3Answer4.TabIndex = 28;
             radioButtonQuestion3Answer4.TabStop = true;
+            radioButtonQuestion3Answer4.Tag = ProgrammingLanguagePriority.JobOpportunities;
             radioButtonQuestion3Answer4.Text = "Возможность найти работу";
             radioButtonQuestion3Answer4.UseVisualStyleBackColor = true;
             // 
@@ -175,6 +177,7 @@ namespace RSFRecomendations.UserControles
             radioButtonQuestion3Answer3.Size = new Size(144, 24);
             radioButtonQuestion3Answer3.TabIndex = 27;
             radioButtonQuestion3Answer3.TabStop = true;
+            radioButtonQuestion3Answer3.Tag = ProgrammingLanguagePriority.Performance;
             radioButtonQuestion3Answer3.Text = "Быстродействие";
             radioButtonQuestion3Answer3.UseVisualStyleBackColor = true;
             // 
@@ -187,6 +190,7 @@ namespace RSFRecomendations.UserControles
             radioButtonQuestion3Answer2.Size = new Size(152, 24);
             radioButtonQuestion3Answer2.TabIndex = 26;
             radioButtonQuestion3Answer2.TabStop = true;
+            radioButtonQuestion3Answer2.Tag = ProgrammingLanguagePriority.Versatility;
             radioButtonQuestion3Answer2.Text = "Универсальность";
             radioButtonQuestion3Answer2.UseVisualStyleBackColor = true;
             // 
@@ -199,6 +203,7 @@ namespace RSFRecomendations.UserControles
             radioButtonQuestion3Answer1.Size = new Size(192, 24);
             radioButtonQuestion3Answer1.TabIndex = 25;
             radioButtonQuestion3Answer1.TabStop = true;
+            radioButtonQuestion3Answer1.Tag = ProgrammingLanguagePriority.Simplicity;
             radioButtonQuestion3Answer1.Text = "Простота и понятность";
             radioButtonQuestion3Answer1.UseVisualStyleBackColor = true;
             // 
@@ -224,6 +229,7 @@ namespace RSFRecomendations.UserControles
             radioButtonQuestion2Answer3.Size = new Size(343, 24);
             radioButtonQuestion2Answer3.TabIndex = 2;
             radioButtonQuestion2Answer3.TabStop = true;
+            radioButtonQuestion2Answer3.Tag = ProgrammingSkill.Advanced;
             radioButtonQuestion2Answer3.Text = "Продвинутый (уже решал задачи, писал код)";
             radioButtonQuestion2Answer3.UseVisualStyleBackColor = true;
             // 
@@ -236,6 +242,7 @@ namespace RSFRecomendations.UserControles
             radioButtonQuestion2Answer2.Size = new Size(334, 24);
             radioButtonQuestion2Answer2.TabIndex = 1;
             radioButtonQuestion2Answer2.TabStop = true;
+            radioButtonQuestion2Answer2.Tag = ProgrammingSkill.Intermediate;
             radioButtonQuestion2Answer2.Text = "Базовый (знаю основы, немного практики)";
             radioButtonQuestion2Answer2.UseVisualStyleBackColor = true;
             // 
@@ -248,7 +255,7 @@ namespace RSFRecomendations.UserControles
             radioButtonQuestion2Answer1.Size = new Size(247, 24);
             radioButtonQuestion2Answer1.TabIndex = 0;
             radioButtonQuestion2Answer1.TabStop = true;
-            radioButtonQuestion2Answer1.Tag = ProgrammingSkill.Advanced;
+            radioButtonQuestion2Answer1.Tag = ProgrammingSkill.Nocturnal;
             radioButtonQuestion2Answer1.Text = "Новичок (ещё ничего не знаю)";
             radioButtonQuestion2Answer1.UseVisualStyleBackColor = true;
             // 
@@ -353,11 +360,11 @@ namespace RSFRecomendations.UserControles
             buttonAddForm.FlatStyle = FlatStyle.Flat;
             buttonAddForm.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             buttonAddForm.ForeColor = Color.White;
-            buttonAddForm.Location = new Point(297, 502);
+            buttonAddForm.Location = new Point(264, 502);
             buttonAddForm.Name = "buttonAddForm";
-            buttonAddForm.Size = new Size(215, 60);
+            buttonAddForm.Size = new Size(281, 60);
             buttonAddForm.TabIndex = 22;
-            buttonAddForm.Text = "Подобрать";
+            buttonAddForm.Text = "Подобрать ";
             buttonAddForm.UseVisualStyleBackColor = false;
             buttonAddForm.Click += buttonAddForm_Click;
             buttonAddForm.Paint += buttonAddForm_Paint;

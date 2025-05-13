@@ -76,6 +76,7 @@
             textBoxDescriptionLanguageInfo.Name = "textBoxDescriptionLanguageInfo";
             textBoxDescriptionLanguageInfo.Size = new Size(757, 304);
             textBoxDescriptionLanguageInfo.TabIndex = 3;
+            textBoxDescriptionLanguageInfo.ReadOnly = true;
             // 
             // pictureBoxImageLanguageInfo
             // 

@@ -111,5 +111,5 @@ public class ProgrammingLanguagePurposeModel
     /// <summary>
     /// Сама цель
     /// </summary>
-    public Purpose SelectedPurpose { get; set; }
+    public Purpose? SelectedPurpose { get; set; }
 }

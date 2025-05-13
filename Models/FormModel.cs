@@ -92,19 +92,19 @@ namespace RSFRecomendations.Models
         public ProgrammingLanguagePurposeModel PurposeForm { get; set; }
 
         /// <summary>
-        /// Сложность языка
-        /// </summary>
-        public Difficulty DifficultyForm { get; set; }
-
-        /// <summary>
         /// Уровень программирования пользователя
         /// </summary>
-        public ProgrammingSkill ProgrammingSkillUser { get; set; }
+        public ProgrammingSkill? ProgrammingSkillUser { get; set; }
 
         /// <summary>
         /// Время на обучение в неделю
         /// </summary>
-        public TimeToEducation TimeEducationInWeek { get; set; }
+        public TimeToEducation? TimeEducationInWeek { get; set; }
+
+        /// <summary>
+        /// Приоритет в языке
+        /// </summary>
+        public ProgrammingLanguagePriority? Priority { get; set; }
 
         /// <summary>
         /// Объект User для связки 

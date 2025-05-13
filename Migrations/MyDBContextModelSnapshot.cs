@@ -49,7 +49,7 @@ namespace RSFRecomendations.Migrations
                     b.Property<Guid>("ProgrammingLanguageId")
                         .HasColumnType("uuid");
 
-                    b.Property<int>("SelectedPurpose")
+                    b.Property<int?>("SelectedPurpose")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -63,16 +63,16 @@ namespace RSFRecomendations.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<int>("DifficultyForm")
+                    b.Property<int?>("Priority")
                         .HasColumnType("integer");
 
-                    b.Property<int>("ProgrammingSkillUser")
+                    b.Property<int?>("ProgrammingSkillUser")
                         .HasColumnType("integer");
 
                     b.Property<Guid>("PurposeId")
                         .HasColumnType("uuid");
 
-                    b.Property<int>("TimeEducationInWeek")
+                    b.Property<int?>("TimeEducationInWeek")
                         .HasColumnType("integer");
 
                     b.Property<Guid>("UserId")

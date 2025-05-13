@@ -18,7 +18,7 @@ namespace RSFRecomendations.Migrations
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     ProgrammingLanguageId = table.Column<Guid>(type: "uuid", nullable: false),
                     FormId = table.Column<Guid>(type: "uuid", nullable: false),
-                    SelectedPurpose = table.Column<int>(type: "integer", nullable: false)
+                    SelectedPurpose = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -86,9 +86,9 @@ namespace RSFRecomendations.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     PurposeId = table.Column<Guid>(type: "uuid", nullable: false),
-                    DifficultyForm = table.Column<int>(type: "integer", nullable: false),
-                    ProgrammingSkillUser = table.Column<int>(type: "integer", nullable: false),
-                    TimeEducationInWeek = table.Column<int>(type: "integer", nullable: false),
+                    ProgrammingSkillUser = table.Column<int>(type: "integer", nullable: true),
+                    TimeEducationInWeek = table.Column<int>(type: "integer", nullable: true),
+                    Priority = table.Column<int>(type: "integer", nullable: true),
                     UserId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>

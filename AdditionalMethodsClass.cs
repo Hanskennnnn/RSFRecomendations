@@ -59,6 +59,24 @@ namespace RSFRecomendations
         }
 
         /// <summary>
+        /// Метод для получения уровня подготовки
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public ProgrammingSkill? GetProgSkill(ICollection<RadioButton> values)
+        {
+            var radioButtons = values;
+            foreach (var radio in radioButtons)
+            {
+                if (radio.Checked)
+                {
+                    return (ProgrammingSkill)radio.Tag;
+                }
+            }
+            return null;
+        }
+
+        /// <summary>
         /// Метод для вытаскивания всех языков из базы данных 
         /// </summary>
         /// <returns></returns>
@@ -66,6 +84,60 @@ namespace RSFRecomendations
         {
             var languages = await db.ProgrammingLanguages.ToListAsync();
             return languages;
+        }
+
+        /// <summary>
+        /// Метод для получения времени обучения анкеты
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public TimeToEducation? GetTimeToEducation(ICollection<RadioButton> values)
+        {
+            var radioButtons = values;
+            foreach (var radio in radioButtons)
+            {
+                if (radio.Checked)
+                {
+                    return (TimeToEducation)radio.Tag;
+                }
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Метод для получения приоритетов анкеты
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public ProgrammingLanguagePriority? GetPriority(ICollection<RadioButton> values)
+        {
+            var radioButtons = values;
+            foreach (var radio in radioButtons)
+            {
+                if (radio.Checked)
+                {
+                    return (ProgrammingLanguagePriority)radio.Tag;
+                }
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Метод для получения целей анкеты
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
+        public Purpose? GetPurposeForm(ICollection<RadioButton> values)
+        {
+            var radioButtons = values;
+            foreach (var radio in radioButtons)
+            {
+                if (radio.Checked)
+                {
+                    return (Purpose)radio.Tag;
+                }
+            }
+            return null;
         }
 
         /// <summary>

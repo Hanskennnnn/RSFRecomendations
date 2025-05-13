@@ -306,6 +306,60 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Выберите приоритет для языка.
+        /// </summary>
+        internal static string EmptyPriorityForm {
+            get {
+                return ResourceManager.GetString("EmptyPriorityForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка подобрать анкеты без приоритета языка.
+        /// </summary>
+        internal static string EmptyPriorityFormLog {
+            get {
+                return ResourceManager.GetString("EmptyPriorityFormLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Выберите уровень программирвания.
+        /// </summary>
+        internal static string EmptyProgSkillForm {
+            get {
+                return ResourceManager.GetString("EmptyProgSkillForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка подобрать анкету без уровня программирования.
+        /// </summary>
+        internal static string EmptyProgSkillFormLog {
+            get {
+                return ResourceManager.GetString("EmptyProgSkillFormLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Выберите цель языка для анкеты.
+        /// </summary>
+        internal static string EmptyPurposeForm {
+            get {
+                return ResourceManager.GetString("EmptyPurposeForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка подобрать анкету без цели.
+        /// </summary>
+        internal static string EmptyPurposeFormLog {
+            get {
+                return ResourceManager.GetString("EmptyPurposeFormLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Выберите хотя бы одну цель языка!.
         /// </summary>
         internal static string EmptyPurposeLang {
@@ -338,6 +392,24 @@ namespace RSFRecomendations.Properties {
         internal static string EmptyRepeatPasswordRegLog {
             get {
                 return ResourceManager.GetString("EmptyRepeatPasswordRegLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Выберите время которое хотите уделять языку.
+        /// </summary>
+        internal static string EmptyTimeForm {
+            get {
+                return ResourceManager.GetString("EmptyTimeForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка подобрать анкету без времени, которое уделяется языку.
+        /// </summary>
+        internal static string EmptyTimeFormLog {
+            get {
+                return ResourceManager.GetString("EmptyTimeFormLog", resourceCulture);
             }
         }
         
@@ -486,7 +558,7 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Почта должна быть вида &quot;____@__.__&quot;!.
+        ///   Ищет локализованную строку, похожую на Почта должна быть вида &quot;____@__.__&quot; и до @ должно быть минимум 4 символа, после @ и до . минимум 3 символа, после . минимум 2 символа.
         /// </summary>
         internal static string IncorrectMail {
             get {
@@ -796,11 +868,29 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Повторная анкета успешна заполнена.
+        /// </summary>
+        internal static string SuccessfulEditForm {
+            get {
+                return ResourceManager.GetString("SuccessfulEditForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Изменения успешно сохранены!.
         /// </summary>
         internal static string SuccessfulEditProfile {
             get {
                 return ResourceManager.GetString("SuccessfulEditProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Анкета успешно заполнена.
+        /// </summary>
+        internal static string SuccessfulForm {
+            get {
+                return ResourceManager.GetString("SuccessfulForm", resourceCulture);
             }
         }
         

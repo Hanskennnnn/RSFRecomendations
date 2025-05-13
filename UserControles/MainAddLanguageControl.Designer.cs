@@ -120,18 +120,19 @@ namespace RSFRecomendations.UserControles
             // 
             // buttonAddLanguage
             // 
-            buttonAddLanguage.Location = new Point(290, 473);
-            buttonAddLanguage.Name = "buttonAddLanguage";
-            buttonAddLanguage.Size = new Size(202, 44);
-            buttonAddLanguage.TabIndex = 29;
-            buttonAddLanguage.Text = "Добавить язык";
-            buttonAddLanguage.Click += buttonAddLanguage_Click;
-            buttonAddLanguage.Paint += buttonAddLanguage_Paint;
             buttonAddLanguage.BackColor = Color.FromArgb(125, 115, 235);
             buttonAddLanguage.FlatAppearance.BorderSize = 0;
             buttonAddLanguage.FlatStyle = FlatStyle.Flat;
             buttonAddLanguage.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             buttonAddLanguage.ForeColor = Color.White;
+            buttonAddLanguage.Location = new Point(290, 473);
+            buttonAddLanguage.Name = "buttonAddLanguage";
+            buttonAddLanguage.Size = new Size(202, 44);
+            buttonAddLanguage.TabIndex = 29;
+            buttonAddLanguage.Text = "Добавить язык";
+            buttonAddLanguage.UseVisualStyleBackColor = false;
+            buttonAddLanguage.Click += buttonAddLanguage_Click;
+            buttonAddLanguage.Paint += buttonAddLanguage_Paint;
             // 
             // labelLanguageDifficultyLanguage
             // 
@@ -167,18 +168,19 @@ namespace RSFRecomendations.UserControles
             // 
             // buttonAddImageLanguage
             // 
-            buttonAddImageLanguage.Location = new Point(21, 232);
-            buttonAddImageLanguage.Name = "buttonAddImageLanguage";
-            buttonAddImageLanguage.Size = new Size(168, 45);
-            buttonAddImageLanguage.TabIndex = 1;
-            buttonAddImageLanguage.Text = "Добавить картинку";
-            buttonAddImageLanguage.Click += buttonAddImageLanguage_Click;
-            buttonAddImageLanguage.Paint += buttonAddImageLanguage_Paint;
             buttonAddImageLanguage.BackColor = Color.FromArgb(125, 115, 235);
             buttonAddImageLanguage.FlatAppearance.BorderSize = 0;
             buttonAddImageLanguage.FlatStyle = FlatStyle.Flat;
             buttonAddImageLanguage.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             buttonAddImageLanguage.ForeColor = Color.White;
+            buttonAddImageLanguage.Location = new Point(21, 208);
+            buttonAddImageLanguage.Name = "buttonAddImageLanguage";
+            buttonAddImageLanguage.Size = new Size(168, 69);
+            buttonAddImageLanguage.TabIndex = 1;
+            buttonAddImageLanguage.Text = "Добавить картинку";
+            buttonAddImageLanguage.UseVisualStyleBackColor = false;
+            buttonAddImageLanguage.Click += buttonAddImageLanguage_Click;
+            buttonAddImageLanguage.Paint += buttonAddImageLanguage_Paint;
             // 
             // pictureBoxImageLanguage
             // 

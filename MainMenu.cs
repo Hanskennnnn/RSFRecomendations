@@ -1,4 +1,5 @@
-﻿using NLog;
+﻿using Microsoft.EntityFrameworkCore;
+using NLog;
 using RSFRecomendations.Models;
 using RSFRecomendations.UserControles;
 
@@ -16,6 +17,8 @@ namespace RSFRecomendations
 
         private AdditionalMethodsClass additionalMethods;
 
+        private readonly MyDBContext db; 
+
         private Logger Log;
 
         public MainMenu(UserModel user)
@@ -27,8 +30,11 @@ namespace RSFRecomendations
 
             Log = LogManager.GetCurrentClassLogger();
 
-            ShowControl(new MainMenuFirstLogControl(User));
+            db = new MyDBContext();
 
+            ShowControl(new MainFormProfileControl(User));
+            Log.Info(Properties.Resources.GoMainMenuLog);
+           
 
             if (User.Login == "Admin")
             {
@@ -76,9 +82,13 @@ namespace RSFRecomendations
             Log.Info("Пользователь нажал на кнопку выход из аккаунта");
         }
 
-        private void btnGoMainMenu_Click(object sender, EventArgs e)
+        private async void btnGoMainMenu_Click(object sender, EventArgs e)
         {
-            if (User.FormModel != null)
+            var dbUser = await db.Users
+            .Include(u => u.FormModel)
+            .FirstOrDefaultAsync(u => u.Id == User.Id);
+
+            if (dbUser.FormModel != null)
             {
                 ShowControl(new MainMenuControl(User));
                 Log.Info(Properties.Resources.GoMainMenuLog);
