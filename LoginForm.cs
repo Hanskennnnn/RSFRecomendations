@@ -16,7 +16,6 @@ namespace RSFRecomendations
 
         public LoginForm()
         {
-
             InitializeComponent();
 
             textBoxLogLogin.Text = Properties.Resources.EnterLogin;
@@ -25,12 +24,10 @@ namespace RSFRecomendations
             textBoxLogPassword.ForeColor = Color.Gray;
 
             Log = LogManager.GetCurrentClassLogger();
-
             db = new MyDBContext();
             additionalMethods = new AdditionalMethodsClass();
 
             Log.Info("Переход к форме входа");
-
         }
 
         private void linkLabelToRegistration_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

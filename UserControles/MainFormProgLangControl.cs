@@ -1,7 +1,4 @@
-﻿using System.Collections.ObjectModel;
-using System.Windows.Forms;
-using Microsoft.EntityFrameworkCore;
-using NLog;
+﻿using NLog;
 using RSFRecomendations.Models;
 
 namespace RSFRecomendations.UserControles
@@ -11,24 +8,21 @@ namespace RSFRecomendations.UserControles
     /// </summary>
     public partial class MainFormProgLangControl : UserControl
     {
-        private readonly MyDBContext db;
-
         private AdditionalMethodsClass additionalMethods;
 
         private Logger Log;
+
         /// <summary>
         /// Пользователь
         /// </summary>
         public UserModel User { get; set; }
+
         public MainFormProgLangControl(UserModel user)
         {
             InitializeComponent();
 
             Log = LogManager.GetCurrentClassLogger();
-
-            db = new MyDBContext();
             additionalMethods = new AdditionalMethodsClass();
-
             User = user;
 
             LoadLanguages();

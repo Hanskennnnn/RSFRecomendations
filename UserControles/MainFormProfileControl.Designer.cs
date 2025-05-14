@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panelToUserInfo = new Panel();
+            labelAddPhotoCamera = new Label();
             buttonAddImage = new Button();
             btnEditProfile = new Button();
             pbImageUser = new PictureBox();
@@ -42,6 +43,7 @@
             // panelToUserInfo
             // 
             panelToUserInfo.BackColor = Color.White;
+            panelToUserInfo.Controls.Add(labelAddPhotoCamera);
             panelToUserInfo.Controls.Add(buttonAddImage);
             panelToUserInfo.Controls.Add(btnEditProfile);
             panelToUserInfo.Controls.Add(pbImageUser);
@@ -52,6 +54,17 @@
             panelToUserInfo.Size = new Size(795, 449);
             panelToUserInfo.TabIndex = 3;
             panelToUserInfo.Paint += panelToUserInfo_Paint;
+            // 
+            // labelAddPhotoCamera
+            // 
+            labelAddPhotoCamera.Location = new Point(293, 166);
+            labelAddPhotoCamera.Name = "labelAddPhotoCamera";
+            labelAddPhotoCamera.Size = new Size(260, 31);
+            labelAddPhotoCamera.TabIndex = 7;
+            labelAddPhotoCamera.Text = "Добавить изображение с  камеры";
+            labelAddPhotoCamera.Click += labelAddPhotoCamera_Click;
+            labelAddPhotoCamera.MouseEnter += labelAddPhotoCamera_MouseEnter;
+            labelAddPhotoCamera.MouseLeave += labelAddPhotoCamera_MouseLeave;
             // 
             // buttonAddImage
             // 
@@ -87,9 +100,10 @@
             // 
             // pbImageUser
             // 
-            pbImageUser.Location = new Point(331, 18);
+            pbImageUser.BorderStyle = BorderStyle.FixedSingle;
+            pbImageUser.Location = new Point(293, 11);
             pbImageUser.Name = "pbImageUser";
-            pbImageUser.Size = new Size(148, 150);
+            pbImageUser.Size = new Size(248, 140);
             pbImageUser.SizeMode = PictureBoxSizeMode.Zoom;
             pbImageUser.TabIndex = 0;
             pbImageUser.TabStop = false;
@@ -145,5 +159,6 @@
         private PictureBox pbImageUser;
         private Label labelMainProfile;
         private Button buttonAddImage;
+        private Label labelAddPhotoCamera;
     }
 }

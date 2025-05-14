@@ -39,6 +39,7 @@
             // 
             // panel2
             // 
+            panel2.BackColor = Color.White;
             panel2.Controls.Add(linkLabelToRegistration);
             panel2.Controls.Add(buttonLogin);
             panel2.Controls.Add(textBoxLogPassword);
@@ -48,7 +49,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(503, 502);
             panel2.TabIndex = 13;
-            panel2.BackColor = Color.White;
             // 
             // linkLabelToRegistration
             // 
@@ -79,6 +79,8 @@
             // 
             // textBoxLogPassword
             // 
+            textBoxLogPassword.BackColor = SystemColors.Window;
+            textBoxLogPassword.BorderStyle = BorderStyle.FixedSingle;
             textBoxLogPassword.Font = new Font("Segoe UI", 16F);
             textBoxLogPassword.Location = new Point(73, 217);
             textBoxLogPassword.Name = "textBoxLogPassword";
@@ -86,11 +88,11 @@
             textBoxLogPassword.TabIndex = 7;
             textBoxLogPassword.Enter += textBoxLogPassword_Enter;
             textBoxLogPassword.Leave += textBoxLogPassword_Leave;
-            textBoxLogPassword.BorderStyle = BorderStyle.FixedSingle;
-            textBoxLogPassword.BackColor = SystemColors.Window; 
             // 
             // textBoxLogLogin
             // 
+            textBoxLogLogin.BackColor = SystemColors.Window;
+            textBoxLogLogin.BorderStyle = BorderStyle.FixedSingle;
             textBoxLogLogin.Font = new Font("Segoe UI", 16F);
             textBoxLogLogin.Location = new Point(73, 157);
             textBoxLogLogin.Name = "textBoxLogLogin";
@@ -98,8 +100,6 @@
             textBoxLogLogin.TabIndex = 6;
             textBoxLogLogin.Enter += textBoxLogLogin_Enter;
             textBoxLogLogin.Leave += textBoxLogLogin_Leave;
-            textBoxLogLogin.BorderStyle = BorderStyle.FixedSingle;
-            textBoxLogLogin.BackColor = SystemColors.Window; 
             // 
             // labelLogin
             // 
@@ -117,8 +117,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(484, 502);
             Controls.Add(panel2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             MinimizeBox = false;
             Name = "LoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Вход";
             panel2.ResumeLayout(false);
             panel2.PerformLayout();

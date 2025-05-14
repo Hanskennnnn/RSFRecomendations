@@ -27,14 +27,11 @@ namespace RSFRecomendations
 
             User = user;
             additionalMethods = new AdditionalMethodsClass();
-
             Log = LogManager.GetCurrentClassLogger();
-
             db = new MyDBContext();
 
             ShowControl(new MainFormProfileControl(User));
             Log.Info(Properties.Resources.GoMainMenuLog);
-           
 
             if (User.Login == "Admin")
             {
@@ -46,7 +43,6 @@ namespace RSFRecomendations
                 buttonAddLanguage.Visible = false;
                 buttonAddLanguage.Enabled = false;
             }
-
         }
 
         private void btnGoForm_Click(object sender, EventArgs e)

@@ -2,6 +2,7 @@
 using NLog;
 using Microsoft.EntityFrameworkCore;
 using RSFRecomendations.Models;
+using AForge.Video.DirectShow;
 
 namespace RSFRecomendations.UserControles
 {
@@ -14,22 +15,27 @@ namespace RSFRecomendations.UserControles
 
         private AdditionalMethodsClass additionalMethods;
 
+        private VideoCaptureDevice videoSource;
+
         private Logger Log;
-        UserModel User { get; set; }
+
+        /// <summary>
+        /// Пользователь
+        /// </summary>
+        public UserModel User { get; set; }
+
         public MainFormProfileControl(UserModel user)
         {
             InitializeComponent();
 
             db = new MyDBContext();
             additionalMethods = new AdditionalMethodsClass();
-
             User = user;
             Log = LogManager.GetCurrentClassLogger();
 
             tbUserLoginProfile.Text = User.Login;
             tbUserEmailProfile.Text = User.Email;
             pbImageUser.Image = additionalMethods.ByteToImage(User.Image);
-
 
             Log.Info("Переход к форме профиля");
         }
@@ -68,9 +74,10 @@ namespace RSFRecomendations.UserControles
                 return;
             }
 
-            byte[] imageByte = additionalMethods.ImageToBytes(pbImageUser.Image);
-            if (User.Login == tbUserLoginProfile.Text && User.Email == tbUserEmailProfile.Text 
-                && additionalMethods.GetImageHash(pbImageUser.Image) == additionalMethods.GetImageHash(additionalMethods.ByteToImage(User.Image)))
+            var imageByte = additionalMethods.ImageToBytes(pbImageUser.Image);
+            if (User.Login == tbUserLoginProfile.Text && User.Email == tbUserEmailProfile.Text
+                && additionalMethods.GetImageHash(pbImageUser.Image) == 
+                additionalMethods.GetImageHash(additionalMethods.ByteToImage(User.Image)))
             {
                 MessageBox.Show(Properties.Resources.NoEditAnything);
                 Log.Warn(Properties.Resources.ChangeNoEditAnythingLog);
@@ -78,7 +85,8 @@ namespace RSFRecomendations.UserControles
             }
 
             // Проверка на сущ логин
-            var usLogin = await db.Users.FirstOrDefaultAsync(c => c.Login == tbUserLoginProfile.Text);
+            var usLogin = await db.Users.FirstOrDefaultAsync(c => c.Login 
+            == tbUserLoginProfile.Text);
 
             if (usLogin != null && usLogin.Id != User.Id)
             {
@@ -89,7 +97,8 @@ namespace RSFRecomendations.UserControles
             }
 
             // Проверка на сущ почту
-            var usEmail = await db.Users.FirstOrDefaultAsync(c => c.Email == tbUserEmailProfile.Text);
+            var usEmail = await db.Users.FirstOrDefaultAsync(c => c.Email
+            == tbUserEmailProfile.Text);
 
             if (usEmail != null && usEmail.Id != User.Id)
             {
@@ -138,6 +147,31 @@ namespace RSFRecomendations.UserControles
         private void buttonAddImage_Paint(object sender, PaintEventArgs e)
         {
             additionalMethods.ButtonPaint(sender, e);
+        }
+
+        private void labelAddPhotoCamera_MouseEnter(object sender, EventArgs e)
+        {
+            labelAddPhotoCamera.ForeColor = Color.FromArgb(125, 115, 235);
+        }
+
+        private void labelAddPhotoCamera_MouseLeave(object sender, EventArgs e)
+        {
+
+            labelAddPhotoCamera.ForeColor = Color.Black;
+        }
+
+        private async void labelAddPhotoCamera_Click(object sender, EventArgs e)
+        {
+            var cameraForm = new CameraForm(User);
+            cameraForm.FormClosed += async (s, args) =>
+            {
+                var us = await db.Users.FirstOrDefaultAsync(c => c.Login == User.Login);
+                if (us.Image != null)
+                {
+                    pbImageUser.Image = additionalMethods.ByteToImage(us.Image);
+                }
+            };
+            cameraForm.Show();
         }
     }
 }

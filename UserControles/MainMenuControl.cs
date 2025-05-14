@@ -15,12 +15,12 @@ namespace RSFRecomendations
         private AdditionalMethodsClass additionalMethods { get; set; }
 
         private Logger Log;
+
         public MainMenuControl(UserModel user)
         {
             InitializeComponent();
 
             Log = LogManager.GetCurrentClassLogger();
-
             User = user;
             additionalMethods = new AdditionalMethodsClass();
 
@@ -33,6 +33,11 @@ namespace RSFRecomendations
         }
 
         private void labelLang2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxLikeLang1_Click(object sender, EventArgs e)
         {
 
         }

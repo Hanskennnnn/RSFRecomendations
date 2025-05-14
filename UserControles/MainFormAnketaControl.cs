@@ -1,6 +1,4 @@
-﻿using System.Windows.Forms;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic.ApplicationServices;
+﻿using Microsoft.EntityFrameworkCore;
 using NLog;
 using RSFRecomendations.Models;
 
@@ -12,6 +10,7 @@ namespace RSFRecomendations.UserControles
     public partial class MainFormAnketaControl : UserControl
     {
         private readonly MyDBContext db;
+
         /// <summary>
         /// Пользователь
         /// </summary>
@@ -22,6 +21,7 @@ namespace RSFRecomendations.UserControles
         private AdditionalMethodsClass additionalMethods;
 
         public FormModel model { get; set; }
+
         public MainFormAnketaControl(UserModel user)
         {
             InitializeComponent();
@@ -29,9 +29,7 @@ namespace RSFRecomendations.UserControles
             db = new MyDBContext();
             model = new FormModel();
             additionalMethods = new AdditionalMethodsClass();
-
             Log = LogManager.GetCurrentClassLogger();
-
             User = user;
 
             Log.Info("Переход к форме анкеты");
@@ -56,7 +54,6 @@ namespace RSFRecomendations.UserControles
             var valuesQuestion4 = new List<RadioButton> { radioButtonQuestion4Answer1,
                 radioButtonQuestion4Answer2, radioButtonQuestion4Answer3 };
             var timeToEducationForm = additionalMethods.GetTimeToEducation(valuesQuestion4);
-
 
             if (purposeForm == null)
             {

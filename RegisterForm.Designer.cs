@@ -47,6 +47,7 @@ namespace RSFRecomendations
             // 
             // panelRegistration
             // 
+            panelRegistration.BackColor = Color.White;
             panelRegistration.Controls.Add(labelVisitPassword2);
             panelRegistration.Controls.Add(labelVisitPassword);
             panelRegistration.Controls.Add(labelHidePassword2);
@@ -62,7 +63,6 @@ namespace RSFRecomendations
             panelRegistration.Name = "panelRegistration";
             panelRegistration.Size = new Size(515, 502);
             panelRegistration.TabIndex = 1;
-            panelRegistration.BackColor = Color.White;
             // 
             // labelVisitPassword2
             // 
@@ -199,8 +199,11 @@ namespace RSFRecomendations
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(519, 505);
             Controls.Add(panelRegistration);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
+            MinimizeBox = false;
             Name = "RegisterForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Регистрация";
             panelRegistration.ResumeLayout(false);
             panelRegistration.PerformLayout();

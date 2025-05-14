@@ -1634,3 +1634,201 @@
 2025-05-13 23:54:11.0981|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
 2025-05-13 23:54:11.1093|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
 2025-05-13 23:54:16.4962|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Успешное заполнение повторной анкеты
+2025-05-14 09:12:35.2940|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 09:12:47.7796|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 09:12:47.7796|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 09:12:47.8266|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 09:12:49.2666|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-14 09:12:49.2806|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-14 09:12:50.7768|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
+2025-05-14 09:12:50.8065|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
+2025-05-14 09:12:52.2433|INFO|RSFRecomendations.MainMenuControl|Переход к форме главного меню
+2025-05-14 09:12:52.2433|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 09:12:53.4284|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 09:12:53.4284|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-14 10:56:26.4548|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 10:56:38.5852|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 10:56:38.5852|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 10:56:38.6104|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 10:56:54.5668|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Успешное изменение данных пользователя
+2025-05-14 10:56:55.7260|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 10:56:55.7260|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-14 10:56:56.3713|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
+2025-05-14 10:56:56.3824|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
+2025-05-14 10:56:57.0651|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 10:56:57.0651|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-14 11:23:25.1413|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 11:23:48.7626|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:23:48.7626|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:23:48.7830|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 11:23:55.1979|WARN|RSFRecomendations.UserControles.MainFormProfileControl|Попытка изменить данные ничего не поменяв
+2025-05-14 11:24:05.9217|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Успешное изменение данных пользователя
+2025-05-14 11:24:06.8722|INFO|RSFRecomendations.MainMenuControl|Переход к форме главного меню
+2025-05-14 11:24:06.8722|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:24:07.7684|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:24:07.7684|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-14 11:24:15.4261|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:24:15.4324|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-14 11:24:16.1653|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-14 11:24:16.1653|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-14 11:24:17.3002|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
+2025-05-14 11:24:17.3115|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
+2025-05-14 11:24:17.8225|INFO|RSFRecomendations.MainMenuControl|Переход к форме главного меню
+2025-05-14 11:24:17.8309|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:24:18.7231|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:24:18.7231|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-14 11:24:19.8832|INFO|RSFRecomendations.CameraForm|Переход к форме камеры
+2025-05-14 11:26:46.0592|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 11:26:56.7013|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:26:56.7013|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:26:56.7222|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 11:26:59.3427|INFO|RSFRecomendations.MainMenuControl|Переход к форме главного меню
+2025-05-14 11:26:59.3520|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:26:59.7416|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
+2025-05-14 11:26:59.7528|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
+2025-05-14 11:27:00.1588|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-14 11:27:00.1588|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-14 11:27:00.9826|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:27:00.9906|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-14 11:27:03.3994|INFO|RSFRecomendations.CameraForm|Переход к форме камеры
+2025-05-14 11:27:38.8649|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 11:27:46.5806|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:27:46.5815|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:27:46.6014|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 11:27:48.2780|INFO|RSFRecomendations.CameraForm|Переход к форме камеры
+2025-05-14 11:28:07.6724|INFO|RSFRecomendations.MainMenuControl|Переход к форме главного меню
+2025-05-14 11:28:07.6816|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:28:08.4740|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:28:08.4740|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-14 11:29:05.4736|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 11:29:14.4479|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:29:14.4479|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:29:14.4671|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 11:29:26.6231|INFO|RSFRecomendations.CameraForm|Переход к форме камеры
+2025-05-14 11:30:19.7923|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 11:30:28.3031|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:30:28.3031|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:30:28.3230|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 11:30:31.3429|INFO|RSFRecomendations.CameraForm|Переход к форме камеры
+2025-05-14 11:31:16.9976|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 11:31:26.4197|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:31:26.4197|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:31:26.4431|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 11:31:29.4815|INFO|RSFRecomendations.CameraForm|Переход к форме камеры
+2025-05-14 11:31:35.0811|INFO|RSFRecomendations.MainMenuControl|Переход к форме главного меню
+2025-05-14 11:31:35.0903|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:31:36.2379|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:31:36.2379|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-14 11:31:38.1221|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 11:31:38.1463|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку выход из аккаунта
+2025-05-14 11:31:47.8837|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:31:47.8837|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:31:47.9094|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 11:37:47.1346|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 11:37:55.2289|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:37:55.2289|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:37:55.2531|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 11:37:58.3904|WARN|RSFRecomendations.UserControles.MainFormProfileControl|Попытка изменить данные ничего не поменяв
+2025-05-14 11:38:14.7179|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Успешное изменение данных пользователя
+2025-05-14 11:38:16.9009|INFO|RSFRecomendations.MainMenuControl|Переход к форме главного меню
+2025-05-14 11:38:16.9100|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:38:17.4244|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
+2025-05-14 11:38:17.4244|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
+2025-05-14 11:38:17.8221|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-14 11:38:17.8221|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-14 11:38:18.2038|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:38:18.2101|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-14 11:38:19.2786|INFO|RSFRecomendations.CameraForm|Переход к форме камеры
+2025-05-14 11:38:26.1844|INFO|RSFRecomendations.CameraForm|Успешное создание фотки с камеры
+2025-05-14 11:38:30.6146|INFO|RSFRecomendations.MainMenuControl|Переход к форме главного меню
+2025-05-14 11:38:30.6221|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:38:31.0784|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:38:31.0784|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-14 11:38:42.9255|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 11:38:50.4600|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:38:50.4600|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:38:50.4841|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 11:41:29.9033|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 11:41:37.6014|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:41:37.6014|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:41:37.6236|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 11:41:39.5976|INFO|RSFRecomendations.CameraForm|Переход к форме камеры
+2025-05-14 11:41:46.4203|INFO|RSFRecomendations.CameraForm|Успешное создание фотки с камеры
+2025-05-14 11:41:51.9329|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Успешное изменение данных пользователя
+2025-05-14 11:41:52.9004|INFO|RSFRecomendations.MainMenuControl|Переход к форме главного меню
+2025-05-14 11:41:52.9118|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:41:53.3847|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:41:53.3847|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-14 11:42:04.9578|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Успешное изменение данных пользователя
+2025-05-14 11:42:05.5711|INFO|RSFRecomendations.MainMenuControl|Переход к форме главного меню
+2025-05-14 11:42:05.5711|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:42:05.9857|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:42:05.9933|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-14 11:42:08.9265|INFO|RSFRecomendations.CameraForm|Переход к форме камеры
+2025-05-14 11:42:15.7559|WARN|RSFRecomendations.UserControles.MainFormProfileControl|Попытка изменить данные ничего не поменяв
+2025-05-14 11:44:04.5207|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 11:44:10.9198|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:44:10.9198|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:44:10.9417|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 11:44:15.1141|INFO|RSFRecomendations.CameraForm|Переход к форме камеры
+2025-05-14 11:44:24.9683|INFO|RSFRecomendations.CameraForm|Успешное создание фотки с камеры
+2025-05-14 11:44:54.1012|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 11:45:01.3143|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:45:01.3143|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:45:01.3368|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 11:45:22.2831|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 11:45:29.6361|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:45:29.6361|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:45:29.6591|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 11:45:58.2392|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 11:46:05.9984|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:46:05.9984|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:46:06.0203|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 11:46:35.5937|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 11:46:43.3838|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:46:43.3838|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:46:43.4060|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 11:47:01.7685|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 11:47:09.0419|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:47:09.0419|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:47:09.0633|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 11:47:21.4520|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Успешное изменение данных пользователя
+2025-05-14 11:47:22.1037|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 11:47:22.1308|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку выход из аккаунта
+2025-05-14 11:47:42.4690|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 11:47:48.7852|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 11:47:48.7852|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 11:47:48.8071|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 11:47:50.7673|INFO|RSFRecomendations.CameraForm|Переход к форме камеры
+2025-05-14 11:48:01.3999|INFO|RSFRecomendations.CameraForm|Успешное создание фотки с камеры
+2025-05-14 12:12:59.9843|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 12:15:05.5738|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 12:15:07.6335|INFO|RSFRecomendations.RegisterForm|Переход к форме регистрации
+2025-05-14 12:15:07.6571|INFO|RSFRecomendations.LoginForm|Переход к форме регистрации по ссылке 'У вас нет аккаунта?'
+2025-05-14 12:15:53.4443|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 12:15:54.5680|INFO|RSFRecomendations.RegisterForm|Переход к форме регистрации
+2025-05-14 12:15:54.5946|INFO|RSFRecomendations.LoginForm|Переход к форме регистрации по ссылке 'У вас нет аккаунта?'
+2025-05-14 12:16:43.3095|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 12:16:44.4516|INFO|RSFRecomendations.RegisterForm|Переход к форме регистрации
+2025-05-14 12:16:44.4790|INFO|RSFRecomendations.LoginForm|Переход к форме регистрации по ссылке 'У вас нет аккаунта?'
+2025-05-14 12:18:17.0784|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 12:19:16.2863|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 12:19:18.6794|INFO|RSFRecomendations.RegisterForm|Переход к форме регистрации
+2025-05-14 12:19:18.7099|INFO|RSFRecomendations.LoginForm|Переход к форме регистрации по ссылке 'У вас нет аккаунта?'
+2025-05-14 12:19:20.5373|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 12:19:20.5679|INFO|RSFRecomendations.RegisterForm|Переход к форме входа по ссылке 'Уже есть аккаунт?'
+2025-05-14 12:19:27.2082|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 12:19:27.2082|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 12:19:27.2403|INFO|RSFRecomendations.LoginForm|Пользователь нажал кнопку входа.
+2025-05-14 12:19:31.0730|INFO|RSFRecomendations.CameraForm|Переход к форме камеры
+2025-05-14 12:19:45.7160|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Успешное изменение данных пользователя
+2025-05-14 12:19:47.7975|INFO|RSFRecomendations.UserControles.MainFormProgLangControl|Переход к форме языков программирования
+2025-05-14 12:19:47.7975|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к языкам программирования
+2025-05-14 12:19:48.3066|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Переход к форме анкеты
+2025-05-14 12:19:48.3185|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к анкете
+2025-05-14 12:19:48.8909|INFO|RSFRecomendations.MainMenuControl|Переход к форме главного меню
+2025-05-14 12:19:48.8909|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-14 12:19:49.3736|INFO|RSFRecomendations.UserControles.MainFormProfileControl|Переход к форме профиля
+2025-05-14 12:19:49.3796|INFO|RSFRecomendations.MainMenu|Пользователь нажал кнопку перехода к профилю
+2025-05-14 12:19:50.3184|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-14 12:19:50.3434|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку выход из аккаунта

@@ -224,8 +224,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1182, 628);
             Controls.Add(splitContainer1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             MinimizeBox = false;
             Name = "MainMenu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Главное меню";
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);

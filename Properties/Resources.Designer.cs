@@ -71,6 +71,16 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap camera_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("camera_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Попытка изменить данные пользователя с пустой почтой.
         /// </summary>
         internal static string ChangeEmptyEmailLog {
@@ -158,6 +168,24 @@ namespace RSFRecomendations.Properties {
             get {
                 object obj = ResourceManager.GetObject("Dislike", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Камеры не найдены!.
+        /// </summary>
+        internal static string EmptyCamera {
+            get {
+                return ResourceManager.GetString("EmptyCamera", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Не удалось найти камеру.
+        /// </summary>
+        internal static string EmptyCameraLog {
+            get {
+                return ResourceManager.GetString("EmptyCameraLog", resourceCulture);
             }
         }
         
@@ -864,6 +892,24 @@ namespace RSFRecomendations.Properties {
             get {
                 object obj = ResourceManager.GetObject("Register", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Фотография успешно сохранена.
+        /// </summary>
+        internal static string SuccessfulAddPhoto {
+            get {
+                return ResourceManager.GetString("SuccessfulAddPhoto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Успешное создание фотки с камеры.
+        /// </summary>
+        internal static string SuccessfulAddPhotoLog {
+            get {
+                return ResourceManager.GetString("SuccessfulAddPhotoLog", resourceCulture);
             }
         }
         

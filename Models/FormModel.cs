@@ -22,6 +22,9 @@ namespace RSFRecomendations.Models
         Advanced
     }
 
+    /// <summary>
+    /// Приоритеты языка
+    /// </summary>
     public enum ProgrammingLanguagePriority
     {
         /// <summary>

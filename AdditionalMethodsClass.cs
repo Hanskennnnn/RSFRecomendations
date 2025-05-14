@@ -193,7 +193,7 @@ namespace RSFRecomendations
             var passwordByte = Encoding.UTF8.GetBytes(password);
             var sha256 = SHA256.Create();
 
-            byte[] saltedPassword = new byte[salt.Length + passwordByte.Length];
+            var saltedPassword = new byte[salt.Length + passwordByte.Length];
             Buffer.BlockCopy(salt, 0, saltedPassword, 0, salt.Length);
             Buffer.BlockCopy(passwordByte, 0, saltedPassword, salt.Length, passwordByte.Length);
 
@@ -222,12 +222,12 @@ namespace RSFRecomendations
         /// <returns></returns>
         public Image ByteToImage(byte[] byteToImage)
         {
-            byte[] imageBytes = byteToImage;
+            var imageBytes = byteToImage;
 
             // Преобразование byte[] в Image
-            using (MemoryStream ms = new MemoryStream(imageBytes))
+            using (var ms = new MemoryStream(imageBytes))
             {
-                Image image = Image.FromStream(ms);
+                var image = Image.FromStream(ms);
 
                 return image;
             }
@@ -302,7 +302,7 @@ namespace RSFRecomendations
         {
             if (textBox.Text == res)
             {
-                textBox.Text = String.Empty;
+                textBox.Text = string.Empty;
                 textBox.ForeColor = Color.Black;
                 textBox.Tag = null;
                 textBox.UseSystemPasswordChar = pass;
@@ -317,7 +317,7 @@ namespace RSFRecomendations
         /// <param name="pass"></param>
         public void LeaveText(TextBox textBox, string res, bool pass = false)
         {
-            if (textBox.Text == String.Empty)
+            if (textBox.Text == string.Empty)
             {
                 textBox.Text = res;
                 textBox.ForeColor = Color.Gray;
@@ -333,7 +333,7 @@ namespace RSFRecomendations
         /// <returns></returns>
         public bool IsValidEmail(string email)
         {
-            string pattern = @"^[a-zA-Z0-9]{4,}@[a-zA-Z]{3,}\.[a-zA-Z]{2,}$";
+            var pattern = @"^[a-zA-Z0-9]{4,}@[a-zA-Z]{3,}\.[a-zA-Z]{2,}$";
             return Regex.IsMatch(email, pattern);
         }
 
@@ -344,7 +344,7 @@ namespace RSFRecomendations
         /// <returns></returns>
         public bool IsValidLogin(string login)
         {
-            string pattern = @"^[a-zA-Z0-9]{3,}$";
+            var pattern = @"^[a-zA-Z0-9]{3,}$";
             return Regex.IsMatch(login, pattern);
         }
 

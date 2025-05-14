@@ -211,6 +211,7 @@
             pictureBoxLikeLang1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxLikeLang1.TabIndex = 9;
             pictureBoxLikeLang1.TabStop = false;
+            pictureBoxLikeLang1.Click += pictureBoxLikeLang1_Click;
             // 
             // labelLang1
             // 

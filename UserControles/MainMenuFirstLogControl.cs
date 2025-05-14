@@ -9,7 +9,6 @@ namespace RSFRecomendations.UserControles
     /// </summary>
     public partial class MainMenuFirstLogControl : UserControl
     {
-        private readonly MyDBContext db;
         /// <summary>
         /// Пользователь
         /// </summary>
@@ -18,10 +17,12 @@ namespace RSFRecomendations.UserControles
         private MainMenu mainMenuForm;
 
         private Logger Log;
+
         /// <summary>
         /// Кнопка для перехода в анкету
         /// </summary>
         public Button BtnGoForm { get; set; }
+
         public MainMenuFirstLogControl(UserModel user)
         {
             InitializeComponent();
@@ -29,8 +30,6 @@ namespace RSFRecomendations.UserControles
             this.ParentChanged += MainMenuFirstLogControl_ParentChanged;
 
             Log = LogManager.GetCurrentClassLogger();
-
-            db = new MyDBContext(); 
             User = user;
 
             Log.Info("Переход к форме главного меню, до заполнения анкеты");

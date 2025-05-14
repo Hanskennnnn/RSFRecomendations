@@ -4,6 +4,9 @@ using RSFRecomendations.Models;
 
 namespace RSFRecomendations.UserControles
 {
+    /// <summary>
+    /// Юзер контроллер для добавления языка
+    /// </summary>
     public partial class MainAddLanguageControl : UserControl
     {
         private readonly MyDBContext db;
@@ -12,13 +15,13 @@ namespace RSFRecomendations.UserControles
 
         private Logger Log;
         UserModel User { get; set; }
+
         public MainAddLanguageControl(UserModel user)
         {
             InitializeComponent();
 
             db = new MyDBContext();
             additionalMethods = new AdditionalMethodsClass();
-
             User = user;
             Log = LogManager.GetCurrentClassLogger();
 
@@ -29,45 +32,22 @@ namespace RSFRecomendations.UserControles
             textBoxDescriptionLanguage.ForeColor = Color.Gray;
             textBoxDescriptionLanguage.Tag = "Mask";
 
-            // C#, Python, Go, Java, JavaScript
             clbPurposesLanguage.Items.Add("Веб-программирование");
-
-            // C#, C++
             clbPurposesLanguage.Items.Add("Игры");
-
-            // C#, Go
             clbPurposesLanguage.Items.Add("Микросервисы");
-
-            // C++, Go, Java
             clbPurposesLanguage.Items.Add("Приложения");
-
-            // Go, Java, JavaScript
             clbPurposesLanguage.Items.Add("Серверная разработка");
-
-            // Python, Java
             clbPurposesLanguage.Items.Add("Образование и быстрое прототипирование");
-
-            // C#
             clbPurposesLanguage.Items.Add("Разработка приложений под Windows (WPF, WinForms)");
             clbPurposesLanguage.Items.Add("Обработка данных и автоматизация на платформе .NET");
-
-            // C++
             clbPurposesLanguage.Items.Add("Системное программирование (драйверы, ОС)");
             clbPurposesLanguage.Items.Add("Встроенные системы (Embedded)");
             clbPurposesLanguage.Items.Add("Финансовое ПО и торговые системы");
-
-            // Python
             clbPurposesLanguage.Items.Add("Data Science и анализ данных");
             clbPurposesLanguage.Items.Add("Машинное обучение / ИИ");
             clbPurposesLanguage.Items.Add("Скрипты и автоматизация");
-
-            // Go
             clbPurposesLanguage.Items.Add("Разработка CLI-инструментов");
-
-            // Java
             clbPurposesLanguage.Items.Add("Мобильная разработка (Android)");
-
-            // JavaScript
             clbPurposesLanguage.Items.Add("Разработка PWA и SPA");
             clbPurposesLanguage.Items.Add("Интерактивность в браузере");
             clbPurposesLanguage.Items.Add("Полный стек (Full Stack) с MongoDB, Express и пр.");

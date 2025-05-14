@@ -10,10 +10,12 @@
         /// Легкий
         /// </summary>
         Easy,
+
         /// <summary>
         /// Средний
         /// </summary>
         Medium, 
+
         /// <summary>
         /// Сложный
         /// </summary>
@@ -29,26 +31,32 @@
         /// Универсальный ключ языка
         /// </summary>
         public Guid Id { get; set; }
+
         /// <summary>
         /// Название языка
         /// </summary>
         public string Name { get; set; }
+
         /// <summary>
         /// Описание языка
         /// </summary>
         public string Description { get; set; }
+
         /// <summary>
         /// Область применения языка
         /// </summary>
         public ICollection<ProgrammingLanguagePurposeModel> Purposes { get; set; }
+
         /// <summary>
         /// Фото языка
         /// </summary>
         public byte[]? Image { get; set; }
+
         /// <summary>
         /// Сложность языка
         /// </summary>
         public Difficulty? DifficultyLanguage { get; set; }
+
         /// <summary>
         /// Список объектов UserProgrammingLanguage для связки
         /// </summary>

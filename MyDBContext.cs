@@ -1,25 +1,33 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 using RSFRecomendations.Configurates;
 using RSFRecomendations.Configurations;
 using RSFRecomendations.Models;
 
 namespace RSFRecomendations
 {
+    /// <summary>
+    /// Класс базы данных
+    /// </summary>
     public class MyDBContext : DbContext
     {
         public MyDBContext(DbContextOptions<MyDBContext> options) : base(options)
         {
 
         }
+
         public MyDBContext()
         {
 
         }
+
         public DbSet<UserModel> Users { get; set; }
+
         public DbSet<ProgrammingLanguageModel> ProgrammingLanguages { get; set; }
+
         public DbSet<ProgrammingLanguagePurposeModel> ProgrammingLanguagePurpose { get; set; }
+
         public DbSet<UserProgrammingLanguageModel> UserProgrammingLanguages { get; set; }
+
         public DbSet<FormModel> FormModels { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

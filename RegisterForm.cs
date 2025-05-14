@@ -21,7 +21,6 @@ namespace RSFRecomendations
 
             db = new MyDBContext();
             additionalMethods = new AdditionalMethodsClass();
-
             Log = LogManager.GetCurrentClassLogger();
 
             textBoxRegLogin.Text = Properties.Resources.EnterLogin;
@@ -43,7 +42,6 @@ namespace RSFRecomendations
             textBoxRegPassword2.BorderStyle = BorderStyle.FixedSingle;
 
             Log.Info("Переход к форме регистрации");
-
         }
 
         private void linkLabelToLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
