@@ -667,6 +667,33 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Логин не может состоять только из цифр.
+        /// </summary>
+        internal static string IncorrectLoginNum {
+            get {
+                return ResourceManager.GetString("IncorrectLoginNum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка изменить логин на одни цифры.
+        /// </summary>
+        internal static string IncorrectLoginNumEditLog {
+            get {
+                return ResourceManager.GetString("IncorrectLoginNumEditLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка создать аккаунт с одними цифрами в логине.
+        /// </summary>
+        internal static string IncorrectLoginNumLog {
+            get {
+                return ResourceManager.GetString("IncorrectLoginNumLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Почта должна быть вида &quot;____@__.__&quot; и до @ должно быть минимум 4 символа, после @ и до . минимум 3 символа, после . минимум 2 символа.
         /// </summary>
         internal static string IncorrectMail {
@@ -1076,7 +1103,7 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Анкета успешно заполнена, перейдите а главное меню, чтобы посмотреть рекомендации.
+        ///   Ищет локализованную строку, похожую на Анкета успешно заполнена, перейдите в главное меню, чтобы посмотреть рекомендации.
         /// </summary>
         internal static string SuccessfulForm {
             get {

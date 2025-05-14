@@ -380,7 +380,7 @@
     <value>Попытка создания аккаунта с пустым паролем</value>
   </data>
   <data name="SuccessfulForm" xml:space="preserve">
-    <value>Анкета успешно заполнена, перейдите а главное меню, чтобы посмотреть рекомендации</value>
+    <value>Анкета успешно заполнена, перейдите в главное меню, чтобы посмотреть рекомендации</value>
   </data>
   <data name="ChangeIncorrectMailLog" xml:space="preserve">
     <value>Попытка изменить данны профиля с почтой не по маске "____@__.__"</value>
@@ -513,5 +513,14 @@
   </data>
   <data name="WindowsApplicationDevelopment" xml:space="preserve">
     <value>Разработка приложений под Windows (WPF, WinForms)</value>
+  </data>
+  <data name="IncorrectLoginNum" xml:space="preserve">
+    <value>Логин не может состоять только из цифр</value>
+  </data>
+  <data name="IncorrectLoginNumLog" xml:space="preserve">
+    <value>Попытка создать аккаунт с одними цифрами в логине</value>
+  </data>
+  <data name="IncorrectLoginNumEditLog" xml:space="preserve">
+    <value>Попытка изменить логин на одни цифры</value>
   </data>
 </root>

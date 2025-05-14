@@ -1,4 +1,5 @@
 ﻿using System.Security.Cryptography;
+using System.Text.RegularExpressions;
 using Microsoft.EntityFrameworkCore;
 using NLog;
 using RSFRecomendations.Models;
@@ -60,6 +61,12 @@ namespace RSFRecomendations
             {
                 MessageBox.Show(Properties.Resources.EmptyLogin);
                 Log.Warn(Properties.Resources.EmptyLoginRegLog);
+                return;
+            }
+            if (Regex.IsMatch(textBoxRegLogin.Text, "[a-zA-Z]"))
+            {
+                MessageBox.Show(Properties.Resources.IncorrectLoginNum);
+                Log.Warn(Properties.Resources.IncorrectLoginNumLog);
                 return;
             }
             if (!additionalMethods.IsValidLogin(textBoxRegLogin.Text))

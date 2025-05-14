@@ -3,6 +3,8 @@ using NLog;
 using Microsoft.EntityFrameworkCore;
 using RSFRecomendations.Models;
 using AForge.Video.DirectShow;
+using Microsoft.VisualBasic.Logging;
+using System.Text.RegularExpressions;
 
 namespace RSFRecomendations.UserControles
 {
@@ -53,6 +55,12 @@ namespace RSFRecomendations.UserControles
             {
                 MessageBox.Show(Properties.Resources.IncorrectLogin);
                 Log.Warn(Properties.Resources.IncorrectEditLoginLog);
+                return;
+            }
+            if (Regex.IsMatch(tbUserLoginProfile.Text, "[a-zA-Z]"))
+            {
+                MessageBox.Show(Properties.Resources.IncorrectLoginNum);
+                Log.Warn(Properties.Resources.IncorrectLoginNumEditLog);
                 return;
             }
             if (tbUserLoginProfile.Text.Contains(" "))
