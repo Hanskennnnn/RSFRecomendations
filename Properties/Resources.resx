@@ -410,7 +410,7 @@
     <value>Попытка изменить логин на уже существующий</value>
   </data>
   <data name="IncorrectLogin" xml:space="preserve">
-    <value>Логин может содержать только латиницу и цифры и должен состоять минимум из 3 символов</value>
+    <value>Некорректный логин</value>
   </data>
   <data name="LengthPassword" xml:space="preserve">
     <value>В пароле должно быть минимум 8 символов!</value>
@@ -515,13 +515,13 @@
     <value>Разработка приложений под Windows (WPF, WinForms)</value>
   </data>
   <data name="IncorrectLoginNum" xml:space="preserve">
-    <value>Логин не может состоять только из цифр</value>
+    <value>Некорректный логин</value>
   </data>
   <data name="IncorrectLoginNumLog" xml:space="preserve">
     <value>Попытка создать аккаунт с одними цифрами в логине</value>
   </data>
   <data name="IncorrectLoginNumEditLog" xml:space="preserve">
-    <value>Попытка изменить логин на одни цифры</value>
+    <value>Попытка изменить логин на не коррректный</value>
   </data>
   <data name="IncorrectNameLang" xml:space="preserve">
     <value>Недопустимое название языка</value>

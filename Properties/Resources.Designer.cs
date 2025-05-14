@@ -649,7 +649,7 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Логин может содержать только латиницу и цифры и должен состоять минимум из 3 символов.
+        ///   Ищет локализованную строку, похожую на Некорректный логин.
         /// </summary>
         internal static string IncorrectLogin {
             get {
@@ -667,7 +667,7 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Логин не может состоять только из цифр.
+        ///   Ищет локализованную строку, похожую на Некорректный логин.
         /// </summary>
         internal static string IncorrectLoginNum {
             get {
@@ -676,7 +676,7 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Попытка изменить логин на одни цифры.
+        ///   Ищет локализованную строку, похожую на Попытка изменить логин на не коррректный.
         /// </summary>
         internal static string IncorrectLoginNumEditLog {
             get {

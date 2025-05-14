@@ -63,7 +63,7 @@ namespace RSFRecomendations
                 Log.Warn(Properties.Resources.EmptyLoginRegLog);
                 return;
             }
-            if (Regex.IsMatch(textBoxRegLogin.Text, "[a-zA-Z]"))
+            if (Regex.IsMatch(textBoxRegLogin.Text, @"^[A-Za-z][A-Za-z0-9\s#+]*$"))
             {
                 MessageBox.Show(Properties.Resources.IncorrectLoginNum);
                 Log.Warn(Properties.Resources.IncorrectLoginNumLog);
