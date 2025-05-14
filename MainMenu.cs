@@ -81,8 +81,8 @@ namespace RSFRecomendations
         private async void btnGoMainMenu_Click(object sender, EventArgs e)
         {
             var dbUser = await db.Users
-            .Include(u => u.FormModel)
-            .FirstOrDefaultAsync(u => u.Id == User.Id);
+                            .Include(u => u.FormModel)
+                            .FirstOrDefaultAsync(u => u.Id == User.Id);
 
             if (dbUser.FormModel != null)
             {

@@ -38,9 +38,6 @@ namespace RSFRecomendations
 
             NLog.LogManager.Configuration = config;
 
-            var logger = NLog.LogManager.GetCurrentClassLogger();
-
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.SetHighDpiMode(HighDpiMode.SystemAware);

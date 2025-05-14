@@ -14,7 +14,11 @@ namespace RSFRecomendations.UserControles
         private AdditionalMethodsClass additionalMethods;
 
         private Logger Log;
-        UserModel User { get; set; }
+
+        /// <summary>
+        /// Пользователь
+        /// </summary>
+        public UserModel User { get; set; }
 
         public MainAddLanguageControl(UserModel user)
         {
@@ -32,32 +36,33 @@ namespace RSFRecomendations.UserControles
             textBoxDescriptionLanguage.ForeColor = Color.Gray;
             textBoxDescriptionLanguage.Tag = "Mask";
 
-            clbPurposesLanguage.Items.Add("Веб-программирование");
-            clbPurposesLanguage.Items.Add("Игры");
-            clbPurposesLanguage.Items.Add("Микросервисы");
-            clbPurposesLanguage.Items.Add("Приложения");
-            clbPurposesLanguage.Items.Add("Серверная разработка");
-            clbPurposesLanguage.Items.Add("Образование и быстрое прототипирование");
-            clbPurposesLanguage.Items.Add("Разработка приложений под Windows (WPF, WinForms)");
-            clbPurposesLanguage.Items.Add("Обработка данных и автоматизация на платформе .NET");
-            clbPurposesLanguage.Items.Add("Системное программирование (драйверы, ОС)");
-            clbPurposesLanguage.Items.Add("Встроенные системы (Embedded)");
-            clbPurposesLanguage.Items.Add("Финансовое ПО и торговые системы");
-            clbPurposesLanguage.Items.Add("Data Science и анализ данных");
-            clbPurposesLanguage.Items.Add("Машинное обучение / ИИ");
-            clbPurposesLanguage.Items.Add("Скрипты и автоматизация");
-            clbPurposesLanguage.Items.Add("Разработка CLI-инструментов");
-            clbPurposesLanguage.Items.Add("Мобильная разработка (Android)");
-            clbPurposesLanguage.Items.Add("Разработка PWA и SPA");
-            clbPurposesLanguage.Items.Add("Интерактивность в браузере");
-            clbPurposesLanguage.Items.Add("Полный стек (Full Stack) с MongoDB, Express и пр.");
+            clbPurposesLanguage.Items.Add(Properties.Resources.WebDevelopment);
+            clbPurposesLanguage.Items.Add(Properties.Resources.GameDevelopment);
+            clbPurposesLanguage.Items.Add(Properties.Resources.Microservices);
+            clbPurposesLanguage.Items.Add(Properties.Resources.ApplicationDevelopment);
+            clbPurposesLanguage.Items.Add(Properties.Resources.ServerSideDevelopment);
+            clbPurposesLanguage.Items.Add(Properties.Resources.EducationAndRapidPrototyping);
+            clbPurposesLanguage.Items.Add(Properties.Resources.WindowsApplicationDevelopment);
+            clbPurposesLanguage.Items.Add(Properties.Resources.NETDataProcessingAndAutomation);
+            clbPurposesLanguage.Items.Add(Properties.Resources.SystemsProgramming);
+            clbPurposesLanguage.Items.Add(Properties.Resources.EmbeddedSystems);
+            clbPurposesLanguage.Items.Add(Properties.Resources.FinancialAndTradingSoftware);
+            clbPurposesLanguage.Items.Add(Properties.Resources.DataScienceAndDataAnalysis);
+            clbPurposesLanguage.Items.Add(Properties.Resources.MachineLearningAndAI);
+            clbPurposesLanguage.Items.Add(Properties.Resources.ScriptingAndAutomation);
+            clbPurposesLanguage.Items.Add(Properties.Resources.CLIToolDevelopment);
+            clbPurposesLanguage.Items.Add(Properties.Resources.MobileDevelopmentInAndroid);
+            clbPurposesLanguage.Items.Add(Properties.Resources.PWAAndSPADevelopment);
+            clbPurposesLanguage.Items.Add(Properties.Resources.BrowserInteractivity);
+            clbPurposesLanguage.Items.Add(Properties.Resources.FullStackDevelopment);
 
             Log.Info("Переход к форме добавления языка");
         }
 
         private async void buttonAddLanguage_Click(object sender, EventArgs e)
         {
-            var valuesDifficultyLanguage = new List<RadioButton> { radioButtonEasy, radioButtonMid, radioButtonHard };
+            var valuesDifficultyLanguage = new List<RadioButton> 
+                { radioButtonEasy, radioButtonMid, radioButtonHard };
             var difficultyLanguage = additionalMethods.GetDifficulty(valuesDifficultyLanguage);
 
             if (string.IsNullOrWhiteSpace(textBoxNameLanguage.Text))
@@ -76,6 +81,12 @@ namespace RSFRecomendations.UserControles
             {
                 MessageBox.Show(Properties.Resources.EmptyDescriptionLang);
                 Log.Warn(Properties.Resources.EmptyDescriptionLangLog);
+                return;
+            }
+            if (textBoxDescriptionLanguage.Text.Contains(" "))
+            {
+                MessageBox.Show(Properties.Resources.NoContainsSpaceDescriptionLang);
+                Log.Warn(Properties.Resources.NoContainsSpaceDescriptionLangLog);
                 return;
             }
             if (difficultyLanguage == null)
@@ -110,11 +121,14 @@ namespace RSFRecomendations.UserControles
                 Id = Guid.NewGuid(),
                 Name = textBoxNameLanguage.Text,
                 Description = textBoxDescriptionLanguage.Text,
-                Purposes = additionalMethods.GetPurposes(clbPurposesLanguage),
+                Purposes = new List<ProgrammingLanguagePurposeModel>(),
                 DifficultyLanguage = difficultyLanguage,
                 Image = additionalMethods.ImageToBytes(pictureBoxImageLanguage.Image),
                 UsersProgrammingLanguage = new List<UserProgrammingLanguageModel>()
             };
+
+            language.Purposes = await additionalMethods.GetPurposesAsync(clbPurposesLanguage,
+                language.Id);
 
             await db.ProgrammingLanguages.AddAsync(language);
             await db.SaveChangesAsync();

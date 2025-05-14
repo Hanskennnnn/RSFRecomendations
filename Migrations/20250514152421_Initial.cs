@@ -113,12 +113,11 @@ namespace RSFRecomendations.Migrations
                 columns: table => new
                 {
                     UserId = table.Column<Guid>(type: "uuid", nullable: false),
-                    ProgramminLanguageId = table.Column<Guid>(type: "uuid", nullable: false),
                     ProgrammingLanguageId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserProgrammingLanguages", x => new { x.UserId, x.ProgramminLanguageId });
+                    table.PrimaryKey("PK_UserProgrammingLanguages", x => new { x.UserId, x.ProgrammingLanguageId });
                     table.ForeignKey(
                         name: "FK_UserProgrammingLanguages_ProgrammingLanguages_ProgrammingLa~",
                         column: x => x.ProgrammingLanguageId,

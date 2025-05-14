@@ -9,6 +9,10 @@ namespace RSFRecomendations.Configurates
     /// </summary>
     public class UserConfiguration : IEntityTypeConfiguration<UserModel>
     {
+        /// <summary>
+        /// Метод добавления конфигурации пользователя
+        /// </summary>
+        /// <param name="builder"></param>
         public void Configure(EntityTypeBuilder<UserModel> builder)
         {
             builder.HasKey(u => u.Id);

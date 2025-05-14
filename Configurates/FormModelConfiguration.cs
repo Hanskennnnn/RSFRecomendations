@@ -9,6 +9,10 @@ namespace RSFRecomendations.Configurates
     /// </summary>
     public class FormModelConfiguration : IEntityTypeConfiguration<FormModel>
     {
+        /// <summary>
+        /// Метод добавления конфигурации анкеты
+        /// </summary>
+        /// <param name="builder"></param>
         public void Configure(EntityTypeBuilder<FormModel> builder)
         {
             builder.HasKey(f => f.Id);

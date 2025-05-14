@@ -20,6 +20,9 @@ namespace RSFRecomendations.UserControles
 
         private AdditionalMethodsClass additionalMethods;
 
+        /// <summary>
+        /// Анкета
+        /// </summary>
         public FormModel model { get; set; }
 
         public MainFormAnketaControl(UserModel user)
@@ -81,12 +84,12 @@ namespace RSFRecomendations.UserControles
             }
 
             var purpose = await db.ProgrammingLanguagePurpose
-            .FirstOrDefaultAsync(c => c.SelectedPurpose == purposeForm);
+                .FirstOrDefaultAsync(c => c.SelectedPurpose == purposeForm);
 
             var dbUser = await db.Users
-            .Include(u => u.FormModel)
-            .FirstOrDefaultAsync(u => u.Id == User.Id);
-
+                .Include(u => u.FormModel)
+                .FirstOrDefaultAsync(u => u.Id == User.Id);
+    
             if (dbUser.FormModel == null)
             {
                 var form = new FormModel
@@ -162,6 +165,24 @@ namespace RSFRecomendations.UserControles
             }
 
             await db.SaveChangesAsync();
+
+            var radioButtons = new List<RadioButton> { radioButtonQuestion1Answer1, radioButtonQuestion1Answer2,
+                                                       radioButtonQuestion1Answer3,radioButtonQuestion1Answer4,
+                                                       radioButtonQuestion1Answer5,radioButtonQuestion1Answer6};
+            additionalMethods.ClearRadioButtons(radioButtons);
+
+            radioButtons = new List<RadioButton> { radioButtonQuestion2Answer1, radioButtonQuestion2Answer2,
+                                                       radioButtonQuestion2Answer3 };
+            additionalMethods.ClearRadioButtons(radioButtons);
+
+            radioButtons = new List<RadioButton> { radioButtonQuestion3Answer1, radioButtonQuestion3Answer2,
+                                                       radioButtonQuestion3Answer3,radioButtonQuestion3Answer4,
+                                                       radioButtonQuestion3Answer5};
+            additionalMethods.ClearRadioButtons(radioButtons);
+
+            radioButtons = new List<RadioButton> { radioButtonQuestion4Answer1, radioButtonQuestion4Answer2,
+                                                       radioButtonQuestion4Answer3 };
+            additionalMethods.ClearRadioButtons(radioButtons);
         }
 
         private void buttonAddForm_Paint(object sender, PaintEventArgs e)

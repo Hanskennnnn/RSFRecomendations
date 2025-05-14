@@ -61,6 +61,24 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Приложения.
+        /// </summary>
+        internal static string ApplicationDevelopment {
+            get {
+                return ResourceManager.GetString("ApplicationDevelopment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Интерактивность в браузере.
+        /// </summary>
+        internal static string BrowserInteractivity {
+            get {
+                return ResourceManager.GetString("BrowserInteractivity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap camera_icon {
@@ -135,6 +153,15 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Разработка CLI-инструментов.
+        /// </summary>
+        internal static string CLIToolDevelopment {
+            get {
+                return ResourceManager.GetString("CLIToolDevelopment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на C++ — компилируемый язык программирования, являющийся развитием языка C и включающий поддержку объектно-ориентированного программирования. Он предоставляет программисту детальный контроль над памятью и ресурсами, что делает его одним из самых быстрых и мощных языков. Однако сложный синтаксис и высокая вероятность ошибок делают его более требовательным к опыту разработчика..
         /// </summary>
         internal static string CPlusDescription {
@@ -149,6 +176,15 @@ namespace RSFRecomendations.Properties {
         internal static string CSharpDescription {
             get {
                 return ResourceManager.GetString("CSharpDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Data Science и анализ данных.
+        /// </summary>
+        internal static string DataScienceAndDataAnalysis {
+            get {
+                return ResourceManager.GetString("DataScienceAndDataAnalysis", resourceCulture);
             }
         }
         
@@ -168,6 +204,24 @@ namespace RSFRecomendations.Properties {
             get {
                 object obj = ResourceManager.GetObject("Dislike", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Образование и быстрое прототипирование.
+        /// </summary>
+        internal static string EducationAndRapidPrototyping {
+            get {
+                return ResourceManager.GetString("EducationAndRapidPrototyping", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Встроенные системы (Embedded).
+        /// </summary>
+        internal static string EmbeddedSystems {
+            get {
+                return ResourceManager.GetString("EmbeddedSystems", resourceCulture);
             }
         }
         
@@ -496,6 +550,33 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Финансовое ПО и торговые системы.
+        /// </summary>
+        internal static string FinancialAndTradingSoftware {
+            get {
+                return ResourceManager.GetString("FinancialAndTradingSoftware", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Полный стек (Full Stack) с MongoDB, Express и пр..
+        /// </summary>
+        internal static string FullStackDevelopment {
+            get {
+                return ResourceManager.GetString("FullStackDevelopment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Игры.
+        /// </summary>
+        internal static string GameDevelopment {
+            get {
+                return ResourceManager.GetString("GameDevelopment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Пользователь нажал кнопку перехода к добавлению языка.
         /// </summary>
         internal static string GoAddLanguageLog {
@@ -514,7 +595,7 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Go - Статически типизированный, компилируемый язык программирования, разработанный в Google (2009 г.) для создания высокопроизводительных, надежных и масштабируемых приложений..
+        ///   Ищет локализованную строку, похожую на Go (Golang) — компилируемый язык программирования, разработанный Google для создания высокопроизводительных и надежных приложений. Он сочетает простоту синтаксиса, строгую статическую типизацию и встроенную поддержку многопоточности через горутины (goroutines). Go ориентирован на эффективность, минимализм и явность кода, что делает его идеальным для серверной разработки, облачных решений и DevOps-инструментов.
         /// </summary>
         internal static string GoDescription {
             get {
@@ -677,6 +758,15 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Машинное обучение / ИИ.
+        /// </summary>
+        internal static string MachineLearningAndAI {
+            get {
+                return ResourceManager.GetString("MachineLearningAndAI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap MainMenuFirst {
@@ -697,11 +787,38 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Микросервисы.
+        /// </summary>
+        internal static string Microservices {
+            get {
+                return ResourceManager.GetString("Microservices", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Мобильная разработка (Android).
+        /// </summary>
+        internal static string MobileDevelopmentInAndroid {
+            get {
+                return ResourceManager.GetString("MobileDevelopmentInAndroid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Введите название языка.
         /// </summary>
         internal static string NameLanguageText {
             get {
                 return ResourceManager.GetString("NameLanguageText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Обработка данных и автоматизация на платформе .NET.
+        /// </summary>
+        internal static string NETDataProcessingAndAutomation {
+            get {
+                return ResourceManager.GetString("NETDataProcessingAndAutomation", resourceCulture);
             }
         }
         
@@ -877,6 +994,15 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Разработка PWA и SPA.
+        /// </summary>
+        internal static string PWAAndSPADevelopment {
+            get {
+                return ResourceManager.GetString("PWAAndSPADevelopment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Python — это высокоуровневый интерпретируемый язык программирования, известный своей простотой, читаемым синтаксисом и широкой областью применения. Он идеально подходит для быстрого прототипирования, написания скриптов и автоматизации. Благодаря огромному количеству библиотек и активному сообществу, Python часто используется в научной среде, бизнесе и стартапах. Несмотря на универсальность, его скорость исполнения ниже, чем у компилируемых языков..
         /// </summary>
         internal static string PythonDescription {
@@ -892,6 +1018,24 @@ namespace RSFRecomendations.Properties {
             get {
                 object obj = ResourceManager.GetObject("Register", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Скрипты и автоматизация.
+        /// </summary>
+        internal static string ScriptingAndAutomation {
+            get {
+                return ResourceManager.GetString("ScriptingAndAutomation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Серверная разработка.
+        /// </summary>
+        internal static string ServerSideDevelopment {
+            get {
+                return ResourceManager.GetString("ServerSideDevelopment", resourceCulture);
             }
         }
         
@@ -914,7 +1058,7 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Повторная анкета успешна заполнена.
+        ///   Ищет локализованную строку, похожую на Повторная анкета успешна заполнена, перейдите в главное меню, чтобы посмотреть рекомендации.
         /// </summary>
         internal static string SuccessfulEditForm {
             get {
@@ -932,7 +1076,7 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Анкета успешно заполнена.
+        ///   Ищет локализованную строку, похожую на Анкета успешно заполнена, перейдите а главное меню, чтобы посмотреть рекомендации.
         /// </summary>
         internal static string SuccessfulForm {
             get {
@@ -955,6 +1099,15 @@ namespace RSFRecomendations.Properties {
         internal static string SuccessfulRegistration {
             get {
                 return ResourceManager.GetString("SuccessfulRegistration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Системное программирование (драйверы, ОС).
+        /// </summary>
+        internal static string SystemsProgramming {
+            get {
+                return ResourceManager.GetString("SystemsProgramming", resourceCulture);
             }
         }
         
@@ -1037,6 +1190,24 @@ namespace RSFRecomendations.Properties {
         internal static string UserExistsRegLoginLog {
             get {
                 return ResourceManager.GetString("UserExistsRegLoginLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Веб-программирование.
+        /// </summary>
+        internal static string WebDevelopment {
+            get {
+                return ResourceManager.GetString("WebDevelopment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Разработка приложений под Windows (WPF, WinForms).
+        /// </summary>
+        internal static string WindowsApplicationDevelopment {
+            get {
+                return ResourceManager.GetString("WindowsApplicationDevelopment", resourceCulture);
             }
         }
         

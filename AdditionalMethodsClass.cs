@@ -16,6 +16,30 @@ namespace RSFRecomendations
         private readonly MyDBContext db;
 
         private Logger Log;
+
+        private readonly Dictionary<string, Purpose> purposeMapping = new()
+        {
+            { Properties.Resources.ApplicationDevelopment, Purpose.ApplicationDevelopment },
+            { Properties.Resources.BrowserInteractivity, Purpose.BrowserInteractivity },
+            { Properties.Resources.CLIToolDevelopment, Purpose.CLIToolDevelopment},
+            { Properties.Resources.DataScienceAndDataAnalysis, Purpose.DataScienceAndDataAnalysis },
+            { Properties.Resources.EducationAndRapidPrototyping, Purpose.EducationAndRapidPrototyping },
+            { Properties.Resources.EmbeddedSystems, Purpose.EmbeddedSystems},
+            { Properties.Resources.FinancialAndTradingSoftware, Purpose.FinancialAndTradingSoftware },
+            { Properties.Resources.FullStackDevelopment, Purpose.FullStackDevelopment },
+            { Properties.Resources.GameDevelopment, Purpose.GameDevelopment},
+            { Properties.Resources.MachineLearningAndAI, Purpose.MachineLearningAndAI},
+            { Properties.Resources.Microservices, Purpose.Microservices},
+            { Properties.Resources.MobileDevelopmentInAndroid, Purpose.MobileDevelopmentInAndroid },
+            { Properties.Resources.NETDataProcessingAndAutomation, Purpose.NETDataProcessingAndAutomation},
+            { Properties.Resources.PWAAndSPADevelopment, Purpose.PWAAndSPADevelopment },
+            { Properties.Resources.ScriptingAndAutomation, Purpose.ScriptingAndAutomation},
+            { Properties.Resources.ServerSideDevelopment, Purpose.ServerSideDevelopment},
+            { Properties.Resources.SystemsProgramming, Purpose.SystemsProgramming },
+            { Properties.Resources.WebDevelopment, Purpose.WebDevelopment},
+            { Properties.Resources.WindowsApplicationDevelopment, Purpose.WindowsApplicationDevelopment }
+        };
+
         public AdditionalMethodsClass()
         {
             Log = LogManager.GetCurrentClassLogger();
@@ -39,24 +63,28 @@ namespace RSFRecomendations
         /// </summary>
         /// <param name="clbPurposesLanguage"></param>
         /// <param name="languageId"></param>
-        public ICollection<ProgrammingLanguagePurposeModel> GetPurposes(CheckedListBox clbPurposesLanguage)
+        public async Task<List<ProgrammingLanguagePurposeModel>> GetPurposesAsync(CheckedListBox clbPurposesLanguage,
+            Guid languageId)
         {
-            var purposeList = new List<ProgrammingLanguagePurposeModel>();
+            var purposes = new List<ProgrammingLanguagePurposeModel>();
 
             foreach (var item in clbPurposesLanguage.CheckedItems)
             {
-                if (!Enum.TryParse<Purpose>(item.ToString(), out var parsedPurpose))
-                    continue;
-
-                purposeList.Add(new ProgrammingLanguagePurposeModel
+                if (purposeMapping.TryGetValue(item.ToString(), out var parsedPurpose))
                 {
-                    Id = Guid.NewGuid(),
-                    SelectedPurpose = parsedPurpose
-                });
+                    purposes.Add(new ProgrammingLanguagePurposeModel
+                    {
+                        Id = Guid.NewGuid(),
+                        ProgrammingLanguageId = languageId,
+                        SelectedPurpose = parsedPurpose
+                    });
+                }
             }
 
-            return purposeList;
+            return purposes;
         }
+
+
 
         /// <summary>
         /// Метод для получения уровня подготовки
@@ -82,8 +110,7 @@ namespace RSFRecomendations
         /// <returns></returns>
         public async Task<List<ProgrammingLanguageModel>> GetLanguages()
         {
-            var languages = await db.ProgrammingLanguages.ToListAsync();
-            return languages;
+            return await db.ProgrammingLanguages.ToListAsync();
         }
 
         /// <summary>
@@ -178,7 +205,6 @@ namespace RSFRecomendations
             {
                 MessageBox.Show(Properties.Resources.EmptyImageLang);
                 Log.Warn(Properties.Resources.EmptyImageLangLog);
-                return;
             }
         }
 
@@ -223,8 +249,6 @@ namespace RSFRecomendations
         public Image ByteToImage(byte[] byteToImage)
         {
             var imageBytes = byteToImage;
-
-            // Преобразование byte[] в Image
             using (var ms = new MemoryStream(imageBytes))
             {
                 var image = Image.FromStream(ms);

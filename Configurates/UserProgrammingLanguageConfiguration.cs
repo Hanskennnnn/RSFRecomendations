@@ -9,9 +9,13 @@ namespace RSFRecomendations.Configurates
     /// </summary>
     public class UserProgrammingLanguageConfiguration : IEntityTypeConfiguration<UserProgrammingLanguageModel>
     {
+        /// <summary>
+        /// Метод добавления конфигурации пользователя языка
+        /// </summary>
+        /// <param name="builder"></param>
         public void Configure(EntityTypeBuilder<UserProgrammingLanguageModel> builder)
         {
-            builder.HasKey(up => new { up.UserId, up.ProgramminLanguageId } );
+            builder.HasKey(up => new { up.UserId, up.ProgrammingLanguageId } );
 
             builder
                 .HasOne(up => up.User)

@@ -9,6 +9,10 @@ namespace RSFRecomendations.Configurations
     /// </summary>
     public class ProgrammingLanguageConfiguration : IEntityTypeConfiguration<ProgrammingLanguageModel>
     {
+        /// <summary>
+        /// Метод добавления конфигурации языка
+        /// </summary>
+        /// <param name="builder"></param>
         public void Configure(EntityTypeBuilder<ProgrammingLanguageModel> builder)
         {
             builder.HasKey(p => p.Id);

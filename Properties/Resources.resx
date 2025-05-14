@@ -200,7 +200,7 @@
     <value>Введите название</value>
   </data>
   <data name="GoDescription" xml:space="preserve">
-    <value>Go - Статически типизированный, компилируемый язык программирования, разработанный в Google (2009 г.) для создания высокопроизводительных, надежных и масштабируемых приложений.</value>
+    <value>Go (Golang) — компилируемый язык программирования, разработанный Google для создания высокопроизводительных и надежных приложений. Он сочетает простоту синтаксиса, строгую статическую типизацию и встроенную поддержку многопоточности через горутины (goroutines). Go ориентирован на эффективность, минимализм и явность кода, что делает его идеальным для серверной разработки, облачных решений и DevOps-инструментов</value>
   </data>
   <data name="TeamRSF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\TeamRSF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -368,7 +368,7 @@
     <value>Попытка входа с пробелами в логине</value>
   </data>
   <data name="SuccessfulEditForm" xml:space="preserve">
-    <value>Повторная анкета успешна заполнена</value>
+    <value>Повторная анкета успешна заполнена, перейдите в главное меню, чтобы посмотреть рекомендации</value>
   </data>
   <data name="EmptyProgSkillForm" xml:space="preserve">
     <value>Выберите уровень программирвания</value>
@@ -380,7 +380,7 @@
     <value>Попытка создания аккаунта с пустым паролем</value>
   </data>
   <data name="SuccessfulForm" xml:space="preserve">
-    <value>Анкета успешно заполнена</value>
+    <value>Анкета успешно заполнена, перейдите а главное меню, чтобы посмотреть рекомендации</value>
   </data>
   <data name="ChangeIncorrectMailLog" xml:space="preserve">
     <value>Попытка изменить данны профиля с почтой не по маске "____@__.__"</value>
@@ -456,5 +456,62 @@
   </data>
   <data name="EmptyCameraLog" xml:space="preserve">
     <value>Не удалось найти камеру</value>
+  </data>
+  <data name="ApplicationDevelopment" xml:space="preserve">
+    <value>Приложения</value>
+  </data>
+  <data name="BrowserInteractivity" xml:space="preserve">
+    <value>Интерактивность в браузере</value>
+  </data>
+  <data name="CLIToolDevelopment" xml:space="preserve">
+    <value>Разработка CLI-инструментов</value>
+  </data>
+  <data name="DataScienceAndDataAnalysis" xml:space="preserve">
+    <value>Data Science и анализ данных</value>
+  </data>
+  <data name="EducationAndRapidPrototyping" xml:space="preserve">
+    <value>Образование и быстрое прототипирование</value>
+  </data>
+  <data name="EmbeddedSystems" xml:space="preserve">
+    <value>Встроенные системы (Embedded)</value>
+  </data>
+  <data name="FinancialAndTradingSoftware" xml:space="preserve">
+    <value>Финансовое ПО и торговые системы</value>
+  </data>
+  <data name="FullStackDevelopment" xml:space="preserve">
+    <value>Полный стек (Full Stack) с MongoDB, Express и пр.</value>
+  </data>
+  <data name="GameDevelopment" xml:space="preserve">
+    <value>Игры</value>
+  </data>
+  <data name="MachineLearningAndAI" xml:space="preserve">
+    <value>Машинное обучение / ИИ</value>
+  </data>
+  <data name="Microservices" xml:space="preserve">
+    <value>Микросервисы</value>
+  </data>
+  <data name="MobileDevelopmentInAndroid" xml:space="preserve">
+    <value>Мобильная разработка (Android)</value>
+  </data>
+  <data name="NETDataProcessingAndAutomation" xml:space="preserve">
+    <value>Обработка данных и автоматизация на платформе .NET</value>
+  </data>
+  <data name="PWAAndSPADevelopment" xml:space="preserve">
+    <value>Разработка PWA и SPA</value>
+  </data>
+  <data name="ScriptingAndAutomation" xml:space="preserve">
+    <value>Скрипты и автоматизация</value>
+  </data>
+  <data name="ServerSideDevelopment" xml:space="preserve">
+    <value>Серверная разработка</value>
+  </data>
+  <data name="SystemsProgramming" xml:space="preserve">
+    <value>Системное программирование (драйверы, ОС)</value>
+  </data>
+  <data name="WebDevelopment" xml:space="preserve">
+    <value>Веб-программирование</value>
+  </data>
+  <data name="WindowsApplicationDevelopment" xml:space="preserve">
+    <value>Разработка приложений под Windows (WPF, WinForms)</value>
   </data>
 </root>

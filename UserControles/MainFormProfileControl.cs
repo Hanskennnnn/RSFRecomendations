@@ -85,8 +85,8 @@ namespace RSFRecomendations.UserControles
             }
 
             // Проверка на сущ логин
-            var usLogin = await db.Users.FirstOrDefaultAsync(c => c.Login 
-            == tbUserLoginProfile.Text);
+            var usLogin = await db.Users.
+                FirstOrDefaultAsync(c => c.Login == tbUserLoginProfile.Text);
 
             if (usLogin != null && usLogin.Id != User.Id)
             {
@@ -97,8 +97,8 @@ namespace RSFRecomendations.UserControles
             }
 
             // Проверка на сущ почту
-            var usEmail = await db.Users.FirstOrDefaultAsync(c => c.Email
-            == tbUserEmailProfile.Text);
+            var usEmail = await db.Users.
+                FirstOrDefaultAsync(c => c.Email == tbUserEmailProfile.Text);
 
             if (usEmail != null && usEmail.Id != User.Id)
             {
