@@ -12,7 +12,7 @@ using RSFRecomendations;
 namespace RSFRecomendations.Migrations
 {
     [DbContext(typeof(MyDBContext))]
-    [Migration("20250513205231_Initial")]
+    [Migration("20250514152421_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -151,13 +151,10 @@ namespace RSFRecomendations.Migrations
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("ProgramminLanguageId")
-                        .HasColumnType("uuid");
-
                     b.Property<Guid>("ProgrammingLanguageId")
                         .HasColumnType("uuid");
 
-                    b.HasKey("UserId", "ProgramminLanguageId");
+                    b.HasKey("UserId", "ProgrammingLanguageId");
 
                     b.HasIndex("ProgrammingLanguageId");
 

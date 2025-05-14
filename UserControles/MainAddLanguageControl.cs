@@ -78,6 +78,12 @@ namespace RSFRecomendations.UserControles
                 Log.Warn(Properties.Resources.EmptyDescriptionLangLog);
                 return;
             }
+            if (textBoxDescriptionLanguage.Text.Contains(" "))
+            {
+                MessageBox.Show(Properties.Resources.NoContainsSpaceDescriptionLang);
+                Log.Warn(Properties.Resources.NoContainsSpaceDescriptionLangLog);
+                return;
+            }
             if (difficultyLanguage == null)
             {
                 MessageBox.Show(Properties.Resources.EmptyDifficultyLang);
@@ -110,11 +116,14 @@ namespace RSFRecomendations.UserControles
                 Id = Guid.NewGuid(),
                 Name = textBoxNameLanguage.Text,
                 Description = textBoxDescriptionLanguage.Text,
-                Purposes = additionalMethods.GetPurposes(clbPurposesLanguage),
+                Purposes = new List<ProgrammingLanguagePurposeModel>(),
                 DifficultyLanguage = difficultyLanguage,
                 Image = additionalMethods.ImageToBytes(pictureBoxImageLanguage.Image),
                 UsersProgrammingLanguage = new List<UserProgrammingLanguageModel>()
             };
+
+            language.Purposes = await additionalMethods.GetPurposesAsync(clbPurposesLanguage,
+                language.Id);
 
             await db.ProgrammingLanguages.AddAsync(language);
             await db.SaveChangesAsync();
@@ -177,3 +186,4 @@ namespace RSFRecomendations.UserControles
         }
     }
 }
+q

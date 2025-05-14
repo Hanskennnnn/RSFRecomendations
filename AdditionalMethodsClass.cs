@@ -16,6 +16,30 @@ namespace RSFRecomendations
         private readonly MyDBContext db;
 
         private Logger Log;
+
+        private readonly Dictionary<string, Purpose> purposeMapping = new()
+        {
+            { "Приложения", Purpose.ApplicationDevelopment },
+            { "Интерактивность в браузере", Purpose.BrowserInteractivity },
+            { "Разработка CLI-инструментов", Purpose.CLIToolDevelopment},
+            { "Data Science и анализ данных", Purpose.DataScienceAndDataAnalysis },
+            { "Образование и быстрое прототипирование", Purpose.EducationAndRapidPrototyping },
+            { "Встроенные системы (Embedded)", Purpose.EmbeddedSystems},
+            { "Финансовое ПО и торговые системы", Purpose.FinancialAndTradingSoftware },
+            { "Полный стек (Full Stack) с MongoDB, Express и пр.", Purpose.FullStackDevelopment },
+            { "Игры", Purpose.GameDevelopment},
+            { "Машинное обучение / ИИ", Purpose.MachineLearningAndAI},
+            { "Микросервисы", Purpose.Microservices},
+            { "Мобильная разработка (Android)", Purpose.MobileDevelopmentInAndroid },
+            { "Обработка данных и автоматизация на платформе .NET", Purpose.NETDataProcessingAndAutomation},
+            { "Разработка PWA и SPA", Purpose.PWAAndSPADevelopment },
+            { "Скрипты и автоматизация", Purpose.ScriptingAndAutomation},
+            { "Серверная разработка", Purpose.ServerSideDevelopment},
+            { "Системное программирование (драйверы, ОС)", Purpose.SystemsProgramming },
+            { "Веб-программирование", Purpose.WebDevelopment},
+            { "Разработка приложений под Windows (WPF, WinForms)", Purpose.WindowsApplicationDevelopment }
+        };
+
         public AdditionalMethodsClass()
         {
             Log = LogManager.GetCurrentClassLogger();
@@ -39,24 +63,28 @@ namespace RSFRecomendations
         /// </summary>
         /// <param name="clbPurposesLanguage"></param>
         /// <param name="languageId"></param>
-        public ICollection<ProgrammingLanguagePurposeModel> GetPurposes(CheckedListBox clbPurposesLanguage)
+        public async Task<List<ProgrammingLanguagePurposeModel>> GetPurposesAsync(
+    CheckedListBox clbPurposesLanguage, Guid languageId)
         {
-            var purposeList = new List<ProgrammingLanguagePurposeModel>();
+            var purposes = new List<ProgrammingLanguagePurposeModel>();
 
             foreach (var item in clbPurposesLanguage.CheckedItems)
             {
-                if (!Enum.TryParse<Purpose>(item.ToString(), out var parsedPurpose))
-                    continue;
-
-                purposeList.Add(new ProgrammingLanguagePurposeModel
+                if (purposeMapping.TryGetValue(item.ToString(), out var parsedPurpose))
                 {
-                    Id = Guid.NewGuid(),
-                    SelectedPurpose = parsedPurpose
-                });
+                    purposes.Add(new ProgrammingLanguagePurposeModel
+                    {
+                        Id = Guid.NewGuid(),
+                        ProgrammingLanguageId = languageId,
+                        SelectedPurpose = parsedPurpose
+                    });
+                }
             }
 
-            return purposeList;
+            return purposes;
         }
+
+
 
         /// <summary>
         /// Метод для получения уровня подготовки

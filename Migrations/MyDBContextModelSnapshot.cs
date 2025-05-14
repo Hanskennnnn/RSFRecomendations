@@ -148,13 +148,10 @@ namespace RSFRecomendations.Migrations
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("ProgramminLanguageId")
-                        .HasColumnType("uuid");
-
                     b.Property<Guid>("ProgrammingLanguageId")
                         .HasColumnType("uuid");
 
-                    b.HasKey("UserId", "ProgramminLanguageId");
+                    b.HasKey("UserId", "ProgrammingLanguageId");
 
                     b.HasIndex("ProgrammingLanguageId");
 

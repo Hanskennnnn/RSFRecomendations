@@ -18,7 +18,7 @@
         /// <summary>
         /// Внешний ключ ProgramminLanguage
         /// </summary>
-        public Guid ProgramminLanguageId { get; set; }
+        public Guid ProgrammingLanguageId { get; set; }
 
         /// <summary>
         /// Объект ProgrammingLanguage для связки

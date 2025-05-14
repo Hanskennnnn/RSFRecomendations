@@ -11,7 +11,7 @@ namespace RSFRecomendations.Configurates
     {
         public void Configure(EntityTypeBuilder<UserProgrammingLanguageModel> builder)
         {
-            builder.HasKey(up => new { up.UserId, up.ProgramminLanguageId } );
+            builder.HasKey(up => new { up.UserId, up.ProgrammingLanguageId } );
 
             builder
                 .HasOne(up => up.User)
