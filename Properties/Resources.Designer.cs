@@ -712,6 +712,24 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Недопустимое название языка.
+        /// </summary>
+        internal static string IncorrectNameLang {
+            get {
+                return ResourceManager.GetString("IncorrectNameLang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Попытка создать язык с недопустимым названием.
+        /// </summary>
+        internal static string IncorrectNameLangLog {
+            get {
+                return ResourceManager.GetString("IncorrectNameLangLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Java — строго типизированный объектно-ориентированный язык, работающий через виртуальную машину (JVM), что обеспечивает его кроссплатформенность. Он известен своей надёжностью, безопасностью и масштабируемостью, что делает его популярным выбором для разработки больших и долгоживущих программных систем. Несмотря на многословность синтаксиса, Java сохраняет стабильную популярность в корпоративной среде..
         /// </summary>
         internal static string JavaDescription {

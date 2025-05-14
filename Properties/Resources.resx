@@ -523,4 +523,10 @@
   <data name="IncorrectLoginNumEditLog" xml:space="preserve">
     <value>Попытка изменить логин на одни цифры</value>
   </data>
+  <data name="IncorrectNameLang" xml:space="preserve">
+    <value>Недопустимое название языка</value>
+  </data>
+  <data name="IncorrectNameLangLog" xml:space="preserve">
+    <value>Попытка создать язык с недопустимым названием</value>
+  </data>
 </root>

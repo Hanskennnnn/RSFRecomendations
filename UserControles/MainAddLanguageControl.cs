@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Text.RegularExpressions;
+using System.Xml.Linq;
+using Microsoft.EntityFrameworkCore;
 using NLog;
 using RSFRecomendations.Models;
 
@@ -69,6 +71,12 @@ namespace RSFRecomendations.UserControles
             {
                 MessageBox.Show(Properties.Resources.EmptyNameLang);
                 Log.Warn(Properties.Resources.EmptyNameLangLog);
+                return;
+            }
+            if (Regex.IsMatch(textBoxNameLanguage.Text, @"^[A-Za-z][A-Za-z0-9\s#+]*$"))
+            {
+                MessageBox.Show(Properties.Resources.IncorrectNameLang);
+                Log.Warn(Properties.Resources.IncorrectNameLangLog);
                 return;
             }
             if (textBoxNameLanguage.Text.Contains(" "))
