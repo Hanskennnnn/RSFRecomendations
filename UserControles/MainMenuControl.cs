@@ -91,27 +91,27 @@ namespace RSFRecomendations
                     {
                         languages[lang.Name] = languages.GetValueOrDefault(lang.Name) + 1;
                     }
-                    if (dbUser.FormModel.PurposeForm.SelectedPurpose == Purpose.WebDevelopment && lang.Name == "JavaScript")
+                    if (dbUser.FormModel.PurposeForm.SelectedPurpose != null && dbUser.FormModel.PurposeForm.SelectedPurpose == Purpose.WebDevelopment && lang.Name == "JavaScript")
                     {
                         languages["JavaScript"] = languages.GetValueOrDefault("JavaScript") + 2;
                     }
-                    if (dbUser.FormModel.PurposeForm.SelectedPurpose == Purpose.GameDevelopment && lang.Name == "C++")
+                    if (dbUser.FormModel.PurposeForm.SelectedPurpose != null && dbUser.FormModel.PurposeForm.SelectedPurpose == Purpose.GameDevelopment && lang.Name == "C++")
                     {
                         languages["C++"] = languages.GetValueOrDefault("C++") + 2;
                     }
-                    if (dbUser.FormModel.PurposeForm.SelectedPurpose == Purpose.ApplicationDevelopment && lang.Name == "C#")
+                    if (dbUser.FormModel.PurposeForm.SelectedPurpose != null && dbUser.FormModel.PurposeForm.SelectedPurpose == Purpose.ApplicationDevelopment && lang.Name == "C#")
                     {
                         languages["C#"] = languages.GetValueOrDefault("C#") + 2;
                     }
-                    if (dbUser.FormModel.PurposeForm.SelectedPurpose == Purpose.ServerSideDevelopment && lang.Name == "Java")
+                    if (dbUser.FormModel.PurposeForm.SelectedPurpose != null && dbUser.FormModel.PurposeForm.SelectedPurpose == Purpose.ServerSideDevelopment && lang.Name == "Java")
                     {
                         languages["Java"] = languages.GetValueOrDefault("Java") + 2;
                     }
-                    if (dbUser.FormModel.PurposeForm.SelectedPurpose == Purpose.Microservices && lang.Name == "Go")
+                    if (dbUser.FormModel.PurposeForm.SelectedPurpose != null && dbUser.FormModel.PurposeForm.SelectedPurpose == Purpose.Microservices && lang.Name == "Go")
                     {
                         languages["Go"] = languages.GetValueOrDefault("Go") + 2;
                     }
-                    if (dbUser.FormModel.PurposeForm.SelectedPurpose == Purpose.DataScienceAndDataAnalysis && lang.Name == "Python")
+                    if (dbUser.FormModel.PurposeForm.SelectedPurpose != null && dbUser.FormModel.PurposeForm.SelectedPurpose == Purpose.DataScienceAndDataAnalysis && lang.Name == "Python")
                     {
                         languages["Python"] = languages.GetValueOrDefault("Python") + 2;
                     }

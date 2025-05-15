@@ -73,7 +73,7 @@ namespace RSFRecomendations.UserControles
                 Log.Warn(Properties.Resources.EmptyNameLangLog);
                 return;
             }
-            if (Regex.IsMatch(textBoxNameLanguage.Text, @"^[A-Za-z][A-Za-z0-9\s#+]*$"))
+            if (!Regex.IsMatch(textBoxNameLanguage.Text, @"^[A-Za-z][A-Za-z0-9\s#+.]*$"))
             {
                 MessageBox.Show(Properties.Resources.IncorrectNameLang);
                 Log.Warn(Properties.Resources.IncorrectNameLangLog);
@@ -89,12 +89,6 @@ namespace RSFRecomendations.UserControles
             {
                 MessageBox.Show(Properties.Resources.EmptyDescriptionLang);
                 Log.Warn(Properties.Resources.EmptyDescriptionLangLog);
-                return;
-            }
-            if (textBoxDescriptionLanguage.Text.Contains(" "))
-            {
-                MessageBox.Show(Properties.Resources.NoContainsSpaceDescriptionLang);
-                Log.Warn(Properties.Resources.NoContainsSpaceDescriptionLangLog);
                 return;
             }
             if (difficultyLanguage == null)
@@ -152,10 +146,12 @@ namespace RSFRecomendations.UserControles
             var radioButtons = new List<RadioButton> { radioButtonEasy, radioButtonMid, radioButtonHard };
             additionalMethods.ClearRadioButtons(radioButtons);
 
-            for (var i = 0; i < clbPurposesLanguage.Items.Count; i++)
+            for (int i = 0; i < clbPurposesLanguage.Items.Count; i++)
             {
                 clbPurposesLanguage.SetItemChecked(i, false);
             }
+            clbPurposesLanguage.ClearSelected(); 
+            clbPurposesLanguage.SelectedIndex = -1; 
         }
 
         private void buttonAddImageLanguage_Click(object sender, EventArgs e)

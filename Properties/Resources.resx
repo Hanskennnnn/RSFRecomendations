@@ -194,7 +194,7 @@
     <value>Попытка входа с несуществующим логином</value>
   </data>
   <data name="EmptyDescriptionLang" xml:space="preserve">
-    <value>Ввдите описание языка!</value>
+    <value>Введите описание языка!</value>
   </data>
   <data name="EnterName" xml:space="preserve">
     <value>Введите название</value>
@@ -371,7 +371,7 @@
     <value>Повторная анкета успешна заполнена, перейдите в главное меню, чтобы посмотреть рекомендации</value>
   </data>
   <data name="EmptyProgSkillForm" xml:space="preserve">
-    <value>Выберите уровень программирвания</value>
+    <value>Выберите уровень программирования</value>
   </data>
   <data name="EmptyImageLangLog" xml:space="preserve">
     <value>Попытка создать язык без изображения</value>

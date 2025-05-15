@@ -100,7 +100,6 @@
             // 
             // pbImageUser
             // 
-            pbImageUser.BorderStyle = BorderStyle.FixedSingle;
             pbImageUser.Location = new Point(293, 11);
             pbImageUser.Name = "pbImageUser";
             pbImageUser.Size = new Size(248, 140);

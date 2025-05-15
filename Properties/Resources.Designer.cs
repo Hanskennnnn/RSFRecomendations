@@ -244,7 +244,7 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Ввдите описание языка!.
+        ///   Ищет локализованную строку, похожую на Введите описание языка!.
         /// </summary>
         internal static string EmptyDescriptionLang {
             get {
@@ -406,7 +406,7 @@ namespace RSFRecomendations.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Выберите уровень программирвания.
+        ///   Ищет локализованную строку, похожую на Выберите уровень программирования.
         /// </summary>
         internal static string EmptyProgSkillForm {
             get {
