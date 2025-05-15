@@ -2686,3 +2686,30 @@
 2025-05-14 21:49:29.4237|INFO|RSFRecomendations.UserControles.MainFormAnketaControl|Успешное заполнение повторной анкеты
 2025-05-14 21:49:29.9822|INFO|RSFRecomendations.MainMenuControl|Переход к форме главного меню
 2025-05-14 21:49:29.9822|INFO|RSFRecomendations.MainMenu|Пользователь нажал на кнопку перехода к главному меню
+2025-05-15 10:12:43.9891|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-15 10:12:46.8531|INFO|RSFRecomendations.RegisterForm|Переход к форме регистрации
+2025-05-15 10:12:46.8858|INFO|RSFRecomendations.LoginForm|Переход к форме регистрации по ссылке 'У вас нет аккаунта?'
+2025-05-15 10:13:07.9185|WARN|RSFRecomendations.RegisterForm|Попытка создать аккаунт с одними цифрами в логине
+2025-05-15 10:13:13.4488|WARN|RSFRecomendations.RegisterForm|Попытка создать аккаунт с одними цифрами в логине
+2025-05-15 10:13:25.6694|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-15 10:13:27.9735|INFO|RSFRecomendations.RegisterForm|Переход к форме регистрации
+2025-05-15 10:13:28.0117|INFO|RSFRecomendations.LoginForm|Переход к форме регистрации по ссылке 'У вас нет аккаунта?'
+2025-05-15 10:13:46.3218|WARN|RSFRecomendations.RegisterForm|Попытка создать аккаунт уже с существующей почтой
+2025-05-15 10:13:53.3707|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-15 10:13:53.4059|INFO|RSFRecomendations.RegisterForm|Успешная регистрация
+2025-05-15 10:14:50.8445|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-15 10:14:52.1425|INFO|RSFRecomendations.RegisterForm|Переход к форме регистрации
+2025-05-15 10:14:52.1707|INFO|RSFRecomendations.LoginForm|Переход к форме регистрации по ссылке 'У вас нет аккаунта?'
+2025-05-15 10:15:07.9887|WARN|RSFRecomendations.RegisterForm|Попытка создать аккаунт с одними цифрами в логине
+2025-05-15 10:15:12.0959|WARN|RSFRecomendations.RegisterForm|Попытка создать аккаунт с одними цифрами в логине
+2025-05-15 10:18:20.9964|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-15 10:18:22.8786|INFO|RSFRecomendations.RegisterForm|Переход к форме регистрации
+2025-05-15 10:18:22.9301|INFO|RSFRecomendations.LoginForm|Переход к форме регистрации по ссылке 'У вас нет аккаунта?'
+2025-05-15 10:18:47.8565|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-15 10:18:47.9055|INFO|RSFRecomendations.RegisterForm|Успешная регистрация
+2025-05-15 10:18:49.0350|INFO|RSFRecomendations.RegisterForm|Переход к форме регистрации
+2025-05-15 10:18:49.0923|INFO|RSFRecomendations.LoginForm|Переход к форме регистрации по ссылке 'У вас нет аккаунта?'
+2025-05-15 10:19:11.1597|WARN|RSFRecomendations.RegisterForm|Попытка создать аккаунт с одними цифрами в логине
+2025-05-15 10:19:16.6201|WARN|RSFRecomendations.RegisterForm|Попытка создать аккаунт с одними цифрами в логине
+2025-05-15 10:19:20.6895|INFO|RSFRecomendations.LoginForm|Переход к форме входа
+2025-05-15 10:19:20.7359|INFO|RSFRecomendations.RegisterForm|Успешная регистрация

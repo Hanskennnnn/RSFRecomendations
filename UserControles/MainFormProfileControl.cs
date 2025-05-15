@@ -57,7 +57,7 @@ namespace RSFRecomendations.UserControles
                 Log.Warn(Properties.Resources.IncorrectEditLoginLog);
                 return;
             }
-            if (Regex.IsMatch(tbUserLoginProfile.Text, @"^[a-zA-Z]+[0-9]+$"))
+            if (!Regex.IsMatch(tbUserLoginProfile.Text, @"^[a-zA-Z]+[0-9]+$"))
             {
                 MessageBox.Show(Properties.Resources.IncorrectLoginNum);
                 Log.Warn(Properties.Resources.IncorrectLoginNumEditLog);
