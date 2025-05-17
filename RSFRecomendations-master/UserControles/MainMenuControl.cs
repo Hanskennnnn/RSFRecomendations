@@ -221,8 +221,7 @@ namespace RSFRecomendations
             }
             else
             {
-                var random = new Random();
-                var randomForm = similarForms[random.Next(similarForms.Count)];
+                var randomForm = similarForms[0];
 
                 // пользователь формы
                 var usersWithThisForm = await db.Users

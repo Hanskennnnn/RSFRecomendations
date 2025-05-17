@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace RSFRecomendations
 {
     /// <summary>
-    /// Класс для общих методов
+    ///   Класс для общих методов
     /// </summary>
     public class AdditionalMethodsClass
     {
