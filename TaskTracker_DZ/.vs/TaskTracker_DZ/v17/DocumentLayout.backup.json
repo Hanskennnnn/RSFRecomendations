@@ -1,0 +1,239 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\almaz\\source\\repos\\TaskTracker_DZ\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{65C17ACB-B17F-4F6C-B1C3-950BA4227623}|..\\TaskManager_Kalimullin\\TaskManager\\TaskTracker.csproj|c:\\users\\almaz\\source\\repos\\taskmanager_kalimullin\\taskmanager\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65C17ACB-B17F-4F6C-B1C3-950BA4227623}|..\\TaskManager_Kalimullin\\TaskManager\\TaskTracker.csproj|c:\\users\\almaz\\source\\repos\\taskmanager_kalimullin\\taskmanager\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65C17ACB-B17F-4F6C-B1C3-950BA4227623}|..\\TaskManager_Kalimullin\\TaskManager\\TaskTracker.csproj|c:\\users\\almaz\\source\\repos\\taskmanager_kalimullin\\taskmanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65C17ACB-B17F-4F6C-B1C3-950BA4227623}|..\\TaskManager_Kalimullin\\TaskManager\\TaskTracker.csproj|c:\\users\\almaz\\source\\repos\\taskmanager_kalimullin\\taskmanager\\tasktracker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65C17ACB-B17F-4F6C-B1C3-950BA4227623}|..\\TaskManager_Kalimullin\\TaskManager\\TaskTracker.csproj|c:\\users\\almaz\\source\\repos\\taskmanager_kalimullin\\taskmanager\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB84540-A6C2-4ED5-A46D-1C4A469C47F3}|..\\TaskManager_Kalimullin\\Library\\Library.csproj|c:\\users\\almaz\\source\\repos\\taskmanager_kalimullin\\library\\library.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB84540-A6C2-4ED5-A46D-1C4A469C47F3}|..\\TaskManager_Kalimullin\\Library\\Library.csproj|c:\\users\\almaz\\source\\repos\\taskmanager_kalimullin\\library\\repositories\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB84540-A6C2-4ED5-A46D-1C4A469C47F3}|..\\TaskManager_Kalimullin\\Library\\Library.csproj|c:\\users\\almaz\\source\\repos\\taskmanager_kalimullin\\library\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB84540-A6C2-4ED5-A46D-1C4A469C47F3}|..\\TaskManager_Kalimullin\\Library\\Library.csproj|c:\\users\\almaz\\source\\repos\\taskmanager_kalimullin\\library\\interfaces\\itastrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB84540-A6C2-4ED5-A46D-1C4A469C47F3}|..\\TaskManager_Kalimullin\\Library\\Library.csproj|c:\\users\\almaz\\source\\repos\\taskmanager_kalimullin\\library\\interfaces\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB84540-A6C2-4ED5-A46D-1C4A469C47F3}|..\\TaskManager_Kalimullin\\Library\\Library.csproj|c:\\users\\almaz\\source\\repos\\taskmanager_kalimullin\\library\\models\\taskitementity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB84540-A6C2-4ED5-A46D-1C4A469C47F3}|..\\TaskManager_Kalimullin\\Library\\Library.csproj|c:\\users\\almaz\\source\\repos\\taskmanager_kalimullin\\library\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\TaskManager\\Form1.cs",
+              "RelativeDocumentMoniker": "..\\TaskManager_Kalimullin\\TaskManager\\Form1.cs",
+              "ToolTip": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\TaskManager\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]*",
+              "RelativeToolTip": "..\\TaskManager_Kalimullin\\TaskManager\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T16:04:29.333Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\TaskManager\\Form1.cs",
+              "RelativeDocumentMoniker": "..\\TaskManager_Kalimullin\\TaskManager\\Form1.cs",
+              "ToolTip": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\TaskManager\\Form1.cs*",
+              "RelativeToolTip": "..\\TaskManager_Kalimullin\\TaskManager\\Form1.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T15:29:03.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\TaskManager\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "..\\TaskManager_Kalimullin\\TaskManager\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\TaskManager\\Form1.Designer.cs",
+              "RelativeToolTip": "..\\TaskManager_Kalimullin\\TaskManager\\Form1.Designer.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAwFoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T15:28:07.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\TaskManager\\Program.cs",
+              "RelativeDocumentMoniker": "..\\TaskManager_Kalimullin\\TaskManager\\Program.cs",
+              "ToolTip": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\TaskManager\\Program.cs*",
+              "RelativeToolTip": "..\\TaskManager_Kalimullin\\TaskManager\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T15:07:02.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TaskService.cs",
+              "DocumentMoniker": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\Library\\Services\\TaskService.cs",
+              "RelativeDocumentMoniker": "..\\TaskManager_Kalimullin\\Library\\Services\\TaskService.cs",
+              "ToolTip": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\Library\\Services\\TaskService.cs",
+              "RelativeToolTip": "..\\TaskManager_Kalimullin\\Library\\Services\\TaskService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T15:00:09.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TaskRepository.cs",
+              "DocumentMoniker": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\Library\\Repositories\\TaskRepository.cs",
+              "RelativeDocumentMoniker": "..\\TaskManager_Kalimullin\\Library\\Repositories\\TaskRepository.cs",
+              "ToolTip": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\Library\\Repositories\\TaskRepository.cs",
+              "RelativeToolTip": "..\\TaskManager_Kalimullin\\Library\\Repositories\\TaskRepository.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T15:00:07.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TaskItemEntity.cs",
+              "DocumentMoniker": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\Library\\Models\\TaskItemEntity.cs",
+              "RelativeDocumentMoniker": "..\\TaskManager_Kalimullin\\Library\\Models\\TaskItemEntity.cs",
+              "ToolTip": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\Library\\Models\\TaskItemEntity.cs",
+              "RelativeToolTip": "..\\TaskManager_Kalimullin\\Library\\Models\\TaskItemEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T15:00:05.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ITastRepository.cs",
+              "DocumentMoniker": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\Library\\Interfaces\\ITastRepository.cs",
+              "RelativeDocumentMoniker": "..\\TaskManager_Kalimullin\\Library\\Interfaces\\ITastRepository.cs",
+              "ToolTip": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\Library\\Interfaces\\ITastRepository.cs",
+              "RelativeToolTip": "..\\TaskManager_Kalimullin\\Library\\Interfaces\\ITastRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T15:00:03.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ITaskService.cs",
+              "DocumentMoniker": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\Library\\Interfaces\\ITaskService.cs",
+              "RelativeDocumentMoniker": "..\\TaskManager_Kalimullin\\Library\\Interfaces\\ITaskService.cs",
+              "ToolTip": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\Library\\Interfaces\\ITaskService.cs",
+              "RelativeToolTip": "..\\TaskManager_Kalimullin\\Library\\Interfaces\\ITaskService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T15:00:01.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\Library\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "..\\TaskManager_Kalimullin\\Library\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\Library\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "..\\TaskManager_Kalimullin\\Library\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T14:59:57.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TaskTracker.csproj",
+              "DocumentMoniker": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\TaskManager\\TaskTracker.csproj",
+              "RelativeDocumentMoniker": "..\\TaskManager_Kalimullin\\TaskManager\\TaskTracker.csproj",
+              "ToolTip": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\TaskManager\\TaskTracker.csproj*",
+              "RelativeToolTip": "..\\TaskManager_Kalimullin\\TaskManager\\TaskTracker.csproj*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-01T14:58:10.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Library.csproj",
+              "DocumentMoniker": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\Library\\Library.csproj",
+              "RelativeDocumentMoniker": "..\\TaskManager_Kalimullin\\Library\\Library.csproj",
+              "ToolTip": "C:\\Users\\almaz\\source\\repos\\TaskManager_Kalimullin\\Library\\Library.csproj*",
+              "RelativeToolTip": "..\\TaskManager_Kalimullin\\Library\\Library.csproj*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-01T14:55:23.334Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

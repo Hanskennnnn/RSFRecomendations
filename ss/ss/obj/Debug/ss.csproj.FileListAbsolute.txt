@@ -1,0 +1,7 @@
+C:\Users\almaz\source\repos\ss\ss\bin\Debug\ss.exe.config
+C:\Users\almaz\source\repos\ss\ss\bin\Debug\ss.exe
+C:\Users\almaz\source\repos\ss\ss\bin\Debug\ss.pdb
+C:\Users\almaz\source\repos\ss\ss\obj\Debug\ss.csproj.AssemblyReference.cache
+C:\Users\almaz\source\repos\ss\ss\obj\Debug\ss.csproj.CoreCompileInputs.cache
+C:\Users\almaz\source\repos\ss\ss\obj\Debug\ss.exe
+C:\Users\almaz\source\repos\ss\ss\obj\Debug\ss.pdb
